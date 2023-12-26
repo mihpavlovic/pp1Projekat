@@ -14,9 +14,9 @@ public class sym {
 	public static final int IDENT = 6;
 	
 	// Constants
-	public static final int NUMBER = 7;
-	public static final int CHAR = 8;
-	public static final int BOOL = 9;
+	public static final int NUMCONST = 7;
+	public static final int CHARCONST = 8;
+	public static final int BOOLCONST = 9;
 
 	
 	// Operators
@@ -37,10 +37,8 @@ public class sym {
 	public static final int INC = 24;
 	public static final int DEC = 25;
 	public static final int DOUBLECOLON = 26;
-	public static final int CONST = 27;
-
 
 	
-	public static final int EOF = 28;
-	public static final int VOID = 29;
+	public static final int EOF = 27;
+	public static final int VOID = 28;
 }

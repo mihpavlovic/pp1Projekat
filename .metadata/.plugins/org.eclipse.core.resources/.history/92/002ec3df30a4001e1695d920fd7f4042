@@ -15,8 +15,8 @@ public class sym {
 	
 	// Constants
 	public static final int NUMBER = 7;
-	public static final int CHAR = 8;
-	public static final int BOOL = 9;
+	public static final int CHARCONST = 8;
+	public static final int BOOLCONST = 9;
 
 	
 	// Operators

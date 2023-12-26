@@ -65,8 +65,8 @@ import java_cup.runtime.Symbol;
 "namespace"	{ return new_symbol(sym.NAMESPACE, yytext()); }
 "const"		{ return new_symbol(sym.CONST, yytext()); }
 "--"		{ return new_symbol(sym.DEC, yytext()); }
-"true"		{ return new_symbol(sym.BOOL, yytext()); }
-"false"		{ return new_symbol(sym.BOOL, yytext()); }
+"true"		{ return new_symbol(sym.BOOLCONST, yytext()); }
+"false"		{ return new_symbol(sym.BOOLCONST, yytext()); }
 
 
 
@@ -74,10 +74,7 @@ import java_cup.runtime.Symbol;
 <COMMENT> . {yybegin(COMMENT);}
 <COMMENT> "\r\n" { yybegin(YYINITIAL); }
 
-
-[0-9]+  { return new_symbol(sym.NUMBER, Integer.parseInt(yytext())); }
-'.'		{ return new_symbol(sym.CHAR, yytext());}
-[a-zA-Z][a-zA-Z0-9_]* 	{return new_symbol (sym.IDENT, yytext()); }
+[0-9]+  { return new_symbol(sym.NUMBER, new Integer (yytext())); }
 
 
 

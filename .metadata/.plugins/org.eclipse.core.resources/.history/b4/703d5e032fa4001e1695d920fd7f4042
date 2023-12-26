@@ -43,6 +43,7 @@ import java_cup.runtime.Symbol;
 
 "program"   { return new_symbol(sym.PROG, yytext());}
 "print" 	{ return new_symbol(sym.PRINT, yytext()); }
+"return" 	{ return new_symbol(sym.RETURN, yytext()); }
 "void" 		{ return new_symbol(sym.VOID, yytext()); }
 "+" 		{ return new_symbol(sym.PLUS, yytext()); }
 "=" 		{ return new_symbol(sym.EQUAL, yytext()); }
@@ -61,28 +62,9 @@ import java_cup.runtime.Symbol;
 "["			{ return new_symbol(sym.LBRACKET, yytext()); }
 "]"			{ return new_symbol(sym.RBRACKET, yytext()); }
 "read"		{ return new_symbol(sym.READ, yytext()); }
-"new"		{ return new_symbol(sym.NEW, yytext()); }
-"namespace"	{ return new_symbol(sym.NAMESPACE, yytext()); }
-"const"		{ return new_symbol(sym.CONST, yytext()); }
-"--"		{ return new_symbol(sym.DEC, yytext()); }
-"true"		{ return new_symbol(sym.BOOL, yytext()); }
-"false"		{ return new_symbol(sym.BOOL, yytext()); }
 
 
 
-"//" {yybegin(COMMENT);}
-<COMMENT> . {yybegin(COMMENT);}
-<COMMENT> "\r\n" { yybegin(YYINITIAL); }
-
-
-[0-9]+  { return new_symbol(sym.NUMBER, Integer.parseInt(yytext())); }
-'.'		{ return new_symbol(sym.CHAR, yytext());}
-[a-zA-Z][a-zA-Z0-9_]* 	{return new_symbol (sym.IDENT, yytext()); }
-
-
-
-
-. { System.err.println("Leksicka greska ("+yytext()+") u liniji "+(yyline+1)); }
 
 
 
