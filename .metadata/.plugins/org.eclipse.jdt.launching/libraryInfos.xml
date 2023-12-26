@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<libraryInfos>
+    <libraryInfo home="C:\eclipse-java\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.5.v20221102-0933\jre" version="17.0.5"/>
+    <libraryInfo home="C:\Users\mihai\Downloads\openlogic-openjdk-8u392-b08-windows-64\jre\bin" version="1.8.0_392-392">
+        <bootpath>
+            <entry path="C:\Users\mihai\Downloads\openlogic-openjdk-8u392-b08-windows-64\jre\lib\resources.jar"/>
+            <entry path="C:\Users\mihai\Downloads\openlogic-openjdk-8u392-b08-windows-64\jre\lib\rt.jar"/>
+            <entry path="C:\Users\mihai\Downloads\openlogic-openjdk-8u392-b08-windows-64\jre\lib\sunrsasign.jar"/>
+            <entry path="C:\Users\mihai\Downloads\openlogic-openjdk-8u392-b08-windows-64\jre\lib\jsse.jar"/>
+            <entry path="C:\Users\mihai\Downloads\openlogic-openjdk-8u392-b08-windows-64\jre\lib\jce.jar"/>
+            <entry path="C:\Users\mihai\Downloads\openlogic-openjdk-8u392-b08-windows-64\jre\lib\charsets.jar"/>
+            <entry path="C:\Users\mihai\Downloads\openlogic-openjdk-8u392-b08-windows-64\jre\lib\jfr.jar"/>
+            <entry path="C:\Users\mihai\Downloads\openlogic-openjdk-8u392-b08-windows-64\jre\classes"/>
+        </bootpath>
+        <extensionDirs>
+            <entry path="C:\Users\mihai\Downloads\openlogic-openjdk-8u392-b08-windows-64\jre\lib\ext"/>
+            <entry path="C:\WINDOWS\Sun\Java\lib\ext"/>
+        </extensionDirs>
+        <endorsedDirs>
+            <entry path="C:\Users\mihai\Downloads\openlogic-openjdk-8u392-b08-windows-64\jre\lib\endorsed"/>
+        </endorsedDirs>
+    </libraryInfo>
+    <libraryInfo home="C:\eclipse-java\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.5.v20221102-0933" version="17.0.5"/>
+    <libraryInfo home="C:\Users\mihai\Downloads\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.5.v20221102-0933" version="17.0.5"/>
+    <libraryInfo home="C:\Users\mihai\Downloads\openlogic-openjdk-8u392-b08-windows-64\jre" version="1.8.0_392-392">
+        <bootpath>
+            <entry path="C:\Users\mihai\Downloads\openlogic-openjdk-8u392-b08-windows-64\jre\lib\resources.jar"/>
+            <entry path="C:\Users\mihai\Downloads\openlogic-openjdk-8u392-b08-windows-64\jre\lib\rt.jar"/>
+            <entry path="C:\Users\mihai\Downloads\openlogic-openjdk-8u392-b08-windows-64\jre\lib\sunrsasign.jar"/>
+            <entry path="C:\Users\mihai\Downloads\openlogic-openjdk-8u392-b08-windows-64\jre\lib\jsse.jar"/>
+            <entry path="C:\Users\mihai\Downloads\openlogic-openjdk-8u392-b08-windows-64\jre\lib\jce.jar"/>
+            <entry path="C:\Users\mihai\Downloads\openlogic-openjdk-8u392-b08-windows-64\jre\lib\charsets.jar"/>
+            <entry path="C:\Users\mihai\Downloads\openlogic-openjdk-8u392-b08-windows-64\jre\lib\jfr.jar"/>
+            <entry path="C:\Users\mihai\Downloads\openlogic-openjdk-8u392-b08-windows-64\jre\classes"/>
+        </bootpath>
+        <extensionDirs>
+            <entry path="C:\Users\mihai\Downloads\openlogic-openjdk-8u392-b08-windows-64\jre\lib\ext"/>
+            <entry path="C:\WINDOWS\Sun\Java\lib\ext"/>
+        </extensionDirs>
+        <endorsedDirs>
+            <entry path="C:\Users\mihai\Downloads\openlogic-openjdk-8u392-b08-windows-64\jre\lib\endorsed"/>
+        </endorsedDirs>
+    </libraryInfo>
+    <libraryInfo home="C:\Users\mihai\Downloads\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.5.v20221102-0933\jre" version="17.0.5"/>
+</libraryInfos>
