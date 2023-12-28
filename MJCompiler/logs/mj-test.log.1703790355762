@@ -1,0 +1,23 @@
+INFO  20:05:07,946 - Compiling source file: D:\7. sem\PP1\projekatRad\workspace\pp1Projekat\MJCompiler\test\program.mj
+INFO  20:05:07,952 - #2 program
+INFO  20:05:07,952 - #7 MJProgram
+INFO  20:05:07,952 - #5 namespace
+INFO  20:05:07,953 - #6 const
+INFO  20:05:07,954 - #3 {
+INFO  20:05:07,954 - #4 }
+INFO  20:05:07,955 - Program(
+ MJProgram
+  NamespaceList(
+    NamespListDerived1(
+    ) [NamespListDerived1]
+    Nmsp(
+    ) [Nmsp]
+  ) [NamespaceList]
+  Decl(
+    DeclarationsDerived2(
+    ) [DeclarationsDerived2]
+    ConstDeclaration(
+    ) [ConstDeclaration]
+  ) [Decl]
+) [Program]
+INFO  20:05:07,955 - ===================================
