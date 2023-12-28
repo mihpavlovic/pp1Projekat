@@ -45,34 +45,52 @@ scan with {:
 :}
 
 terminal PROG, LBRACE, RBRACE, NAMESPACE, CONST ;
-terminal String IDENT;
+terminal IDENT;
+terminal NUMBER;
+terminal BOOL;
+terminal CHAR;
 
-terminal DOUBLECOLON, READ, NEW, PLUS, CHAR, MUL, BOOL, COMMA, SEMI, DIV, MINUS, RPAREN, EQUAL, LPAREN, LBRACKET, MOD, RBRACKET;
-terminal INC, NUMBER, PRINT, VOID, DEC;
+terminal DOUBLECOLON, READ, NEW, PLUS, MUL, COMMA, SEMI, DIV, MINUS, RPAREN, EQUAL, LPAREN, LBRACKET, MOD, RBRACKET;
+terminal INC, PRINT, VOID, DEC;
 
-nonterminal Program, NamespList, Declarations, Namesp, VarDecl, ConstDecl;
+nonterminal Program, NamespList, Declarations, Namesp, VarDecl, ConstDecl, MethodDeclList, Type, WhichConst, MoreConstDecls;
 
 
-Program ::= (Program) PROG IDENT NamespList Declarations LBRACE  RBRACE;
+Program ::=  PROG IDENT NamespList Declarations LBRACE MethodDeclList  RBRACE;
 
-NamespList ::= (NamespaceList) NamespList Namesp 
+NamespList ::= NamespList Namesp 
 				|
 				/*epsilon*/
 				;
 
-Namesp ::= (Nmsp) NAMESPACE;
+Namesp ::= NAMESPACE IDENT LBRACE Declarations LBRACE RBRACE RBRACE;
 
-Declarations ::= (Decl) Declarations ConstDecl
+Declarations ::= Declarations ConstDecl
 				|
 				Declarations VarDecl
 				|
 				/*epsilon smena*/
 				;
 
-VarDecl ::= (VarDeclaration) IDENT;
+ConstDecl ::= CONST Type IDENT EQUAL WhichConst MoreConstDecls SEMI ;
 
-ConstDecl ::= (ConstDeclaration) CONST;
+VarDecl ::= IDENT;
 
+Type ::= IDENT;
+
+WhichConst ::= NUMBER
+				|
+				CHAR
+				|
+				BOOL
+				;
+
+MoreConstDecls ::= COMMA IDENT EQUAL WhichConst
+					|
+					/*epsilon smena*/
+					;
+
+MethodDeclList::=;
 
 
 

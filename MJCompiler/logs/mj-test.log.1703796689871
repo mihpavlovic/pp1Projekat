@@ -1,0 +1,25 @@
+INFO  20:07:36,896 - Compiling source file: D:\7. sem\PP1\projekatRad\workspace\pp1Projekat\MJCompiler\test\program.mj
+INFO  20:07:36,902 - #2 program
+INFO  20:07:36,902 - #7 MJProgram
+INFO  20:07:36,903 - #5 namespace
+INFO  20:07:36,903 - #7 okej
+INFO  20:07:36,905 - #3 {
+INFO  20:07:36,905 - #4 }
+INFO  20:07:36,906 - Program(
+ MJProgram
+  NamespaceList(
+    NamespListDerived1(
+    ) [NamespListDerived1]
+    Nmsp(
+    ) [Nmsp]
+  ) [NamespaceList]
+  DeclarationsDerived1(
+    DeclarationsDerived2(
+    ) [DeclarationsDerived2]
+    VarDeclaration(
+     okej
+    ) [VarDeclaration]
+  ) [DeclarationsDerived1]
+) [Program]
+INFO  20:07:36,906 - ===================================
+INFO  20:07:36,908 -  Deklarisanih promenljivih ima = 1

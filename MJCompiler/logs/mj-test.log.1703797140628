@@ -1,0 +1,15 @@
+INFO  21:55:15,296 - Compiling source file: D:\7. sem\PP1\projekatRad\workspace\pp1Projekat\MJCompiler\test\program.mj
+INFO  21:55:15,304 - #2 program
+INFO  21:55:15,304 - #7 MJProgram
+INFO  21:55:15,304 - #5 namespace
+INFO  21:55:15,305 - #7 okej
+INFO  21:55:15,305 - #3 {
+INFO  21:55:15,305 - #6 const
+INFO  21:55:15,305 - #7 int
+INFO  21:55:15,305 - #7 nula
+INFO  21:55:15,306 - #21 =
+INFO  21:55:15,306 - #8 0
+INFO  21:55:15,306 - #17 ;
+ERROR 21:55:15,306 - 
+Sintaksna greska na liniji 3
+ERROR 21:55:15,306 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 3

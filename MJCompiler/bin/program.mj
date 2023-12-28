@@ -1,4 +1,10 @@
 program MJProgram
-	namespace okej
+	namespace okej{
+	const int nula = 0;
+	const int jedan = 1;
+	const int pet = 5;
+	
+	{}
+	}
 {
 }
