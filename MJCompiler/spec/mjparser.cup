@@ -50,10 +50,13 @@ terminal NUMBER;
 terminal BOOL;
 terminal CHAR;
 
-terminal DOUBLECOLON, READ, NEW, PLUS, MUL, COMMA, SEMI, DIV, MINUS, RPAREN, EQUAL, LPAREN, LBRACKET, MOD, RBRACKET;
+terminal DOUBLECOLON, READ, NEW, PLUS, MUL, COMMA, SEMI, DIV, MINUS, RPAREN, ASSIGN, LPAREN, LBRACKET, MOD, RBRACKET;
 terminal INC, PRINT, VOID, DEC;
+terminal GREATER,LESS,GREATEROREQUAL,LESSOREQUAL,EQUAL,DIFFERENT,AND,OR;
 
-nonterminal Program, NamespList, Declarations, Namesp, VarDecl, ConstDecl, MethodDeclList, Type, WhichConst, MoreConstDecls;
+
+nonterminal Program, NamespList, Declarations, Namesp, VarDecl, ConstDecl, MethodDeclList, Type, WhichConst, MoreConstDecls, MoreVarDecls;
+nonterminal MethodDecl, FormPars, StatementList, Statement, DesignatorStatement, VarDeclInFunc, Designator, Expr, AndConst, DesigNmsp, DesigBracket;
 
 
 Program ::=  PROG IDENT NamespList Declarations LBRACE MethodDeclList  RBRACE;
@@ -72,9 +75,12 @@ Declarations ::= Declarations ConstDecl
 				/*epsilon smena*/
 				;
 
-ConstDecl ::= CONST Type IDENT EQUAL WhichConst MoreConstDecls SEMI ;
+ConstDecl ::= CONST Type IDENT ASSIGN WhichConst MoreConstDecls SEMI ;
 
-VarDecl ::= IDENT;
+VarDecl ::= Type IDENT LBRACKET RBRACKET MoreVarDecls SEMI
+			|
+			Type IDENT MoreVarDecls SEMI
+			;
 
 Type ::= IDENT;
 
@@ -85,17 +91,65 @@ WhichConst ::= NUMBER
 				BOOL
 				;
 
-MoreConstDecls ::= COMMA IDENT EQUAL WhichConst
+MoreConstDecls ::= MoreConstDecls COMMA IDENT ASSIGN WhichConst
 					|
 					/*epsilon smena*/
 					;
 
-MethodDeclList::=;
+MethodDeclList::= MethodDecl ; /*uradjeno da moze samo jedna da se deklarise, odnosno samo main*/
 
+MoreVarDecls ::= MoreVarDecls COMMA IDENT LBRACKET RBRACKET
+				|
+				MoreVarDecls COMMA IDENT
+				|
+				/*epsilon smena*/
+				 ;
+				 
+MethodDecl ::= Type IDENT LPAREN FormPars RPAREN VarDeclInFunc LBRACE StatementList RBRACE;
 
+FormPars ::= /*epsilon smena*/;
 
+VarDeclInFunc ::= VarDeclInFunc Type IDENT LBRACKET RBRACKET SEMI
+				|
+				VarDeclInFunc Type IDENT MoreVarDecls SEMI
+				|
+				/*epsilon smena*/
+				;
 
+StatementList ::= StatementList Statement
+				|
+				/*epsilon smena*/
+				;
 
+Statement ::= DesignatorStatement SEMI 
+			|
+			READ LPAREN Designator RPAREN SEMI 
+			| 
+			PRINT LPAREN Expr AndConst RPAREN SEMI
+			;
+
+AndConst ::= COMMA NUMBER
+			|
+			/*epsilon smena*/
+			;
+
+DesignatorStatement ::= Designator ASSIGN Expr
+						|
+						Designator INC
+						|
+						Designator DEC
+						;
+
+Designator ::= IDENT DOUBLECOLON IDENT LBRACKET Expr RBRACKET
+				|
+				IDENT
+				|
+				IDENT LBRACKET Expr RBRACKET
+				|
+				IDENT DOUBLECOLON IDENT
+				;
+
+Expr ::= NUMBER;
 
 
 

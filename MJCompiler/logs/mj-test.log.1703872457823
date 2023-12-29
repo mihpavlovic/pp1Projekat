@@ -1,0 +1,81 @@
+INFO  18:53:03,325 - Compiling source file: D:\7. sem\PP1\projekatRad\workspace\pp1Projekat\MJCompiler\test\program.mj
+INFO  18:53:03,486 - #2 program
+INFO  18:53:03,486 - #7 MJProgram
+INFO  18:53:03,486 - #5 namespace
+INFO  18:53:03,495 - #7 okej
+INFO  18:53:03,495 - #3 {
+INFO  18:53:03,496 - #6 const
+INFO  18:53:03,504 - #7 int
+INFO  18:53:03,505 - #7 nula
+INFO  18:53:03,519 - #21 =
+INFO  18:53:03,520 - #8 0
+INFO  18:53:03,520 - #16 ,
+INFO  18:53:03,537 - #7 ok
+INFO  18:53:03,538 - #21 =
+INFO  18:53:03,538 - #8 4
+INFO  18:53:03,538 - #17 ;
+INFO  18:53:03,538 - #6 const
+INFO  18:53:03,538 - #7 int
+INFO  18:53:03,538 - #7 jedan
+INFO  18:53:03,538 - #21 =
+INFO  18:53:03,538 - #8 1
+INFO  18:53:03,538 - #17 ;
+INFO  18:53:03,547 - #6 const
+INFO  18:53:03,547 - #7 int
+INFO  18:53:03,547 - #7 pet
+INFO  18:53:03,547 - #21 =
+INFO  18:53:03,548 - #8 5
+INFO  18:53:03,548 - #17 ;
+INFO  18:53:03,548 - #3 {
+INFO  18:53:03,548 - #4 }
+INFO  18:53:03,548 - #4 }
+INFO  18:53:03,548 - #3 {
+INFO  18:53:03,548 - #4 }
+INFO  18:53:03,566 - ProgramDerived1(
+  NamespListDerived1(
+    NamespListDerived2(
+    ) [NamespListDerived2]
+    NamespDerived1(
+      DeclarationsDerived1(
+        DeclarationsDerived1(
+          DeclarationsDerived1(
+            DeclarationsDerived3(
+            ) [DeclarationsDerived3]
+            ConstDeclDerived1(
+              TypeDerived1(
+              ) [TypeDerived1]
+              WhichConstDerived1(
+              ) [WhichConstDerived1]
+              MoreConstDeclsDerived1(
+                WhichConstDerived1(
+                ) [WhichConstDerived1]
+              ) [MoreConstDeclsDerived1]
+            ) [ConstDeclDerived1]
+          ) [DeclarationsDerived1]
+          ConstDeclDerived1(
+            TypeDerived1(
+            ) [TypeDerived1]
+            WhichConstDerived1(
+            ) [WhichConstDerived1]
+            MoreConstDeclsDerived2(
+            ) [MoreConstDeclsDerived2]
+          ) [ConstDeclDerived1]
+        ) [DeclarationsDerived1]
+        ConstDeclDerived1(
+          TypeDerived1(
+          ) [TypeDerived1]
+          WhichConstDerived1(
+          ) [WhichConstDerived1]
+          MoreConstDeclsDerived2(
+          ) [MoreConstDeclsDerived2]
+        ) [ConstDeclDerived1]
+      ) [DeclarationsDerived1]
+    ) [NamespDerived1]
+  ) [NamespListDerived1]
+  DeclarationsDerived3(
+  ) [DeclarationsDerived3]
+  MethodDeclListDerived1(
+  ) [MethodDeclListDerived1]
+) [ProgramDerived1]
+INFO  18:53:03,566 - ===================================
+INFO  18:53:03,581 -  Deklarisanih promenljivih ima = 0

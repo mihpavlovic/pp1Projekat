@@ -1,0 +1,37 @@
+INFO  20:23:59,234 - Compiling source file: D:\7. sem\PP1\projekatRad\workspace\pp1Projekat\MJCompiler\test\program.mj
+INFO  20:23:59,249 - #2 program
+INFO  20:23:59,249 - #7 MJProgram
+INFO  20:23:59,249 - #5 namespace
+INFO  20:23:59,252 - #7 okej
+INFO  20:23:59,252 - #3 {
+INFO  20:23:59,252 - #6 const
+INFO  20:23:59,253 - #7 int
+INFO  20:23:59,253 - #7 nula
+INFO  20:23:59,254 - #21 =
+INFO  20:23:59,254 - #8 0
+INFO  20:23:59,254 - #16 ,
+INFO  20:23:59,256 - #7 ok
+INFO  20:23:59,256 - #21 =
+INFO  20:23:59,256 - #8 4
+INFO  20:23:59,256 - #16 ,
+INFO  20:23:59,256 - #7 test
+INFO  20:23:59,256 - #21 =
+INFO  20:23:59,256 - #8 5
+INFO  20:23:59,256 - #17 ;
+INFO  20:23:59,257 - #6 const
+INFO  20:23:59,257 - #7 int
+INFO  20:23:59,257 - #7 jedan
+INFO  20:23:59,257 - #21 =
+INFO  20:23:59,257 - #8 1
+INFO  20:23:59,257 - #17 ;
+INFO  20:23:59,257 - #6 const
+INFO  20:23:59,257 - #7 int
+INFO  20:23:59,257 - #7 pet
+INFO  20:23:59,257 - #21 =
+INFO  20:23:59,257 - #8 5
+INFO  20:23:59,257 - #17 ;
+INFO  20:23:59,257 - #7 int
+INFO  20:23:59,257 - #11 ::
+ERROR 20:23:59,258 - 
+Sintaksna greska na liniji 6
+ERROR 20:23:59,258 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 6

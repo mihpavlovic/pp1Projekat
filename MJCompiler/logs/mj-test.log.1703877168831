@@ -1,0 +1,224 @@
+INFO  20:12:31,171 - Compiling source file: D:\7. sem\PP1\projekatRad\workspace\pp1Projekat\MJCompiler\test\program.mj
+INFO  20:12:31,181 - #2 program
+INFO  20:12:31,181 - #7 MJProgram
+INFO  20:12:31,181 - #5 namespace
+INFO  20:12:31,181 - #7 okej
+INFO  20:12:31,182 - #3 {
+INFO  20:12:31,182 - #6 const
+INFO  20:12:31,182 - #7 int
+INFO  20:12:31,182 - #7 nula
+INFO  20:12:31,183 - #21 =
+INFO  20:12:31,183 - #8 0
+INFO  20:12:31,183 - #16 ,
+INFO  20:12:31,185 - #7 ok
+INFO  20:12:31,185 - #21 =
+INFO  20:12:31,185 - #8 4
+INFO  20:12:31,185 - #16 ,
+INFO  20:12:31,185 - #7 test
+INFO  20:12:31,186 - #21 =
+INFO  20:12:31,186 - #8 5
+INFO  20:12:31,186 - #17 ;
+INFO  20:12:31,186 - #6 const
+INFO  20:12:31,187 - #7 int
+INFO  20:12:31,191 - #7 jedan
+INFO  20:12:31,191 - #21 =
+INFO  20:12:31,191 - #8 1
+INFO  20:12:31,191 - #17 ;
+INFO  20:12:31,191 - #6 const
+INFO  20:12:31,191 - #7 int
+INFO  20:12:31,191 - #7 pet
+INFO  20:12:31,191 - #21 =
+INFO  20:12:31,191 - #8 5
+INFO  20:12:31,191 - #17 ;
+INFO  20:12:31,191 - #7 int
+INFO  20:12:31,191 - #7 broj
+INFO  20:12:31,191 - #17 ;
+INFO  20:12:31,192 - #7 String
+INFO  20:12:31,192 - #7 niz
+INFO  20:12:31,192 - #23 [
+INFO  20:12:31,192 - #25 ]
+INFO  20:12:31,192 - #17 ;
+INFO  20:12:31,192 - #3 {
+INFO  20:12:31,193 - #4 }
+INFO  20:12:31,193 - #4 }
+INFO  20:12:31,193 - #5 namespace
+INFO  20:12:31,193 - #7 Konstante
+INFO  20:12:31,193 - #3 {
+INFO  20:12:31,193 - #6 const
+INFO  20:12:31,193 - #7 int
+INFO  20:12:31,193 - #7 nulaa
+INFO  20:12:31,193 - #21 =
+INFO  20:12:31,193 - #8 0
+INFO  20:12:31,193 - #17 ;
+INFO  20:12:31,193 - #6 const
+INFO  20:12:31,194 - #7 int
+INFO  20:12:31,194 - #7 jedann
+INFO  20:12:31,194 - #21 =
+INFO  20:12:31,194 - #8 1
+INFO  20:12:31,194 - #16 ,
+INFO  20:12:31,194 - #7 proba
+INFO  20:12:31,194 - #21 =
+INFO  20:12:31,194 - #8 8
+INFO  20:12:31,194 - #17 ;
+INFO  20:12:31,194 - #6 const
+INFO  20:12:31,194 - #7 int
+INFO  20:12:31,194 - #7 pett
+INFO  20:12:31,194 - #21 =
+INFO  20:12:31,194 - #8 5
+INFO  20:12:31,194 - #17 ;
+INFO  20:12:31,194 - #7 Boolean
+INFO  20:12:31,194 - #7 brr
+INFO  20:12:31,194 - #16 ,
+INFO  20:12:31,195 - #7 brr2
+INFO  20:12:31,195 - #23 [
+INFO  20:12:31,195 - #25 ]
+INFO  20:12:31,195 - #17 ;
+INFO  20:12:31,195 - #3 {
+INFO  20:12:31,195 - #4 }
+INFO  20:12:31,195 - #4 }
+INFO  20:12:31,195 - #3 {
+INFO  20:12:31,195 - #7 int
+INFO  20:12:31,195 - #7 main
+INFO  20:12:31,195 - #22 (
+INFO  20:12:31,195 - #20 )
+INFO  20:12:31,197 - #3 {
+INFO  20:12:31,197 - #7 proba
+INFO  20:12:31,197 - #17 ;
+INFO  20:12:31,198 - #4 }
+INFO  20:12:31,198 - #4 }
+INFO  20:12:31,199 - ProgramDerived1(
+  NamespListDerived1(
+    NamespListDerived1(
+      NamespListDerived2(
+      ) [NamespListDerived2]
+      NamespDerived1(
+        DeclarationsDerived2(
+          DeclarationsDerived2(
+            DeclarationsDerived1(
+              DeclarationsDerived1(
+                DeclarationsDerived1(
+                  DeclarationsDerived3(
+                  ) [DeclarationsDerived3]
+                  ConstDeclDerived1(
+                    TypeDerived1(
+                    ) [TypeDerived1]
+                    WhichConstDerived1(
+                    ) [WhichConstDerived1]
+                    MoreConstDeclsDerived1(
+                      MoreConstDeclsDerived1(
+                        MoreConstDeclsDerived2(
+                        ) [MoreConstDeclsDerived2]
+                        WhichConstDerived1(
+                        ) [WhichConstDerived1]
+                      ) [MoreConstDeclsDerived1]
+                      WhichConstDerived1(
+                      ) [WhichConstDerived1]
+                    ) [MoreConstDeclsDerived1]
+                  ) [ConstDeclDerived1]
+                ) [DeclarationsDerived1]
+                ConstDeclDerived1(
+                  TypeDerived1(
+                  ) [TypeDerived1]
+                  WhichConstDerived1(
+                  ) [WhichConstDerived1]
+                  MoreConstDeclsDerived2(
+                  ) [MoreConstDeclsDerived2]
+                ) [ConstDeclDerived1]
+              ) [DeclarationsDerived1]
+              ConstDeclDerived1(
+                TypeDerived1(
+                ) [TypeDerived1]
+                WhichConstDerived1(
+                ) [WhichConstDerived1]
+                MoreConstDeclsDerived2(
+                ) [MoreConstDeclsDerived2]
+              ) [ConstDeclDerived1]
+            ) [DeclarationsDerived1]
+            VarDeclDerived2(
+              TypeDerived1(
+              ) [TypeDerived1]
+              MoreVarDeclsDerived3(
+              ) [MoreVarDeclsDerived3]
+            ) [VarDeclDerived2]
+          ) [DeclarationsDerived2]
+          VarDeclDerived1(
+            TypeDerived1(
+            ) [TypeDerived1]
+            MoreVarDeclsDerived3(
+            ) [MoreVarDeclsDerived3]
+          ) [VarDeclDerived1]
+        ) [DeclarationsDerived2]
+      ) [NamespDerived1]
+    ) [NamespListDerived1]
+    NamespDerived1(
+      DeclarationsDerived2(
+        DeclarationsDerived1(
+          DeclarationsDerived1(
+            DeclarationsDerived1(
+              DeclarationsDerived3(
+              ) [DeclarationsDerived3]
+              ConstDeclDerived1(
+                TypeDerived1(
+                ) [TypeDerived1]
+                WhichConstDerived1(
+                ) [WhichConstDerived1]
+                MoreConstDeclsDerived2(
+                ) [MoreConstDeclsDerived2]
+              ) [ConstDeclDerived1]
+            ) [DeclarationsDerived1]
+            ConstDeclDerived1(
+              TypeDerived1(
+              ) [TypeDerived1]
+              WhichConstDerived1(
+              ) [WhichConstDerived1]
+              MoreConstDeclsDerived1(
+                MoreConstDeclsDerived2(
+                ) [MoreConstDeclsDerived2]
+                WhichConstDerived1(
+                ) [WhichConstDerived1]
+              ) [MoreConstDeclsDerived1]
+            ) [ConstDeclDerived1]
+          ) [DeclarationsDerived1]
+          ConstDeclDerived1(
+            TypeDerived1(
+            ) [TypeDerived1]
+            WhichConstDerived1(
+            ) [WhichConstDerived1]
+            MoreConstDeclsDerived2(
+            ) [MoreConstDeclsDerived2]
+          ) [ConstDeclDerived1]
+        ) [DeclarationsDerived1]
+        VarDeclDerived2(
+          TypeDerived1(
+          ) [TypeDerived1]
+          MoreVarDeclsDerived1(
+            MoreVarDeclsDerived3(
+            ) [MoreVarDeclsDerived3]
+          ) [MoreVarDeclsDerived1]
+        ) [VarDeclDerived2]
+      ) [DeclarationsDerived2]
+    ) [NamespDerived1]
+  ) [NamespListDerived1]
+  DeclarationsDerived3(
+  ) [DeclarationsDerived3]
+  MethodDeclListDerived1(
+    MethodDeclDerived1(
+      TypeDerived1(
+      ) [TypeDerived1]
+      FormParsDerived1(
+      ) [FormParsDerived1]
+      VarDeclOrNoneDerived2(
+      ) [VarDeclOrNoneDerived2]
+      StatementListDerived1(
+        StatementListDerived2(
+        ) [StatementListDerived2]
+        StatementDerived1(
+          DesignatorStatementDerived1(
+          ) [DesignatorStatementDerived1]
+        ) [StatementDerived1]
+      ) [StatementListDerived1]
+    ) [MethodDeclDerived1]
+  ) [MethodDeclListDerived1]
+) [ProgramDerived1]
+INFO  20:12:31,199 - ===================================
+INFO  20:12:31,201 -  Deklarisanih promenljivih ima = 0

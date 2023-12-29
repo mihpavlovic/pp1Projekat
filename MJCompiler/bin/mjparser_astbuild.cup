@@ -50,8 +50,10 @@ terminal NUMBER;
 terminal BOOL;
 terminal CHAR;
 
-terminal DOUBLECOLON, READ, NEW, PLUS, MUL, COMMA, SEMI, DIV, MINUS, RPAREN, EQUAL, LPAREN, LBRACKET, MOD, RBRACKET;
+terminal DOUBLECOLON, READ, NEW, PLUS, MUL, COMMA, SEMI, DIV, MINUS, RPAREN, ASSIGN, LPAREN, LBRACKET, MOD, RBRACKET;
 terminal INC, PRINT, VOID, DEC;
+terminal GREATER,LESS,GREATEROREQUAL,LESSOREQUAL,EQUAL,DIFFERENT,AND,OR;
+
 
 nonterminal Program Program;
 nonterminal NamespList NamespList;
@@ -63,6 +65,18 @@ nonterminal MethodDeclList MethodDeclList;
 nonterminal Type Type;
 nonterminal WhichConst WhichConst;
 nonterminal MoreConstDecls MoreConstDecls;
+nonterminal MoreVarDecls MoreVarDecls;
+nonterminal MethodDecl MethodDecl;
+nonterminal FormPars FormPars;
+nonterminal StatementList StatementList;
+nonterminal Statement Statement;
+nonterminal DesignatorStatement DesignatorStatement;
+nonterminal VarDeclInFunc VarDeclInFunc;
+nonterminal Designator Designator;
+nonterminal Expr Expr;
+nonterminal AndConst AndConst;
+nonterminal DesigNmsp DesigNmsp;
+nonterminal DesigBracket DesigBracket;
 
 
 Program ::=  PROG IDENT NamespList:N1 Declarations:D2 LBRACE MethodDeclList:M3  RBRACE {: RESULT=new ProgramDerived1(N1, D2, M3); RESULT.setLine(N1left); :};
@@ -81,9 +95,12 @@ Declarations ::= Declarations:D1 ConstDecl:C2 {: RESULT=new DeclarationsDerived1
 				/*epsilon smena*/
 				;
 
-ConstDecl ::= CONST Type:T1 IDENT EQUAL WhichConst:W2 MoreConstDecls:M3 SEMI {: RESULT=new ConstDeclDerived1(T1, W2, M3); RESULT.setLine(T1left); :} ;
+ConstDecl ::= CONST Type:T1 IDENT ASSIGN WhichConst:W2 MoreConstDecls:M3 SEMI {: RESULT=new ConstDeclDerived1(T1, W2, M3); RESULT.setLine(T1left); :} ;
 
-VarDecl ::= IDENT {: RESULT=new VarDeclDerived1(); :};
+VarDecl ::= Type:T1 IDENT LBRACKET RBRACKET MoreVarDecls:M2 SEMI {: RESULT=new VarDeclDerived1(T1, M2); RESULT.setLine(T1left); :}
+			|
+			Type:T1 IDENT MoreVarDecls:M2 SEMI {: RESULT=new VarDeclDerived2(T1, M2); RESULT.setLine(T1left); :}
+			;
 
 Type ::= IDENT {: RESULT=new TypeDerived1(); :};
 
@@ -94,18 +111,64 @@ WhichConst ::= NUMBER {: RESULT=new WhichConstDerived1(); :}
 				BOOL {: RESULT=new WhichConstDerived3(); :}
 				;
 
-MoreConstDecls ::= COMMA IDENT EQUAL WhichConst:W1 {: RESULT=new MoreConstDeclsDerived1(W1); RESULT.setLine(W1left); :}
+MoreConstDecls ::= MoreConstDecls:M1 COMMA IDENT ASSIGN WhichConst:W2 {: RESULT=new MoreConstDeclsDerived1(M1, W2); RESULT.setLine(M1left); :}
 					| {: RESULT=new MoreConstDeclsDerived2(); :}
 					/*epsilon smena*/
 					;
 
-MethodDeclList::= {: RESULT=new MethodDeclListDerived1(); :};
+MethodDeclList::= MethodDecl:M1 {: RESULT=new MethodDeclListDerived1(M1); RESULT.setLine(M1left); :} ; /*uradjeno da moze samo jedna da se deklarise, odnosno samo main*/
 
+MoreVarDecls ::= MoreVarDecls:M1 COMMA IDENT LBRACKET RBRACKET {: RESULT=new MoreVarDeclsDerived1(M1); RESULT.setLine(M1left); :}
+				|
+				MoreVarDecls:M1 COMMA IDENT {: RESULT=new MoreVarDeclsDerived2(M1); RESULT.setLine(M1left); :}
+				| {: RESULT=new MoreVarDeclsDerived3(); :}
+				/*epsilon smena*/
+				 ;
+				 
+MethodDecl ::= Type:T1 IDENT LPAREN FormPars:F2 RPAREN VarDeclInFunc:V3 LBRACE StatementList:S4 RBRACE {: RESULT=new MethodDeclDerived1(T1, F2, V3, S4); RESULT.setLine(T1left); :};
 
+FormPars ::= {: RESULT=new FormParsDerived1(); :} /*epsilon smena*/;
 
+VarDeclInFunc ::= VarDeclInFunc:V1 Type:T2 IDENT LBRACKET RBRACKET SEMI {: RESULT=new VarDeclInFuncDerived1(V1, T2); RESULT.setLine(V1left); :}
+				|
+				VarDeclInFunc:V1 Type:T2 IDENT MoreVarDecls:M3 SEMI {: RESULT=new VarDeclInFuncDerived2(V1, T2, M3); RESULT.setLine(V1left); :}
+				| {: RESULT=new VarDeclInFuncDerived3(); :}
+				/*epsilon smena*/
+				;
 
+StatementList ::= StatementList:S1 Statement:S2 {: RESULT=new StatementListDerived1(S1, S2); RESULT.setLine(S1left); :}
+				| {: RESULT=new StatementListDerived2(); :}
+				/*epsilon smena*/
+				;
 
+Statement ::= DesignatorStatement:D1 SEMI {: RESULT=new StatementDerived1(D1); RESULT.setLine(D1left); :} 
+			|
+			READ LPAREN Designator:D1 RPAREN SEMI {: RESULT=new StatementDerived2(D1); RESULT.setLine(D1left); :} 
+			| 
+			PRINT LPAREN Expr:E1 AndConst:A2 RPAREN SEMI {: RESULT=new StatementDerived3(E1, A2); RESULT.setLine(E1left); :}
+			;
 
+DesignatorStatement ::= Designator:D1 ASSIGN Expr:E2 {: RESULT=new DesignatorStatementDerived1(D1, E2); RESULT.setLine(D1left); :}
+						|
+						Designator:D1 INC {: RESULT=new DesignatorStatementDerived2(D1); RESULT.setLine(D1left); :}
+						|
+						Designator:D1 DEC {: RESULT=new DesignatorStatementDerived3(D1); RESULT.setLine(D1left); :}
+						;
 
+Designator ::= IDENT DOUBLECOLON IDENT LBRACKET Expr:E1 RBRACKET {: RESULT=new DesignatorDerived1(E1); RESULT.setLine(E1left); :}
+				|
+				IDENT {: RESULT=new DesignatorDerived2(); :}
+				|
+				IDENT LBRACKET Expr:E1 RBRACKET {: RESULT=new DesignatorDerived3(E1); RESULT.setLine(E1left); :}
+				|
+				IDENT DOUBLECOLON IDENT {: RESULT=new DesignatorDerived4(); :}
+				;
+
+Expr ::= NUMBER {: RESULT=new ExprDerived1(); :};
+
+AndConst ::= COMMA NUMBER {: RESULT=new AndConstDerived1(); :}
+			| {: RESULT=new AndConstDerived2(); :}
+			/*epsilon smena*/
+			;
 
 

@@ -45,7 +45,7 @@ import java_cup.runtime.Symbol;
 "print" 	{ return new_symbol(sym.PRINT, yytext()); }
 "void" 		{ return new_symbol(sym.VOID, yytext()); }
 "+" 		{ return new_symbol(sym.PLUS, yytext()); }
-"=" 		{ return new_symbol(sym.EQUAL, yytext()); }
+"=" 		{ return new_symbol(sym.ASSIGN, yytext()); }
 ";" 		{ return new_symbol(sym.SEMI, yytext()); }
 "," 		{ return new_symbol(sym.COMMA, yytext()); }
 "(" 		{ return new_symbol(sym.LPAREN, yytext()); }
@@ -67,6 +67,15 @@ import java_cup.runtime.Symbol;
 "--"		{ return new_symbol(sym.DEC, yytext()); }
 "true"		{ return new_symbol(sym.BOOL, yytext()); }
 "false"		{ return new_symbol(sym.BOOL, yytext()); }
+">"			{ return new_symbol(sym.GREATER, yytext()); }
+"<"			{ return new_symbol(sym.LESS, yytext()); }
+">="		{ return new_symbol(sym.GREATEROREQUAL, yytext()); }
+"<="		{ return new_symbol(sym.LESSOREQUAL, yytext()); }
+"=="		{ return new_symbol(sym.EQUAL, yytext()); }
+"!="		{ return new_symbol(sym.DIFFERENT, yytext()); }
+"&&"		{ return new_symbol(sym.AND, yytext()); }
+"||"		{ return new_symbol(sym.OR, yytext()); }
+
 
 
 

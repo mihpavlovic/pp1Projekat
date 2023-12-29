@@ -1,0 +1,187 @@
+INFO  19:15:43,213 - Compiling source file: D:\7. sem\PP1\projekatRad\workspace\pp1Projekat\MJCompiler\test\program.mj
+INFO  19:15:43,221 - #2 program
+INFO  19:15:43,221 - #7 MJProgram
+INFO  19:15:43,221 - #5 namespace
+INFO  19:15:43,222 - #7 okej
+INFO  19:15:43,222 - #3 {
+INFO  19:15:43,222 - #6 const
+INFO  19:15:43,222 - #7 int
+INFO  19:15:43,222 - #7 nula
+INFO  19:15:43,223 - #21 =
+INFO  19:15:43,223 - #8 0
+INFO  19:15:43,223 - #16 ,
+INFO  19:15:43,228 - #7 ok
+INFO  19:15:43,228 - #21 =
+INFO  19:15:43,228 - #8 4
+INFO  19:15:43,228 - #16 ,
+INFO  19:15:43,228 - #7 test
+INFO  19:15:43,228 - #21 =
+INFO  19:15:43,228 - #8 5
+INFO  19:15:43,228 - #17 ;
+INFO  19:15:43,228 - #6 const
+INFO  19:15:43,228 - #7 int
+INFO  19:15:43,228 - #7 jedan
+INFO  19:15:43,228 - #21 =
+INFO  19:15:43,229 - #8 1
+INFO  19:15:43,229 - #17 ;
+INFO  19:15:43,229 - #6 const
+INFO  19:15:43,229 - #7 int
+INFO  19:15:43,229 - #7 pet
+INFO  19:15:43,229 - #21 =
+INFO  19:15:43,229 - #8 5
+INFO  19:15:43,229 - #17 ;
+INFO  19:15:43,229 - #7 int
+INFO  19:15:43,229 - #7 broj
+INFO  19:15:43,229 - #17 ;
+INFO  19:15:43,230 - #7 String
+INFO  19:15:43,230 - #7 niz
+INFO  19:15:43,230 - #23 [
+INFO  19:15:43,230 - #25 ]
+INFO  19:15:43,230 - #16 ,
+INFO  19:15:43,231 - #7 rec
+INFO  19:15:43,231 - #17 ;
+INFO  19:15:43,231 - #3 {
+INFO  19:15:43,231 - #4 }
+INFO  19:15:43,231 - #4 }
+INFO  19:15:43,231 - #5 namespace
+INFO  19:15:43,231 - #7 Konstante
+INFO  19:15:43,231 - #3 {
+INFO  19:15:43,231 - #6 const
+INFO  19:15:43,232 - #7 int
+INFO  19:15:43,232 - #7 nulaa
+INFO  19:15:43,232 - #21 =
+INFO  19:15:43,232 - #8 0
+INFO  19:15:43,232 - #17 ;
+INFO  19:15:43,232 - #6 const
+INFO  19:15:43,232 - #7 int
+INFO  19:15:43,232 - #7 jedann
+INFO  19:15:43,232 - #21 =
+INFO  19:15:43,232 - #8 1
+INFO  19:15:43,232 - #16 ,
+INFO  19:15:43,232 - #7 proba
+INFO  19:15:43,232 - #21 =
+INFO  19:15:43,232 - #8 8
+INFO  19:15:43,232 - #17 ;
+INFO  19:15:43,232 - #6 const
+INFO  19:15:43,232 - #7 int
+INFO  19:15:43,232 - #7 pett
+INFO  19:15:43,232 - #21 =
+INFO  19:15:43,232 - #8 5
+INFO  19:15:43,232 - #17 ;
+INFO  19:15:43,233 - #3 {
+INFO  19:15:43,233 - #4 }
+INFO  19:15:43,233 - #4 }
+INFO  19:15:43,233 - #3 {
+INFO  19:15:43,233 - #4 }
+INFO  19:15:43,235 - ProgramDerived1(
+  NamespListDerived1(
+    NamespListDerived1(
+      NamespListDerived2(
+      ) [NamespListDerived2]
+      NamespDerived1(
+        DeclarationsDerived2(
+          DeclarationsDerived2(
+            DeclarationsDerived1(
+              DeclarationsDerived1(
+                DeclarationsDerived1(
+                  DeclarationsDerived3(
+                  ) [DeclarationsDerived3]
+                  ConstDeclDerived1(
+                    TypeDerived1(
+                    ) [TypeDerived1]
+                    WhichConstDerived1(
+                    ) [WhichConstDerived1]
+                    MoreConstDeclsDerived1(
+                      MoreConstDeclsDerived1(
+                        MoreConstDeclsDerived2(
+                        ) [MoreConstDeclsDerived2]
+                        WhichConstDerived1(
+                        ) [WhichConstDerived1]
+                      ) [MoreConstDeclsDerived1]
+                      WhichConstDerived1(
+                      ) [WhichConstDerived1]
+                    ) [MoreConstDeclsDerived1]
+                  ) [ConstDeclDerived1]
+                ) [DeclarationsDerived1]
+                ConstDeclDerived1(
+                  TypeDerived1(
+                  ) [TypeDerived1]
+                  WhichConstDerived1(
+                  ) [WhichConstDerived1]
+                  MoreConstDeclsDerived2(
+                  ) [MoreConstDeclsDerived2]
+                ) [ConstDeclDerived1]
+              ) [DeclarationsDerived1]
+              ConstDeclDerived1(
+                TypeDerived1(
+                ) [TypeDerived1]
+                WhichConstDerived1(
+                ) [WhichConstDerived1]
+                MoreConstDeclsDerived2(
+                ) [MoreConstDeclsDerived2]
+              ) [ConstDeclDerived1]
+            ) [DeclarationsDerived1]
+            VarDeclDerived2(
+              TypeDerived1(
+              ) [TypeDerived1]
+              MoreVarDeclsDerived3(
+              ) [MoreVarDeclsDerived3]
+            ) [VarDeclDerived2]
+          ) [DeclarationsDerived2]
+          VarDeclDerived1(
+            TypeDerived1(
+            ) [TypeDerived1]
+            MoreVarDeclsDerived2(
+              MoreVarDeclsDerived3(
+              ) [MoreVarDeclsDerived3]
+            ) [MoreVarDeclsDerived2]
+          ) [VarDeclDerived1]
+        ) [DeclarationsDerived2]
+      ) [NamespDerived1]
+    ) [NamespListDerived1]
+    NamespDerived1(
+      DeclarationsDerived1(
+        DeclarationsDerived1(
+          DeclarationsDerived1(
+            DeclarationsDerived3(
+            ) [DeclarationsDerived3]
+            ConstDeclDerived1(
+              TypeDerived1(
+              ) [TypeDerived1]
+              WhichConstDerived1(
+              ) [WhichConstDerived1]
+              MoreConstDeclsDerived2(
+              ) [MoreConstDeclsDerived2]
+            ) [ConstDeclDerived1]
+          ) [DeclarationsDerived1]
+          ConstDeclDerived1(
+            TypeDerived1(
+            ) [TypeDerived1]
+            WhichConstDerived1(
+            ) [WhichConstDerived1]
+            MoreConstDeclsDerived1(
+              MoreConstDeclsDerived2(
+              ) [MoreConstDeclsDerived2]
+              WhichConstDerived1(
+              ) [WhichConstDerived1]
+            ) [MoreConstDeclsDerived1]
+          ) [ConstDeclDerived1]
+        ) [DeclarationsDerived1]
+        ConstDeclDerived1(
+          TypeDerived1(
+          ) [TypeDerived1]
+          WhichConstDerived1(
+          ) [WhichConstDerived1]
+          MoreConstDeclsDerived2(
+          ) [MoreConstDeclsDerived2]
+        ) [ConstDeclDerived1]
+      ) [DeclarationsDerived1]
+    ) [NamespDerived1]
+  ) [NamespListDerived1]
+  DeclarationsDerived3(
+  ) [DeclarationsDerived3]
+  MethodDeclListDerived1(
+  ) [MethodDeclListDerived1]
+) [ProgramDerived1]
+INFO  19:15:43,236 - ===================================
+INFO  19:15:43,236 -  Deklarisanih promenljivih ima = 0
