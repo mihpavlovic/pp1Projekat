@@ -57,6 +57,7 @@ terminal GREATER,LESS,GREATEROREQUAL,LESSOREQUAL,EQUAL,DIFFERENT,AND,OR;
 
 nonterminal Program, NamespList, Declarations, Namesp, VarDecl, ConstDecl, MethodDeclList, Type, WhichConst, MoreConstDecls, MoreVarDecls;
 nonterminal MethodDecl, FormPars, StatementList, Statement, DesignatorStatement, VarDeclInFunc, Designator, Expr, AndConst, DesigNmsp, DesigBracket;
+nonterminal Term, AddopTerm, Addop, Relop, Mulop, Factor, MulopFactor;
 
 
 Program ::=  PROG IDENT NamespList Declarations LBRACE MethodDeclList  RBRACE;
@@ -105,7 +106,9 @@ MoreVarDecls ::= MoreVarDecls COMMA IDENT LBRACKET RBRACKET
 				/*epsilon smena*/
 				 ;
 				 
-MethodDecl ::= Type IDENT LPAREN FormPars RPAREN VarDeclInFunc LBRACE StatementList RBRACE;
+MethodDecl ::= Type IDENT LPAREN FormPars RPAREN VarDeclInFunc LBRACE StatementList RBRACE
+				|
+				VOID IDENT LPAREN FormPars RPAREN VarDeclInFunc LBRACE StatementList RBRACE;
 
 FormPars ::= /*epsilon smena*/;
 
@@ -149,7 +152,66 @@ Designator ::= IDENT DOUBLECOLON IDENT LBRACKET Expr RBRACKET
 				IDENT DOUBLECOLON IDENT
 				;
 
-Expr ::= NUMBER;
+Expr ::= MINUS Term AddopTerm
+		|
+		Term AddopTerm
+		;
+
+Term ::= Factor MulopFactor;
+
+AddopTerm ::= AddopTerm Addop Term
+				| 
+				/*epsilon smena*/
+				;
+				
+Factor ::= NUMBER
+			|
+			CHAR
+			|
+			LPAREN Expr RPAREN
+			|
+			BOOL
+			|
+			Designator
+			|
+			NEW Type LBRACKET Expr RBRACKET
+			;
+
+
+MulopFactor ::= MulopFactor Mulop Factor
+				|
+				/*epsilon smena*/
+				;
+
+
+
+Addop ::= MINUS
+		|
+		PLUS
+		;
+
+Mulop ::= MUL
+		| 
+		DIV
+		|
+		MOD
+		;
+		
+
+
+Relop ::= GREATER 
+		| 
+		LESS 
+		| 
+		GREATEROREQUAL
+		| 
+		LESSOREQUAL 
+		| 
+		EQUAL
+		| 
+		DIFFERENT
+		;
+
 
 
 

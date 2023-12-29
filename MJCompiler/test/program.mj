@@ -22,5 +22,10 @@ namespace Konstante{
 	print(1);
 	ajde :: ajde --;
 	maNemoj [ 4 ] = 5;
+	test1 = - 5;
+	test2 = 5 + 4;
+	test3 = - 5 - 4 + 8;
+
+	
 	}
 }
