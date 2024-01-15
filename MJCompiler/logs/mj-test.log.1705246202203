@@ -1,0 +1,52 @@
+INFO  16:29:11,017 - Compiling source file: D:\7. sem\PP1\projekatRad\workspace\pp1Projekat\MJCompiler\test\programSem.mj
+INFO  16:29:11,758 - #2 program
+INFO  16:29:11,758 - #7 MJtest
+INFO  16:29:11,759 - #7 int
+INFO  16:29:11,810 - #7 b
+INFO  16:29:11,830 - #17 ;
+INFO  16:29:11,843 - #3 {
+INFO  16:29:11,844 - #28 void
+INFO  16:29:11,844 - #7 main
+INFO  16:29:11,844 - #22 (
+INFO  16:29:11,844 - #20 )
+INFO  16:29:11,858 - #3 {
+INFO  16:29:11,866 - #4 }
+INFO  16:29:11,875 - #4 }
+INFO  16:29:11,916 - Program(
+  ProgName(
+   MJtest
+  ) [ProgName]
+  NoNamespaceList(
+  ) [NoNamespaceList]
+  VarDeclarations(
+    NoDeclarations(
+    ) [NoDeclarations]
+    VarDeclNoArray(
+      Type(
+       int
+      ) [Type]
+     b
+      NoMoreVarDeclarations(
+      ) [NoMoreVarDeclarations]
+    ) [VarDeclNoArray]
+  ) [VarDeclarations]
+  MethodDeclList(
+    MethodDecl(
+      MethodDeclNameVoid(
+       main
+      ) [MethodDeclNameVoid]
+      FormPars(
+      ) [FormPars]
+      NoVarDeclarationsInFunc(
+      ) [NoVarDeclarationsInFunc]
+      NoStmtList(
+      ) [NoStmtList]
+    ) [MethodDecl]
+  ) [MethodDeclList]
+) [Program]
+INFO  16:29:11,916 - ===================================
+INFO  16:29:11,937 - Deklarisana promenljiva b na liniji 4
+INFO  16:29:11,937 - Obradjuje se funkcija main na liniji 7
+INFO  16:29:11,938 -  Print count calls = 0
+INFO  16:29:11,938 -  Deklarisanih promenljivih ima = 1
+INFO  16:29:11,938 - ===================================

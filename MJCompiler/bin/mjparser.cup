@@ -8,6 +8,8 @@ import rs.ac.bg.etf.pp1.ast.*;
 
 parser code {:
 
+	boolean errorDetected;
+	
 	Logger log = Logger.getLogger(getClass());
    
    
@@ -27,6 +29,7 @@ parser code {:
     }
 
     public void report_error(String message, Object info) {
+    	errorDetected = true;
     	StringBuilder msg = new StringBuilder(message); 
     	if (info instanceof Symbol)
             msg.append (" na liniji ").append(((Symbol)info).left);
@@ -36,6 +39,9 @@ parser code {:
 
 :}
 
+init with {:
+	errorDetected = false;
+:}
 
 scan with {:
 	Symbol s = this.getScanner().next_token();
@@ -45,171 +51,197 @@ scan with {:
 :}
 
 terminal PROG, LBRACE, RBRACE, NAMESPACE, CONST ;
-terminal IDENT;
-terminal NUMBER;
+terminal String IDENT;
+terminal Integer NUMBER;
 terminal BOOL;
-terminal CHAR;
+terminal String CHAR;
 
 terminal DOUBLECOLON, READ, NEW, PLUS, MUL, COMMA, SEMI, DIV, MINUS, RPAREN, ASSIGN, LPAREN, LBRACKET, MOD, RBRACKET;
 terminal INC, PRINT, VOID, DEC;
 terminal GREATER,LESS,GREATEROREQUAL,LESSOREQUAL,EQUAL,DIFFERENT,AND,OR;
 
 
-nonterminal Program, NamespList, Declarations, Namesp, VarDecl, ConstDecl, MethodDeclList, Type, WhichConst, MoreConstDecls, MoreVarDecls;
-nonterminal MethodDecl, FormPars, StatementList, Statement, DesignatorStatement, VarDeclInFunc, Designator, Expr, AndConst, DesigNmsp, DesigBracket;
-nonterminal Term, AddopTerm, Addop, Relop, Mulop, Factor, MulopFactor;
+nonterminal Program, NamespList, Declarations, Namesp, VarDecl, ConstDecl, MethodDeclList, WhichConst, MoreConstDecls, MoreVarDecls;
+nonterminal FormPars, StatementList, Statement, DesignatorStatement, VarDeclInFunc , AndConst, DesigNmsp, DesigBracket;
+nonterminal Addop, Relop, Mulop;
 
 
-Program ::=  PROG IDENT NamespList Declarations LBRACE MethodDeclList  RBRACE;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, MethodDeclName, MethodDecl, Designator;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Expr, Term, Factor;
 
-NamespList ::= NamespList Namesp 
+Program ::= (Program)  PROG ProgName:p NamespList Declarations LBRACE MethodDeclList  RBRACE;
+
+ProgName ::= (ProgName) IDENT:progName;
+
+NamespList ::= (NamespaceList) NamespList Namesp 
 				|
-				/*epsilon*/
+				(NoNamespaceList)/*epsilon*/
 				;
 
-Namesp ::= NAMESPACE IDENT LBRACE Declarations LBRACE RBRACE RBRACE;
+Namesp ::= (Namesp) NAMESPACE IDENT LBRACE Declarations LBRACE RBRACE RBRACE;
 
-Declarations ::= Declarations ConstDecl
+Declarations ::=(ConstDeclarations) Declarations ConstDecl
 				|
-				Declarations VarDecl
+				(VarDeclarations) Declarations VarDecl
 				|
-				/*epsilon smena*/
+				(NoDeclarations) /*epsilon smena*/
 				;
 
-ConstDecl ::= CONST Type IDENT ASSIGN WhichConst MoreConstDecls SEMI ;
+ConstDecl ::= (ConstDecl) CONST Type:constType IDENT:constName ASSIGN WhichConst MoreConstDecls SEMI ;
 
-VarDecl ::= Type IDENT LBRACKET RBRACKET MoreVarDecls SEMI
+VarDecl ::= (VarDeclArray) Type:arrayType IDENT:arrayName LBRACKET RBRACKET MoreVarDecls SEMI
 			|
-			Type IDENT MoreVarDecls SEMI
+			(VarDeclNoArray) Type:varType IDENT:varName MoreVarDecls SEMI
+			|
+			(ErrorStmtVar) error SEMI:l
+		   	{: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null);  :}
 			;
 
-Type ::= IDENT;
+Type ::= (Type) IDENT:typeName;
 
-WhichConst ::= NUMBER
+WhichConst ::= (ConstNum) NUMBER:numValue
 				|
-				CHAR
+				(ConstChar) CHAR:charValue
 				|
-				BOOL
+				(ConstBool) BOOL:boolValue
 				;
 
-MoreConstDecls ::= MoreConstDecls COMMA IDENT ASSIGN WhichConst
+MoreConstDecls ::= (MoreConstDeclarations) MoreConstDecls COMMA IDENT ASSIGN WhichConst
 					|
-					/*epsilon smena*/
+					(NoMoreConstDeclarations) /*epsilon smena*/
 					;
 
-MethodDeclList::= MethodDecl ; /*uradjeno da moze samo jedna da se deklarise, odnosno samo main*/
+MethodDeclList::= (MethodDeclList) MethodDecl ; /*uradjeno da moze samo jedna da se deklarise, odnosno samo main*/
 
-MoreVarDecls ::= MoreVarDecls COMMA IDENT LBRACKET RBRACKET
+MoreVarDecls ::= (MoreVarDeclarationsArray) MoreVarDecls COMMA IDENT LBRACKET RBRACKET
 				|
-				MoreVarDecls COMMA IDENT
+				(MoreVarDeclarations) MoreVarDecls COMMA IDENT
 				|
-				/*epsilon smena*/
+				(NoMoreVarDeclarations) /*epsilon smena*/
 				 ;
 				 
-MethodDecl ::= Type IDENT LPAREN FormPars RPAREN VarDeclInFunc LBRACE StatementList RBRACE
+/*MethodDecl ::= (MethodDeclType) Type IDENT LPAREN FormPars RPAREN VarDeclInFunc LBRACE StatementList RBRACE
 				|
-				VOID IDENT LPAREN FormPars RPAREN VarDeclInFunc LBRACE StatementList RBRACE;
+				(MethodDeclVoid) VOID IDENT LPAREN FormPars RPAREN VarDeclInFunc LBRACE StatementList RBRACE;
+*/
 
-FormPars ::= /*epsilon smena*/;
+MethodDecl ::= (MethodDecl) MethodDeclName LPAREN FormPars RPAREN VarDeclInFunc LBRACE StatementList RBRACE;
 
-VarDeclInFunc ::= VarDeclInFunc Type IDENT LBRACKET RBRACKET SEMI
+
+
+MethodDeclName ::= (MethodDeclNameType) Type:methType IDENT:methName
 				|
-				VarDeclInFunc Type IDENT MoreVarDecls SEMI
-				|
-				/*epsilon smena*/
+				(MethodDeclNameVoid) VOID IDENT:methName
 				;
 
-StatementList ::= StatementList Statement
+FormPars ::= (FormPars) /*epsilon smena*/;
+
+VarDeclInFunc ::= (VarDeclarationsInFuncArray) VarDeclInFunc Type IDENT LBRACKET RBRACKET SEMI
 				|
-				/*epsilon smena*/
+				(VarDeclarationsInFunc) VarDeclInFunc Type IDENT MoreVarDecls SEMI
+				|
+				(NoVarDeclarationsInFunc)/*epsilon smena*/
 				;
 
-Statement ::= DesignatorStatement SEMI 
+StatementList ::= (StmtList) StatementList Statement
+				|
+				 (NoStmtList)/*epsilon smena*/
+				;
+
+Statement ::= (StatementDesignatorStatement) DesignatorStatement SEMI 
 			|
-			READ LPAREN Designator RPAREN SEMI 
+			(StatementRead) READ LPAREN Designator RPAREN SEMI 
 			| 
-			PRINT LPAREN Expr AndConst RPAREN SEMI
-			;
-
-AndConst ::= COMMA NUMBER
+			(StatementPrint) PRINT LPAREN Expr AndConst RPAREN SEMI
 			|
-			/*epsilon smena*/
+			(ErrorStmt) error SEMI:l
+		   	{: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null);  :}
 			;
 
-DesignatorStatement ::= Designator ASSIGN Expr
+AndConst ::= (AndConstPrint) COMMA NUMBER
+			|
+			(NoAndConstPrint) /*epsilon smena*/
+			;
+
+DesignatorStatement ::= (DesignatorStatementAssign) Designator ASSIGN Expr
 						|
-						Designator INC
+						(DesignatorStatementInc) Designator INC
 						|
-						Designator DEC
+						(DesignatorStatementDec) Designator DEC
 						;
 
-Designator ::= IDENT DOUBLECOLON IDENT LBRACKET Expr RBRACKET
+Designator ::= (DesigntrNmspArray) IDENT DOUBLECOLON IDENT LBRACKET Expr RBRACKET
 				|
-				IDENT
+				(Designtr) IDENT:name
 				|
-				IDENT LBRACKET Expr RBRACKET
+				(DesigntrArray) IDENT LBRACKET Expr RBRACKET
 				|
-				IDENT DOUBLECOLON IDENT
+				(DesigntrNmsp) IDENT DOUBLECOLON IDENT
 				;
 
-Expr ::= MINUS Term AddopTerm
+
+
+
+Expr ::= (ExprMinus) MINUS Term
 		|
-		Term AddopTerm
+		(ExprNoMinus) Term
+		|
+		(ExprAddopTerm) Expr Addop Term
+		;
+		
+Term ::= (TermMulopFactor) Term Mulop Factor 
+		|
+		(FactorNoTerm)Factor
 		;
 
-Term ::= Factor MulopFactor;
 
-AddopTerm ::= AddopTerm Addop Term
-				| 
-				/*epsilon smena*/
-				;
-				
-Factor ::= NUMBER
+
+
+
+			
+Factor ::= (FactorNum) NUMBER:num
 			|
-			CHAR
+			(FactorChar) CHAR:ch
 			|
-			LPAREN Expr RPAREN
+			(FactorExpr) LPAREN Expr RPAREN
 			|
-			BOOL
+			(FactorBool) BOOL:bl
 			|
-			Designator
+			(FactorDesignator) Designator
 			|
-			NEW Type LBRACKET Expr RBRACKET
+			(FactorNew) NEW Type LBRACKET Expr RBRACKET
 			;
 
 
-MulopFactor ::= MulopFactor Mulop Factor
-				|
-				/*epsilon smena*/
-				;
 
 
 
-Addop ::= MINUS
+
+Addop ::= (AddopMinus) MINUS:m
 		|
-		PLUS
+		(AddopPlus) PLUS:p
 		;
 
-Mulop ::= MUL
+Mulop ::= (MulopMul) MUL:ml
 		| 
-		DIV
+		(MulopDiv) DIV:d
 		|
-		MOD
+		(MulopMod) MOD:md
 		;
 		
 
 
-Relop ::= GREATER 
+Relop ::= (RelopGr) GREATER 
 		| 
-		LESS 
+		(RelopLe) LESS 
 		| 
-		GREATEROREQUAL
+		(RelopGrOrEq) GREATEROREQUAL
 		| 
-		LESSOREQUAL 
+		(RelopLeOrEq)LESSOREQUAL 
 		| 
-		EQUAL
+		(RelopEq) EQUAL
 		| 
-		DIFFERENT
+		(RelopDiff) DIFFERENT
 		;
 
 

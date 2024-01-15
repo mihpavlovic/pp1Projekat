@@ -7,16 +7,20 @@ program MJProgram
 	String niz[];
 	
 	{}
-	}
+}
 namespace Konstante{
 	const int nulaa = 0;
 	const int jedann = 1, proba = 8;
 	const int pett = 5;
 	Boolean brr, brr2[];
 	{}
-	}
+}
+
+int a;
+String b;
+
 {
-	int main() int x; String brr[];{
+	void main() int x; String brr[];{
 	proba ++; 
 	read(proba);
 	print(1);

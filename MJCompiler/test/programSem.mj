@@ -1,0 +1,8 @@
+program MJtest 
+
+int a;
+char b;
+
+{
+	void main(){}
+}

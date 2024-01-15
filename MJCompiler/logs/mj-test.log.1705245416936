@@ -1,0 +1,66 @@
+INFO  16:16:17,890 - Compiling source file: D:\7. sem\PP1\projekatRad\workspace\pp1Projekat\MJCompiler\test\programSem.mj
+INFO  16:16:17,913 - #2 program
+INFO  16:16:17,913 - #7 MJtest
+INFO  16:16:17,913 - #7 int
+INFO  16:16:17,915 - #7 a
+INFO  16:16:17,916 - #17 ;
+INFO  16:16:17,916 - #7 String
+INFO  16:16:17,917 - #7 b
+INFO  16:16:17,917 - #17 ;
+INFO  16:16:17,917 - #3 {
+INFO  16:16:17,917 - #28 void
+INFO  16:16:17,917 - #7 main
+INFO  16:16:17,917 - #22 (
+INFO  16:16:17,917 - #20 )
+INFO  16:16:17,918 - #3 {
+INFO  16:16:17,919 - #4 }
+INFO  16:16:17,919 - #4 }
+INFO  16:16:17,926 - Program(
+  ProgName(
+   MJtest
+  ) [ProgName]
+  NoNamespaceList(
+  ) [NoNamespaceList]
+  VarDeclarations(
+    VarDeclarations(
+      NoDeclarations(
+      ) [NoDeclarations]
+      VarDeclNoArray(
+        Type(
+         int
+        ) [Type]
+       a
+        NoMoreVarDeclarations(
+        ) [NoMoreVarDeclarations]
+      ) [VarDeclNoArray]
+    ) [VarDeclarations]
+    VarDeclNoArray(
+      Type(
+       String
+      ) [Type]
+     b
+      NoMoreVarDeclarations(
+      ) [NoMoreVarDeclarations]
+    ) [VarDeclNoArray]
+  ) [VarDeclarations]
+  MethodDeclList(
+    MethodDecl(
+      MethodDeclNameVoid(
+       main
+      ) [MethodDeclNameVoid]
+      FormPars(
+      ) [FormPars]
+      NoVarDeclarationsInFunc(
+      ) [NoVarDeclarationsInFunc]
+      NoStmtList(
+      ) [NoStmtList]
+    ) [MethodDecl]
+  ) [MethodDeclList]
+) [Program]
+INFO  16:16:17,930 - ===================================
+INFO  16:16:17,932 - Deklarisana promenljiva a na liniji 3
+INFO  16:16:17,932 - Deklarisana promenljiva b na liniji 4
+INFO  16:16:17,932 - Obradjuje se funkcija main na liniji 7
+INFO  16:16:17,932 -  Print count calls = 0
+INFO  16:16:17,932 -  Deklarisanih promenljivih ima = 2
+INFO  16:16:17,932 - ===================================
