@@ -1,0 +1,111 @@
+INFO  22:57:07,759 - Compiling source file: D:\7. sem\PP1\projekatRad\workspace\pp1Projekat\MJCompiler\test\programSem.mj
+INFO  22:57:07,776 - #2 program
+INFO  22:57:07,776 - #7 MJtest
+INFO  22:57:07,777 - #7 int
+INFO  22:57:07,778 - #7 a
+INFO  22:57:07,778 - #16 ,
+INFO  22:57:07,778 - #7 ako
+INFO  22:57:07,778 - #17 ;
+INFO  22:57:07,778 - #7 char
+INFO  22:57:07,779 - #7 b
+INFO  22:57:07,779 - #16 ,
+INFO  22:57:07,779 - #7 k
+INFO  22:57:07,779 - #17 ;
+INFO  22:57:07,779 - #6 const
+INFO  22:57:07,779 - #7 char
+INFO  22:57:07,779 - #7 proba
+INFO  22:57:07,779 - #21 =
+INFO  22:57:07,779 - #8 5
+INFO  22:57:07,779 - #16 ,
+INFO  22:57:07,780 - #7 proba2
+INFO  22:57:07,780 - #21 =
+INFO  22:57:07,780 - #10 'b'
+INFO  22:57:07,785 - #17 ;
+INFO  22:57:07,785 - #3 {
+INFO  22:57:07,785 - #28 void
+INFO  22:57:07,785 - #7 main
+INFO  22:57:07,785 - #22 (
+INFO  22:57:07,786 - #20 )
+INFO  22:57:07,786 - #3 {
+INFO  22:57:07,786 - #4 }
+INFO  22:57:07,787 - #4 }
+INFO  22:57:07,794 - Program(
+  ProgName(
+   MJtest
+  ) [ProgName]
+  NoNamespaceList(
+  ) [NoNamespaceList]
+  ConstDeclarations(
+    VarDeclarations(
+      VarDeclarations(
+        NoDeclarations(
+        ) [NoDeclarations]
+        VarDeclNoArray(
+          Type(
+           int
+          ) [Type]
+         a
+          MoreVarDeclarations(
+            NoMoreVarDeclarations(
+            ) [NoMoreVarDeclarations]
+           ako
+          ) [MoreVarDeclarations]
+        ) [VarDeclNoArray]
+      ) [VarDeclarations]
+      VarDeclNoArray(
+        Type(
+         char
+        ) [Type]
+       b
+        MoreVarDeclarations(
+          NoMoreVarDeclarations(
+          ) [NoMoreVarDeclarations]
+         k
+        ) [MoreVarDeclarations]
+      ) [VarDeclNoArray]
+    ) [VarDeclarations]
+    ConstDecl(
+      Type(
+       char
+      ) [Type]
+     proba
+      ConstNum(
+       5
+      ) [ConstNum]
+      MoreConstDeclarations(
+        NoMoreConstDeclarations(
+        ) [NoMoreConstDeclarations]
+       proba2
+        ConstChar(
+         'b'
+        ) [ConstChar]
+      ) [MoreConstDeclarations]
+    ) [ConstDecl]
+  ) [ConstDeclarations]
+  MethodDeclList(
+    MethodDecl(
+      MethodDeclNameVoid(
+       main
+      ) [MethodDeclNameVoid]
+      FormPars(
+      ) [FormPars]
+      NoVarDeclarationsInFunc(
+      ) [NoVarDeclarationsInFunc]
+      NoStmtList(
+      ) [NoStmtList]
+    ) [MethodDecl]
+  ) [MethodDeclList]
+) [Program]
+INFO  22:57:07,794 - ===================================
+INFO  22:57:07,795 - Deklarisana promenljiva ako na liniji 4
+INFO  22:57:07,795 - Deklarisana promenljiva a na liniji 3
+INFO  22:57:07,795 - Deklarisana promenljiva k na liniji 5
+INFO  22:57:07,795 - Deklarisana promenljiva b na liniji 4
+ERROR 22:57:07,795 - Semanticka greska na liniji 5: konstanti tipa int se pridodaje vrednost koja nije tipa int
+INFO  22:57:07,795 - Deklarisana konstanta proba2 na liniji 19
+INFO  22:57:07,795 - Deklarisana konstanta proba na liniji 5
+INFO  22:57:07,796 - Obradjuje se funkcija main na liniji 8
+INFO  22:57:07,796 -  Print count calls = 0
+INFO  22:57:07,796 -  Deklarisanih promenljivih ima = 4
+INFO  22:57:07,796 - ===================================
+ERROR 22:57:07,796 - Parsiranje NIJE uspesno zavrseno!

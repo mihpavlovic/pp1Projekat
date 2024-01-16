@@ -1,0 +1,99 @@
+INFO  15:18:13,917 - Compiling source file: D:\7. sem\PP1\projekatRad\workspace\pp1Projekat\MJCompiler\test\programSem.mj
+INFO  15:18:13,934 - #2 program
+INFO  15:18:13,934 - #7 MJtest
+INFO  15:18:13,934 - #7 int
+INFO  15:18:13,937 - #7 a
+INFO  15:18:13,937 - #16 ,
+INFO  15:18:13,938 - #7 ako
+INFO  15:18:13,938 - #17 ;
+INFO  15:18:13,938 - #7 char
+INFO  15:18:13,938 - #7 b
+INFO  15:18:13,938 - #16 ,
+INFO  15:18:13,938 - #7 k
+INFO  15:18:13,938 - #17 ;
+INFO  15:18:13,938 - #6 const
+INFO  15:18:13,938 - #7 char
+INFO  15:18:13,938 - #7 proba
+INFO  15:18:13,938 - #21 =
+INFO  15:18:13,938 - #10 'a'
+INFO  15:18:13,938 - #17 ;
+INFO  15:18:13,939 - #3 {
+INFO  15:18:13,940 - #28 void
+INFO  15:18:13,940 - #7 main
+INFO  15:18:13,945 - #22 (
+INFO  15:18:13,945 - #20 )
+INFO  15:18:13,945 - #3 {
+INFO  15:18:13,946 - #4 }
+INFO  15:18:13,946 - #4 }
+INFO  15:18:13,952 - Program(
+  ProgName(
+   MJtest
+  ) [ProgName]
+  NoNamespaceList(
+  ) [NoNamespaceList]
+  ConstDeclarations(
+    VarDeclarations(
+      VarDeclarations(
+        NoDeclarations(
+        ) [NoDeclarations]
+        VarDeclNoArray(
+          Type(
+           int
+          ) [Type]
+         a
+          MoreVarDeclarations(
+            NoMoreVarDeclarations(
+            ) [NoMoreVarDeclarations]
+           ako
+          ) [MoreVarDeclarations]
+        ) [VarDeclNoArray]
+      ) [VarDeclarations]
+      VarDeclNoArray(
+        Type(
+         char
+        ) [Type]
+       b
+        MoreVarDeclarations(
+          NoMoreVarDeclarations(
+          ) [NoMoreVarDeclarations]
+         k
+        ) [MoreVarDeclarations]
+      ) [VarDeclNoArray]
+    ) [VarDeclarations]
+    ConstDecl(
+      Type(
+       char
+      ) [Type]
+     proba
+      ConstChar(
+       'a'
+      ) [ConstChar]
+      NoMoreConstDeclarations(
+      ) [NoMoreConstDeclarations]
+    ) [ConstDecl]
+  ) [ConstDeclarations]
+  MethodDeclList(
+    MethodDecl(
+      MethodDeclNameVoid(
+       main
+      ) [MethodDeclNameVoid]
+      FormPars(
+      ) [FormPars]
+      NoVarDeclarationsInFunc(
+      ) [NoVarDeclarationsInFunc]
+      NoStmtList(
+      ) [NoStmtList]
+    ) [MethodDecl]
+  ) [MethodDeclList]
+) [Program]
+INFO  15:18:13,952 - ===================================
+INFO  15:18:13,954 - Deklarisana promenljiva ako na liniji 4
+INFO  15:18:13,954 - Deklarisana promenljiva a na liniji 3
+INFO  15:18:13,954 - Deklarisana promenljiva k na liniji 5
+INFO  15:18:13,954 - Deklarisana promenljiva b na liniji 4
+INFO  15:18:13,954 - Deklarisana konstanta proba na liniji 5
+INFO  15:18:13,954 - Obradjuje se funkcija main na liniji 8
+INFO  15:18:13,954 -  Print count calls = 0
+INFO  15:18:13,954 -  Deklarisanih promenljivih ima = 4
+INFO  15:18:13,954 - ===================================
+INFO  15:18:13,955 - Parsiranje uspesno zavrseno!

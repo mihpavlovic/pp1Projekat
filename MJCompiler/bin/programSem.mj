@@ -1,7 +1,8 @@
 program MJtest 
 
-int a;
-char b;
+int a, ako;
+char b, k;
+const char proba = 'a', proba2='b';
 
 {
 	void main(){}

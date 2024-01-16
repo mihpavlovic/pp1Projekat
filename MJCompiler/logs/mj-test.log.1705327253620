@@ -1,0 +1,67 @@
+INFO  15:00:23,186 - Compiling source file: D:\7. sem\PP1\projekatRad\workspace\pp1Projekat\MJCompiler\test\programSem.mj
+INFO  15:00:23,203 - #2 program
+INFO  15:00:23,203 - #7 MJtest
+INFO  15:00:23,203 - #7 int
+INFO  15:00:23,204 - #7 a
+INFO  15:00:23,205 - #17 ;
+INFO  15:00:23,206 - #7 char
+INFO  15:00:23,206 - #7 b
+INFO  15:00:23,206 - #17 ;
+INFO  15:00:23,206 - #3 {
+INFO  15:00:23,206 - #28 void
+INFO  15:00:23,206 - #7 main
+INFO  15:00:23,206 - #22 (
+INFO  15:00:23,206 - #20 )
+INFO  15:00:23,207 - #3 {
+INFO  15:00:23,207 - #4 }
+INFO  15:00:23,207 - #4 }
+INFO  15:00:23,214 - Program(
+  ProgName(
+   MJtest
+  ) [ProgName]
+  NoNamespaceList(
+  ) [NoNamespaceList]
+  VarDeclarations(
+    VarDeclarations(
+      NoDeclarations(
+      ) [NoDeclarations]
+      VarDeclNoArray(
+        Type(
+         int
+        ) [Type]
+       a
+        NoMoreVarDeclarations(
+        ) [NoMoreVarDeclarations]
+      ) [VarDeclNoArray]
+    ) [VarDeclarations]
+    VarDeclNoArray(
+      Type(
+       char
+      ) [Type]
+     b
+      NoMoreVarDeclarations(
+      ) [NoMoreVarDeclarations]
+    ) [VarDeclNoArray]
+  ) [VarDeclarations]
+  MethodDeclList(
+    MethodDecl(
+      MethodDeclNameVoid(
+       main
+      ) [MethodDeclNameVoid]
+      FormPars(
+      ) [FormPars]
+      NoVarDeclarationsInFunc(
+      ) [NoVarDeclarationsInFunc]
+      NoStmtList(
+      ) [NoStmtList]
+    ) [MethodDecl]
+  ) [MethodDeclList]
+) [Program]
+INFO  15:00:23,215 - ===================================
+INFO  15:00:23,216 - Deklarisana promenljiva a na liniji 3
+INFO  15:00:23,216 - Deklarisana promenljiva b na liniji 4
+INFO  15:00:23,216 - Obradjuje se funkcija main na liniji 7
+INFO  15:00:23,216 -  Print count calls = 0
+INFO  15:00:23,216 -  Deklarisanih promenljivih ima = 2
+INFO  15:00:23,216 - ===================================
+INFO  15:00:23,217 - Parsiranje uspesno zavrseno!

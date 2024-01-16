@@ -12,6 +12,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	int printCallCount = 0;
 	int varDeclCount = 0;
 	int constDeclCount = 0;
+	Struct currentTypeForVarOrConstDecl = null;
 	Obj currentMethod = null;
 	boolean returnFound = false;
 	boolean errorDetected = false;
@@ -57,6 +58,46 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		varDeclCount++;
 		report_info("Deklarisana promenljiva "+ varDeclNoArray.getVarName(), varDeclNoArray);
 		Obj varNode = Tab.insert(Obj.Var, varDeclNoArray.getVarName(), varDeclNoArray.getType().struct);
+		currentTypeForVarOrConstDecl = null;
+	}
+    
+    public void visit(MoreVarDeclarations moreVarDecl) {
+    	varDeclCount++;
+		report_info("Deklarisana promenljiva "+ moreVarDecl.getVarName(), moreVarDecl);
+    	Obj moreVarNode = Tab.insert(Obj.Var, moreVarDecl.getVarName(), currentTypeForVarOrConstDecl);
+    }
+    
+    
+    public void visit(ConstDecl constDecl) {
+		constDeclCount++;
+		report_info("Deklarisana konstanta "+ constDecl.getConstName(), constDecl);
+		Obj constNode = Tab.insert(Obj.Con, constDecl.getConstName(), constDecl.getType().struct);
+		currentTypeForVarOrConstDecl = null;
+	}
+    
+    public void visit(MoreConstDeclarations moreConstDecl) {
+		constDeclCount++;
+		report_info("Deklarisana konstanta "+ moreConstDecl.getConstName(), moreConstDecl);
+		Obj moreConstNode = Tab.insert(Obj.Con, moreConstDecl.getConstName(), currentTypeForVarOrConstDecl);
+	}
+    
+    public void visit(ConstNum constNum) {
+		if(currentTypeForVarOrConstDecl != Tab.intType) {
+			report_error("Semanticka greska na liniji " + constNum.getLine() + ": pokusaj dodele int vrednosti konstanti koja nije tog tipa", null);
+		}
+	}
+	
+	public void visit(ConstChar constChar) {
+		if(currentTypeForVarOrConstDecl != Tab.charType) {
+			report_error("Semanticka greska na liniji " + constChar.getLine() + ": pokusaj dodele char vrednosti konstanti koja nije tog tipa", null);
+		}
+	}
+
+	//ne valja jer nisam implementirao jos bool
+	public void visit(ConstBool constBool) {
+		if(currentTypeForVarOrConstDecl != Tab.charType) {
+			report_error("Semanticka greska na liniji " + constBool.getLine() + ": pokusaj dodele bool vrednosti konstanti koja nije tog tipa", null);
+		}
 	}
     
     
@@ -88,6 +129,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		} else {
 			if(Obj.Type == typeNode.getKind()) {
 				type.struct = typeNode.getType();
+				currentTypeForVarOrConstDecl = typeNode.getType();
 			} else {
     			report_error("Greska: Ime " + type.getTypeName() + " ne predstavlja tip!", type);
     			type.struct = Tab.noType;
@@ -95,18 +137,33 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		}
 	}
 	
-	public void visit(ConstDecl constDecl) {
-		constDeclCount++;
-		report_info("Deklarisana konstanta "+ constDecl.getConstName(), constDecl);
-		Obj constNode = Tab.insert(Obj.Con, constDecl.getConstName(), constDecl.getType().struct);
+	
+	
+	public void visit(ExprMinus expr) {
+		expr.struct = expr.getTerm().struct;
 	}
 	
+	public void visit(ExprNoMinus expr) {
+		expr.struct = expr.getTerm().struct;
+	}
 	
-	public void visit(Term term) {
+	public void visit(ExprAddopTerm expr) {
 		//term.struct = term.getFactor().struct;
 	}
 	
+	
+	
+	
+	public void visit(TermMulopFactor term) {
+		//term.struct = term.getFactor().struct;
+	}
+	
+	public void visit(FactorNoTerm term) {
+		term.struct = term.getFactor().struct;
+	}
+	
 
+	
 	public void visit(FactorNum factorNum) {
 		factorNum.struct = Tab.intType;
 	}

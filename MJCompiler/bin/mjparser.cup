@@ -97,6 +97,7 @@ VarDecl ::= (VarDeclArray) Type:arrayType IDENT:arrayName LBRACKET RBRACKET More
 		   	{: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null);  :}
 			;
 
+
 Type ::= (Type) IDENT:typeName;
 
 WhichConst ::= (ConstNum) NUMBER:numValue
@@ -106,16 +107,16 @@ WhichConst ::= (ConstNum) NUMBER:numValue
 				(ConstBool) BOOL:boolValue
 				;
 
-MoreConstDecls ::= (MoreConstDeclarations) MoreConstDecls COMMA IDENT ASSIGN WhichConst
+MoreConstDecls ::= (MoreConstDeclarations) MoreConstDecls COMMA IDENT:constName ASSIGN WhichConst:constValue
 					|
 					(NoMoreConstDeclarations) /*epsilon smena*/
 					;
 
 MethodDeclList::= (MethodDeclList) MethodDecl ; /*uradjeno da moze samo jedna da se deklarise, odnosno samo main*/
 
-MoreVarDecls ::= (MoreVarDeclarationsArray) MoreVarDecls COMMA IDENT LBRACKET RBRACKET
+MoreVarDecls ::= (MoreVarDeclarationsArray) MoreVarDecls COMMA IDENT:arrayName LBRACKET RBRACKET
 				|
-				(MoreVarDeclarations) MoreVarDecls COMMA IDENT
+				(MoreVarDeclarations) MoreVarDecls COMMA IDENT:varName
 				|
 				(NoMoreVarDeclarations) /*epsilon smena*/
 				 ;
@@ -182,16 +183,16 @@ Designator ::= (DesigntrNmspArray) IDENT DOUBLECOLON IDENT LBRACKET Expr RBRACKE
 
 
 
-Expr ::= (ExprMinus) MINUS Term
+Expr ::= (ExprMinus) MINUS Term:t
 		|
-		(ExprNoMinus) Term
+		(ExprNoMinus) Term:t
 		|
-		(ExprAddopTerm) Expr Addop Term
+		(ExprAddopTerm) Expr:ex Addop Term:t
 		;
 		
-Term ::= (TermMulopFactor) Term Mulop Factor 
+Term ::= (TermMulopFactor) Term:t Mulop Factor:fact 
 		|
-		(FactorNoTerm)Factor
+		(FactorNoTerm)Factor:fact
 		;
 
 

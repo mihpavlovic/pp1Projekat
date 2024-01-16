@@ -1,0 +1,73 @@
+INFO  15:00:53,623 - Compiling source file: D:\7. sem\PP1\projekatRad\workspace\pp1Projekat\MJCompiler\test\programSem.mj
+INFO  15:00:53,640 - #2 program
+INFO  15:00:53,640 - #7 MJtest
+INFO  15:00:53,640 - #7 int
+INFO  15:00:53,642 - #7 a
+INFO  15:00:53,642 - #17 ;
+INFO  15:00:53,643 - #7 char
+INFO  15:00:53,643 - #7 b
+INFO  15:00:53,643 - #16 ,
+INFO  15:00:53,644 - #7 k
+INFO  15:00:53,644 - #17 ;
+INFO  15:00:53,644 - #3 {
+INFO  15:00:53,644 - #28 void
+INFO  15:00:53,644 - #7 main
+INFO  15:00:53,644 - #22 (
+INFO  15:00:53,644 - #20 )
+INFO  15:00:53,644 - #3 {
+INFO  15:00:53,645 - #4 }
+INFO  15:00:53,645 - #4 }
+INFO  15:00:53,650 - Program(
+  ProgName(
+   MJtest
+  ) [ProgName]
+  NoNamespaceList(
+  ) [NoNamespaceList]
+  VarDeclarations(
+    VarDeclarations(
+      NoDeclarations(
+      ) [NoDeclarations]
+      VarDeclNoArray(
+        Type(
+         int
+        ) [Type]
+       a
+        NoMoreVarDeclarations(
+        ) [NoMoreVarDeclarations]
+      ) [VarDeclNoArray]
+    ) [VarDeclarations]
+    VarDeclNoArray(
+      Type(
+       char
+      ) [Type]
+     b
+      MoreVarDeclarations(
+        NoMoreVarDeclarations(
+        ) [NoMoreVarDeclarations]
+       k
+      ) [MoreVarDeclarations]
+    ) [VarDeclNoArray]
+  ) [VarDeclarations]
+  MethodDeclList(
+    MethodDecl(
+      MethodDeclNameVoid(
+       main
+      ) [MethodDeclNameVoid]
+      FormPars(
+      ) [FormPars]
+      NoVarDeclarationsInFunc(
+      ) [NoVarDeclarationsInFunc]
+      NoStmtList(
+      ) [NoStmtList]
+    ) [MethodDecl]
+  ) [MethodDeclList]
+) [Program]
+INFO  15:00:53,656 - ===================================
+INFO  15:00:53,658 - Deklarisana promenljiva a na liniji 3
+INFO  15:00:53,658 - Deklarisana promenljiva k na liniji 5
+INFO  15:00:53,658 - Deklarisana promenljiva b na liniji 4
+INFO  15:00:53,658 - Obradjuje se funkcija main na liniji 7
+INFO  15:00:53,658 -  Print count calls = 0
+INFO  15:00:53,659 -  Deklarisanih promenljivih ima = 3
+INFO  15:00:53,659 - ===================================
+INFO  15:00:53,659 - Parsiranje uspesno zavrseno!

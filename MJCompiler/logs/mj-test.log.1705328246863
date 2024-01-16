@@ -1,0 +1,79 @@
+INFO  15:01:48,752 - Compiling source file: D:\7. sem\PP1\projekatRad\workspace\pp1Projekat\MJCompiler\test\programSem.mj
+INFO  15:01:48,772 - #2 program
+INFO  15:01:48,772 - #7 MJtest
+INFO  15:01:48,772 - #7 int
+INFO  15:01:48,773 - #7 a
+INFO  15:01:48,773 - #16 ,
+INFO  15:01:48,774 - #7 ako
+INFO  15:01:48,774 - #17 ;
+INFO  15:01:48,774 - #7 char
+INFO  15:01:48,774 - #7 b
+INFO  15:01:48,774 - #16 ,
+INFO  15:01:48,774 - #7 k
+INFO  15:01:48,774 - #17 ;
+INFO  15:01:48,774 - #3 {
+INFO  15:01:48,774 - #28 void
+INFO  15:01:48,774 - #7 main
+INFO  15:01:48,774 - #22 (
+INFO  15:01:48,774 - #20 )
+INFO  15:01:48,775 - #3 {
+INFO  15:01:48,775 - #4 }
+INFO  15:01:48,776 - #4 }
+INFO  15:01:48,781 - Program(
+  ProgName(
+   MJtest
+  ) [ProgName]
+  NoNamespaceList(
+  ) [NoNamespaceList]
+  VarDeclarations(
+    VarDeclarations(
+      NoDeclarations(
+      ) [NoDeclarations]
+      VarDeclNoArray(
+        Type(
+         int
+        ) [Type]
+       a
+        MoreVarDeclarations(
+          NoMoreVarDeclarations(
+          ) [NoMoreVarDeclarations]
+         ako
+        ) [MoreVarDeclarations]
+      ) [VarDeclNoArray]
+    ) [VarDeclarations]
+    VarDeclNoArray(
+      Type(
+       char
+      ) [Type]
+     b
+      MoreVarDeclarations(
+        NoMoreVarDeclarations(
+        ) [NoMoreVarDeclarations]
+       k
+      ) [MoreVarDeclarations]
+    ) [VarDeclNoArray]
+  ) [VarDeclarations]
+  MethodDeclList(
+    MethodDecl(
+      MethodDeclNameVoid(
+       main
+      ) [MethodDeclNameVoid]
+      FormPars(
+      ) [FormPars]
+      NoVarDeclarationsInFunc(
+      ) [NoVarDeclarationsInFunc]
+      NoStmtList(
+      ) [NoStmtList]
+    ) [MethodDecl]
+  ) [MethodDeclList]
+) [Program]
+INFO  15:01:48,782 - ===================================
+INFO  15:01:48,783 - Deklarisana promenljiva ako na liniji 4
+INFO  15:01:48,783 - Deklarisana promenljiva a na liniji 3
+INFO  15:01:48,783 - Deklarisana promenljiva k na liniji 5
+INFO  15:01:48,783 - Deklarisana promenljiva b na liniji 4
+INFO  15:01:48,783 - Obradjuje se funkcija main na liniji 7
+INFO  15:01:48,783 -  Print count calls = 0
+INFO  15:01:48,783 -  Deklarisanih promenljivih ima = 4
+INFO  15:01:48,783 - ===================================
+INFO  15:01:48,784 - Parsiranje uspesno zavrseno!

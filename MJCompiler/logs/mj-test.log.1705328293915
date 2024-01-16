@@ -1,0 +1,90 @@
+INFO  15:17:26,866 - Compiling source file: D:\7. sem\PP1\projekatRad\workspace\pp1Projekat\MJCompiler\test\programSem.mj
+INFO  15:17:26,885 - #2 program
+INFO  15:17:26,885 - #7 MJtest
+INFO  15:17:26,885 - #7 int
+INFO  15:17:26,887 - #7 a
+INFO  15:17:26,888 - #16 ,
+INFO  15:17:26,888 - #7 ako
+INFO  15:17:26,888 - #17 ;
+INFO  15:17:26,888 - #7 char
+INFO  15:17:26,889 - #7 b
+INFO  15:17:26,889 - #16 ,
+INFO  15:17:26,889 - #7 k
+INFO  15:17:26,889 - #17 ;
+INFO  15:17:26,889 - #6 const
+INFO  15:17:26,889 - #7 char
+INFO  15:17:26,889 - #7 proba
+INFO  15:17:26,889 - #17 ;
+ERROR 15:17:26,889 - 
+Sintaksna greska na liniji 5
+INFO  15:17:26,889 - #3 {
+INFO  15:17:26,889 - #28 void
+INFO  15:17:26,889 - #7 main
+ERROR 15:17:26,890 - Izvrsen oporavak do ; u liniji 5
+INFO  15:17:26,891 - #22 (
+INFO  15:17:26,891 - #20 )
+INFO  15:17:26,891 - #3 {
+INFO  15:17:26,892 - #4 }
+INFO  15:17:26,892 - #4 }
+INFO  15:17:26,901 - Program(
+  ProgName(
+   MJtest
+  ) [ProgName]
+  NoNamespaceList(
+  ) [NoNamespaceList]
+  VarDeclarations(
+    VarDeclarations(
+      VarDeclarations(
+        NoDeclarations(
+        ) [NoDeclarations]
+        VarDeclNoArray(
+          Type(
+           int
+          ) [Type]
+         a
+          MoreVarDeclarations(
+            NoMoreVarDeclarations(
+            ) [NoMoreVarDeclarations]
+           ako
+          ) [MoreVarDeclarations]
+        ) [VarDeclNoArray]
+      ) [VarDeclarations]
+      VarDeclNoArray(
+        Type(
+         char
+        ) [Type]
+       b
+        MoreVarDeclarations(
+          NoMoreVarDeclarations(
+          ) [NoMoreVarDeclarations]
+         k
+        ) [MoreVarDeclarations]
+      ) [VarDeclNoArray]
+    ) [VarDeclarations]
+    ErrorStmtVar(
+    ) [ErrorStmtVar]
+  ) [VarDeclarations]
+  MethodDeclList(
+    MethodDecl(
+      MethodDeclNameVoid(
+       main
+      ) [MethodDeclNameVoid]
+      FormPars(
+      ) [FormPars]
+      NoVarDeclarationsInFunc(
+      ) [NoVarDeclarationsInFunc]
+      NoStmtList(
+      ) [NoStmtList]
+    ) [MethodDecl]
+  ) [MethodDeclList]
+) [Program]
+INFO  15:17:26,901 - ===================================
+INFO  15:17:26,902 - Deklarisana promenljiva ako na liniji 4
+INFO  15:17:26,902 - Deklarisana promenljiva a na liniji 3
+INFO  15:17:26,903 - Deklarisana promenljiva k na liniji 5
+INFO  15:17:26,903 - Deklarisana promenljiva b na liniji 4
+INFO  15:17:26,903 - Obradjuje se funkcija main na liniji 8
+INFO  15:17:26,903 -  Print count calls = 0
+INFO  15:17:26,903 -  Deklarisanih promenljivih ima = 4
+INFO  15:17:26,903 - ===================================
+ERROR 15:17:26,904 - Parsiranje NIJE uspesno zavrseno!
