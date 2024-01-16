@@ -54,6 +54,9 @@ public class SemanticAnalyzer extends VisitorAdaptor {
     	Tab.openScope();
     }
     
+    //smene za deklaracije promenljivih i konstanti
+    
+    
     public void visit(VarDeclNoArray varDeclNoArray) {
 		varDeclCount++;
 		report_info("Deklarisana promenljiva "+ varDeclNoArray.getVarName(), varDeclNoArray);
@@ -66,6 +69,20 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		report_info("Deklarisana promenljiva "+ moreVarDecl.getVarName(), moreVarDecl);
     	Obj moreVarNode = Tab.insert(Obj.Var, moreVarDecl.getVarName(), currentTypeForVarOrConstDecl);
     }
+    
+    public void visit(VarDeclArray varDeclArray) {
+		report_info("Deklarisan niz "+ varDeclArray.getArrayName(), varDeclArray);
+		//pravim prvo strukturni cvor
+		Struct arrayStructNode = new Struct(Struct.Array, varDeclArray.getType().struct);
+		Obj varArrayNode = Tab.insert(Obj.Var, varDeclArray.getArrayName(), arrayStructNode);
+		currentTypeForVarOrConstDecl = null;
+	}
+    
+    public void visit(MoreVarDeclarationsArray moreVarDelcArray) {
+		report_info("Deklarisan niz "+ moreVarDelcArray.getArrayName(), moreVarDelcArray);
+		Struct arrayStructNode = new Struct(Struct.Array, currentTypeForVarOrConstDecl);
+		Obj moreVarArrayNode = Tab.insert(Obj.Var, moreVarDelcArray.getArrayName(), arrayStructNode);
+	}
     
     
     public void visit(ConstDecl constDecl) {
@@ -100,6 +117,8 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		}
 	}
     
+	
+	//smene za metode
     
     public void visit(MethodDeclNameVoid methodDeclName) {
 		currentMethod = Tab.insert(Obj.Meth, methodDeclName.getMethName(), Tab.noType);
@@ -119,7 +138,10 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		
 		currentMethod = null;
 		returnFound = false;
-	}    
+	}  
+	
+	
+	//smena za tip
 
 	public void visit(Type type) {
 		Obj typeNode = Tab.find(type.getTypeName());
@@ -138,31 +160,57 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	}
 	
 	
+	//Term, Expr, Factor smene
 	
 	public void visit(ExprMinus expr) {
-		expr.struct = expr.getTerm().struct;
+		if(expr.getTerm().struct == Tab.intType) {
+			expr.struct = expr.getTerm().struct;		
+		} else {
+			report_error("Greska na liniji : " + expr.getLine() + "tip nije int", expr);
+			expr.struct = Tab.noType;
+		}
 	}
 	
 	public void visit(ExprNoMinus expr) {
 		expr.struct = expr.getTerm().struct;
 	}
 	
-	public void visit(ExprAddopTerm expr) {
-		//term.struct = term.getFactor().struct;
+	public void visit(ExprAddopTerm expr) { // mozda fali nesto za niz
+		Struct stExpr = expr.getExpr().struct;
+		Struct stTerm = expr.getTerm().struct;
+		if(!stExpr.compatibleWith(stTerm)) {
+			report_error("Tipovi su nekompatibilni u izrazu za sabiranje na liniji : " + expr.getLine(), expr);
+		}
+		else {
+			if(stExpr.equals(stTerm) && stExpr == Tab.intType) {
+				expr.struct = stExpr;
+			}
+			else {
+				report_error("Greska na liniji "+ expr.getLine()+" : u izrazu za sabiranje tipovi nisu int.", null);
+			}
+		}
+		
 	}
 	
-	
-	
-	
 	public void visit(TermMulopFactor term) {
-		//term.struct = term.getFactor().struct;
+		Struct stFactor = term.getFactor().struct;
+		Struct stTerm = term.getTerm().struct;
+		if(!stFactor.compatibleWith(stTerm)) {
+			report_error("Tipovi su nekompatibilni u izrazu za mnozenje na liniji : " + term.getLine(), term);
+		}
+		else {
+			if(stFactor.equals(stTerm) && stFactor == Tab.intType) {
+				term.struct = stFactor;
+			}
+			else {
+				report_error("Greska na liniji "+ term.getLine()+" : u izrazu za sabiranje tipovi nisu int.", null);
+			}
+		}	
 	}
 	
 	public void visit(FactorNoTerm term) {
 		term.struct = term.getFactor().struct;
 	}
-	
-
 	
 	public void visit(FactorNum factorNum) {
 		factorNum.struct = Tab.intType;
@@ -177,7 +225,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	}
 	
 	public void visit(FactorExpr factorExpr) {
-
+		factorExpr.struct = factorExpr.getExpr().struct;
 	
 	}
 	

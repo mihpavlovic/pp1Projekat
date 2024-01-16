@@ -1,8 +1,9 @@
 program MJtest 
 
 int a, ako;
-char b, k;
+char b, k, nizChar[];
 const char proba = 'a', proba2='b';
+int niz[], niz2[];
 
 {
 	void main(){}

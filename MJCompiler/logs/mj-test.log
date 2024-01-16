@@ -1,87 +1,116 @@
-INFO  22:59:48,013 - Compiling source file: D:\7. sem\PP1\projekatRad\workspace\pp1Projekat\MJCompiler\test\programSem.mj
-INFO  22:59:48,030 - #2 program
-INFO  22:59:48,031 - #7 MJtest
-INFO  22:59:48,031 - #7 int
-INFO  22:59:48,032 - #7 a
-INFO  22:59:48,032 - #16 ,
-INFO  22:59:48,033 - #7 ako
-INFO  22:59:48,033 - #17 ;
-INFO  22:59:48,033 - #7 char
-INFO  22:59:48,033 - #7 b
-INFO  22:59:48,033 - #16 ,
-INFO  22:59:48,033 - #7 k
-INFO  22:59:48,033 - #17 ;
-INFO  22:59:48,033 - #6 const
-INFO  22:59:48,034 - #7 char
-INFO  22:59:48,034 - #7 proba
-INFO  22:59:48,034 - #21 =
-INFO  22:59:48,034 - #10 'a'
-INFO  22:59:48,034 - #16 ,
-INFO  22:59:48,035 - #7 proba2
-INFO  22:59:48,035 - #21 =
-INFO  22:59:48,035 - #8 3
-INFO  22:59:48,035 - #17 ;
-INFO  22:59:48,035 - #3 {
-INFO  22:59:48,036 - #28 void
-INFO  22:59:48,037 - #7 main
-INFO  22:59:48,037 - #22 (
-INFO  22:59:48,037 - #20 )
-INFO  22:59:48,037 - #3 {
-INFO  22:59:48,037 - #4 }
-INFO  22:59:48,037 - #4 }
-INFO  22:59:48,043 - Program(
+INFO  13:28:45,086 - Compiling source file: D:\7. sem\PP1\projekatRad\workspace\pp1Projekat\MJCompiler\test\programSem.mj
+INFO  13:28:45,104 - #2 program
+INFO  13:28:45,104 - #7 MJtest
+INFO  13:28:45,104 - #7 int
+INFO  13:28:45,105 - #7 a
+INFO  13:28:45,106 - #16 ,
+INFO  13:28:45,106 - #7 ako
+INFO  13:28:45,106 - #17 ;
+INFO  13:28:45,106 - #7 char
+INFO  13:28:45,106 - #7 b
+INFO  13:28:45,106 - #16 ,
+INFO  13:28:45,107 - #7 k
+INFO  13:28:45,107 - #16 ,
+INFO  13:28:45,107 - #7 nizChar
+INFO  13:28:45,107 - #23 [
+INFO  13:28:45,107 - #25 ]
+INFO  13:28:45,107 - #17 ;
+INFO  13:28:45,107 - #6 const
+INFO  13:28:45,107 - #7 char
+INFO  13:28:45,107 - #7 proba
+INFO  13:28:45,107 - #21 =
+INFO  13:28:45,107 - #10 'a'
+INFO  13:28:45,107 - #16 ,
+INFO  13:28:45,108 - #7 proba2
+INFO  13:28:45,108 - #21 =
+INFO  13:28:45,108 - #10 'b'
+INFO  13:28:45,108 - #17 ;
+INFO  13:28:45,109 - #7 int
+INFO  13:28:45,109 - #7 niz
+INFO  13:28:45,109 - #23 [
+INFO  13:28:45,109 - #25 ]
+INFO  13:28:45,109 - #16 ,
+INFO  13:28:45,109 - #7 niz2
+INFO  13:28:45,109 - #23 [
+INFO  13:28:45,109 - #25 ]
+INFO  13:28:45,109 - #17 ;
+INFO  13:28:45,109 - #3 {
+INFO  13:28:45,109 - #28 void
+INFO  13:28:45,109 - #7 main
+INFO  13:28:45,109 - #22 (
+INFO  13:28:45,109 - #20 )
+INFO  13:28:45,110 - #3 {
+INFO  13:28:45,110 - #4 }
+INFO  13:28:45,111 - #4 }
+INFO  13:28:45,116 - Program(
   ProgName(
    MJtest
   ) [ProgName]
   NoNamespaceList(
   ) [NoNamespaceList]
-  ConstDeclarations(
-    VarDeclarations(
+  VarDeclarations(
+    ConstDeclarations(
       VarDeclarations(
-        NoDeclarations(
-        ) [NoDeclarations]
+        VarDeclarations(
+          NoDeclarations(
+          ) [NoDeclarations]
+          VarDeclNoArray(
+            Type(
+             int
+            ) [Type]
+           a
+            MoreVarDeclarations(
+              NoMoreVarDeclarations(
+              ) [NoMoreVarDeclarations]
+             ako
+            ) [MoreVarDeclarations]
+          ) [VarDeclNoArray]
+        ) [VarDeclarations]
         VarDeclNoArray(
           Type(
-           int
+           char
           ) [Type]
-         a
-          MoreVarDeclarations(
-            NoMoreVarDeclarations(
-            ) [NoMoreVarDeclarations]
-           ako
-          ) [MoreVarDeclarations]
+         b
+          MoreVarDeclarationsArray(
+            MoreVarDeclarations(
+              NoMoreVarDeclarations(
+              ) [NoMoreVarDeclarations]
+             k
+            ) [MoreVarDeclarations]
+           nizChar
+          ) [MoreVarDeclarationsArray]
         ) [VarDeclNoArray]
       ) [VarDeclarations]
-      VarDeclNoArray(
+      ConstDecl(
         Type(
          char
         ) [Type]
-       b
-        MoreVarDeclarations(
-          NoMoreVarDeclarations(
-          ) [NoMoreVarDeclarations]
-         k
-        ) [MoreVarDeclarations]
-      ) [VarDeclNoArray]
-    ) [VarDeclarations]
-    ConstDecl(
+       proba
+        ConstChar(
+         'a'
+        ) [ConstChar]
+        MoreConstDeclarations(
+          NoMoreConstDeclarations(
+          ) [NoMoreConstDeclarations]
+         proba2
+          ConstChar(
+           'b'
+          ) [ConstChar]
+        ) [MoreConstDeclarations]
+      ) [ConstDecl]
+    ) [ConstDeclarations]
+    VarDeclArray(
       Type(
-       char
+       int
       ) [Type]
-     proba
-      ConstChar(
-       'a'
-      ) [ConstChar]
-      MoreConstDeclarations(
-        NoMoreConstDeclarations(
-        ) [NoMoreConstDeclarations]
-       proba2
-        ConstNum(
-         3
-        ) [ConstNum]
-      ) [MoreConstDeclarations]
-    ) [ConstDecl]
-  ) [ConstDeclarations]
+     niz
+      MoreVarDeclarationsArray(
+        NoMoreVarDeclarations(
+        ) [NoMoreVarDeclarations]
+       niz2
+      ) [MoreVarDeclarationsArray]
+    ) [VarDeclArray]
+  ) [VarDeclarations]
   MethodDeclList(
     MethodDecl(
       MethodDeclNameVoid(
@@ -96,16 +125,18 @@ INFO  22:59:48,043 - Program(
     ) [MethodDecl]
   ) [MethodDeclList]
 ) [Program]
-INFO  22:59:48,043 - ===================================
-INFO  22:59:48,045 - Deklarisana promenljiva ako na liniji 4
-INFO  22:59:48,045 - Deklarisana promenljiva a na liniji 3
-INFO  22:59:48,045 - Deklarisana promenljiva k na liniji 5
-INFO  22:59:48,045 - Deklarisana promenljiva b na liniji 4
-ERROR 22:59:48,045 - Semanticka greska na liniji 5: pokusaj dodele int vrednosti konstanti koja nije tog tipa
-INFO  22:59:48,045 - Deklarisana konstanta proba2 na liniji 19
-INFO  22:59:48,045 - Deklarisana konstanta proba na liniji 5
-INFO  22:59:48,045 - Obradjuje se funkcija main na liniji 8
-INFO  22:59:48,045 -  Print count calls = 0
-INFO  22:59:48,045 -  Deklarisanih promenljivih ima = 4
-INFO  22:59:48,046 - ===================================
-ERROR 22:59:48,046 - Parsiranje NIJE uspesno zavrseno!
+INFO  13:28:45,116 - ===================================
+INFO  13:28:45,117 - Deklarisana promenljiva ako na liniji 4
+INFO  13:28:45,117 - Deklarisana promenljiva a na liniji 3
+INFO  13:28:45,118 - Deklarisana promenljiva k na liniji 5
+INFO  13:28:45,118 - Deklarisan niz nizChar na liniji 5
+INFO  13:28:45,118 - Deklarisana promenljiva b na liniji 4
+INFO  13:28:45,118 - Deklarisana konstanta proba2 na liniji 19
+INFO  13:28:45,118 - Deklarisana konstanta proba na liniji 5
+INFO  13:28:45,118 - Deklarisan niz niz2 na liniji 8
+INFO  13:28:45,118 - Deklarisan niz niz na liniji 6
+INFO  13:28:45,118 - Obradjuje se funkcija main na liniji 9
+INFO  13:28:45,118 -  Print count calls = 0
+INFO  13:28:45,118 -  Deklarisanih promenljivih ima = 4
+INFO  13:28:45,118 - ===================================
+INFO  13:28:45,119 - Parsiranje uspesno zavrseno!
