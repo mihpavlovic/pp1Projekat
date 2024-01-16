@@ -1,0 +1,178 @@
+INFO  18:43:12,121 - Compiling source file: D:\7. sem\PP1\projekatRad\workspace\pp1Projekat\MJCompiler\test\programSem.mj
+INFO  18:43:12,137 - #2 program
+INFO  18:43:12,137 - #7 MJtest
+INFO  18:43:12,137 - #5 namespace
+INFO  18:43:12,138 - #7 NMSP
+INFO  18:43:12,138 - #3 {
+INFO  18:43:12,138 - #6 const
+INFO  18:43:12,139 - #7 int
+INFO  18:43:12,139 - #7 in
+INFO  18:43:12,141 - #21 =
+INFO  18:43:12,141 - #8 5
+INFO  18:43:12,141 - #17 ;
+INFO  18:43:12,142 - #3 {
+INFO  18:43:12,142 - #4 }
+INFO  18:43:12,143 - #4 }
+INFO  18:43:12,143 - #7 int
+INFO  18:43:12,145 - #7 a
+INFO  18:43:12,145 - #16 ,
+INFO  18:43:12,146 - #7 ako
+INFO  18:43:12,146 - #17 ;
+INFO  18:43:12,146 - #7 char
+INFO  18:43:12,146 - #7 b
+INFO  18:43:12,151 - #16 ,
+INFO  18:43:12,151 - #7 k
+INFO  18:43:12,151 - #16 ,
+INFO  18:43:12,151 - #7 nizChar
+INFO  18:43:12,151 - #23 [
+INFO  18:43:12,151 - #25 ]
+INFO  18:43:12,151 - #17 ;
+INFO  18:43:12,151 - #6 const
+INFO  18:43:12,151 - #7 char
+INFO  18:43:12,151 - #7 proba
+INFO  18:43:12,151 - #21 =
+INFO  18:43:12,151 - #10 'a'
+INFO  18:43:12,151 - #16 ,
+INFO  18:43:12,151 - #7 proba2
+INFO  18:43:12,152 - #21 =
+INFO  18:43:12,152 - #10 'b'
+INFO  18:43:12,152 - #17 ;
+INFO  18:43:12,152 - #7 int
+INFO  18:43:12,152 - #7 niz
+INFO  18:43:12,152 - #23 [
+INFO  18:43:12,152 - #25 ]
+INFO  18:43:12,152 - #16 ,
+INFO  18:43:12,152 - #7 niz2
+INFO  18:43:12,152 - #23 [
+INFO  18:43:12,152 - #25 ]
+INFO  18:43:12,152 - #17 ;
+INFO  18:43:12,152 - #3 {
+INFO  18:43:12,152 - #28 void
+INFO  18:43:12,152 - #7 main
+INFO  18:43:12,152 - #22 (
+INFO  18:43:12,152 - #20 )
+INFO  18:43:12,153 - #3 {
+INFO  18:43:12,154 - #4 }
+INFO  18:43:12,154 - #4 }
+INFO  18:43:12,162 - Program(
+  ProgName(
+   MJtest
+  ) [ProgName]
+  NamespaceList(
+    NoNamespaceList(
+    ) [NoNamespaceList]
+    Namesp(
+      NamespName(
+       NMSP
+      ) [NamespName]
+      ConstDeclarations(
+        NoDeclarations(
+        ) [NoDeclarations]
+        ConstDecl(
+          Type(
+           int
+          ) [Type]
+         in
+          ConstNum(
+           5
+          ) [ConstNum]
+          NoMoreConstDeclarations(
+          ) [NoMoreConstDeclarations]
+        ) [ConstDecl]
+      ) [ConstDeclarations]
+    ) [Namesp]
+  ) [NamespaceList]
+  VarDeclarations(
+    ConstDeclarations(
+      VarDeclarations(
+        VarDeclarations(
+          NoDeclarations(
+          ) [NoDeclarations]
+          VarDeclNoArray(
+            Type(
+             int
+            ) [Type]
+           a
+            MoreVarDeclarations(
+              NoMoreVarDeclarations(
+              ) [NoMoreVarDeclarations]
+             ako
+            ) [MoreVarDeclarations]
+          ) [VarDeclNoArray]
+        ) [VarDeclarations]
+        VarDeclNoArray(
+          Type(
+           char
+          ) [Type]
+         b
+          MoreVarDeclarationsArray(
+            MoreVarDeclarations(
+              NoMoreVarDeclarations(
+              ) [NoMoreVarDeclarations]
+             k
+            ) [MoreVarDeclarations]
+           nizChar
+          ) [MoreVarDeclarationsArray]
+        ) [VarDeclNoArray]
+      ) [VarDeclarations]
+      ConstDecl(
+        Type(
+         char
+        ) [Type]
+       proba
+        ConstChar(
+         'a'
+        ) [ConstChar]
+        MoreConstDeclarations(
+          NoMoreConstDeclarations(
+          ) [NoMoreConstDeclarations]
+         proba2
+          ConstChar(
+           'b'
+          ) [ConstChar]
+        ) [MoreConstDeclarations]
+      ) [ConstDecl]
+    ) [ConstDeclarations]
+    VarDeclArray(
+      Type(
+       int
+      ) [Type]
+     niz
+      MoreVarDeclarationsArray(
+        NoMoreVarDeclarations(
+        ) [NoMoreVarDeclarations]
+       niz2
+      ) [MoreVarDeclarationsArray]
+    ) [VarDeclArray]
+  ) [VarDeclarations]
+  MethodDeclList(
+    MethodDecl(
+      MethodDeclNameVoid(
+       main
+      ) [MethodDeclNameVoid]
+      FormPars(
+      ) [FormPars]
+      NoVarDeclarationsInFunc(
+      ) [NoVarDeclarationsInFunc]
+      NoStmtList(
+      ) [NoStmtList]
+    ) [MethodDecl]
+  ) [MethodDeclList]
+) [Program]
+INFO  18:43:12,162 - ===================================
+INFO  18:43:12,163 - Obradjuje se prostor imena: NMSP na liniji 3
+INFO  18:43:12,164 - Deklarisana konstanta NMSP::in na liniji 4
+INFO  18:43:12,164 - Deklarisana promenljiva ako na liniji 4
+INFO  18:43:12,164 - Deklarisana promenljiva a na liniji 8
+INFO  18:43:12,164 - Deklarisana promenljiva k na liniji 5
+INFO  18:43:12,164 - Deklarisan niz nizChar na liniji 5
+INFO  18:43:12,164 - Deklarisana promenljiva b na liniji 9
+INFO  18:43:12,164 - Deklarisana konstanta proba2 na liniji 19
+INFO  18:43:12,164 - Deklarisana konstanta proba na liniji 10
+INFO  18:43:12,164 - Deklarisan niz niz2 na liniji 8
+INFO  18:43:12,164 - Deklarisan niz niz na liniji 11
+INFO  18:43:12,164 - Obradjuje se funkcija main na liniji 14
+INFO  18:43:12,167 -  Print count calls = 0
+INFO  18:43:12,167 -  Deklarisanih promenljivih ima = 4
+INFO  18:43:12,167 - ===================================
+INFO  18:43:12,168 - Parsiranje uspesno zavrseno!

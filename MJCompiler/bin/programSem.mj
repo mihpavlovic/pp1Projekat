@@ -1,5 +1,22 @@
 program MJtest 
 
+namespace NMSP1{
+	const int konst1 = 5;
+	const char konst2 = 'f';
+	int prom1;
+	{}
+}
+
+namespace NMSP2{
+	char prom2;
+	const int konst3 = 10;
+	int prom3, prom4;
+	char niz1[];
+	
+	{}
+}
+
+
 int a, ako;
 char b, k, nizChar[];
 const char proba = 'a', proba2='b';

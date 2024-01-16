@@ -1,0 +1,142 @@
+INFO  18:41:43,713 - Compiling source file: D:\7. sem\PP1\projekatRad\workspace\pp1Projekat\MJCompiler\test\programSem.mj
+INFO  18:41:43,732 - #2 program
+INFO  18:41:43,732 - #7 MJtest
+INFO  18:41:43,733 - #7 int
+INFO  18:41:43,733 - #7 a
+INFO  18:41:43,734 - #16 ,
+INFO  18:41:43,734 - #7 ako
+INFO  18:41:43,734 - #17 ;
+INFO  18:41:43,734 - #7 char
+INFO  18:41:43,735 - #7 b
+INFO  18:41:43,735 - #16 ,
+INFO  18:41:43,735 - #7 k
+INFO  18:41:43,735 - #16 ,
+INFO  18:41:43,735 - #7 nizChar
+INFO  18:41:43,735 - #23 [
+INFO  18:41:43,735 - #25 ]
+INFO  18:41:43,735 - #17 ;
+INFO  18:41:43,735 - #6 const
+INFO  18:41:43,735 - #7 char
+INFO  18:41:43,735 - #7 proba
+INFO  18:41:43,735 - #21 =
+INFO  18:41:43,735 - #10 'a'
+INFO  18:41:43,736 - #16 ,
+INFO  18:41:43,736 - #7 proba2
+INFO  18:41:43,736 - #21 =
+INFO  18:41:43,736 - #10 'b'
+INFO  18:41:43,736 - #17 ;
+INFO  18:41:43,737 - #7 int
+INFO  18:41:43,738 - #7 niz
+INFO  18:41:43,738 - #23 [
+INFO  18:41:43,738 - #25 ]
+INFO  18:41:43,738 - #16 ,
+INFO  18:41:43,738 - #7 niz2
+INFO  18:41:43,738 - #23 [
+INFO  18:41:43,738 - #25 ]
+INFO  18:41:43,738 - #17 ;
+INFO  18:41:43,738 - #3 {
+INFO  18:41:43,739 - #28 void
+INFO  18:41:43,739 - #7 main
+INFO  18:41:43,739 - #22 (
+INFO  18:41:43,739 - #20 )
+INFO  18:41:43,740 - #3 {
+INFO  18:41:43,741 - #4 }
+INFO  18:41:43,741 - #4 }
+INFO  18:41:43,747 - Program(
+  ProgName(
+   MJtest
+  ) [ProgName]
+  NoNamespaceList(
+  ) [NoNamespaceList]
+  VarDeclarations(
+    ConstDeclarations(
+      VarDeclarations(
+        VarDeclarations(
+          NoDeclarations(
+          ) [NoDeclarations]
+          VarDeclNoArray(
+            Type(
+             int
+            ) [Type]
+           a
+            MoreVarDeclarations(
+              NoMoreVarDeclarations(
+              ) [NoMoreVarDeclarations]
+             ako
+            ) [MoreVarDeclarations]
+          ) [VarDeclNoArray]
+        ) [VarDeclarations]
+        VarDeclNoArray(
+          Type(
+           char
+          ) [Type]
+         b
+          MoreVarDeclarationsArray(
+            MoreVarDeclarations(
+              NoMoreVarDeclarations(
+              ) [NoMoreVarDeclarations]
+             k
+            ) [MoreVarDeclarations]
+           nizChar
+          ) [MoreVarDeclarationsArray]
+        ) [VarDeclNoArray]
+      ) [VarDeclarations]
+      ConstDecl(
+        Type(
+         char
+        ) [Type]
+       proba
+        ConstChar(
+         'a'
+        ) [ConstChar]
+        MoreConstDeclarations(
+          NoMoreConstDeclarations(
+          ) [NoMoreConstDeclarations]
+         proba2
+          ConstChar(
+           'b'
+          ) [ConstChar]
+        ) [MoreConstDeclarations]
+      ) [ConstDecl]
+    ) [ConstDeclarations]
+    VarDeclArray(
+      Type(
+       int
+      ) [Type]
+     niz
+      MoreVarDeclarationsArray(
+        NoMoreVarDeclarations(
+        ) [NoMoreVarDeclarations]
+       niz2
+      ) [MoreVarDeclarationsArray]
+    ) [VarDeclArray]
+  ) [VarDeclarations]
+  MethodDeclList(
+    MethodDecl(
+      MethodDeclNameVoid(
+       main
+      ) [MethodDeclNameVoid]
+      FormPars(
+      ) [FormPars]
+      NoVarDeclarationsInFunc(
+      ) [NoVarDeclarationsInFunc]
+      NoStmtList(
+      ) [NoStmtList]
+    ) [MethodDecl]
+  ) [MethodDeclList]
+) [Program]
+INFO  18:41:43,747 - ===================================
+INFO  18:41:43,748 - Deklarisana promenljiva ako na liniji 4
+INFO  18:41:43,748 - Deklarisana promenljiva a na liniji 3
+INFO  18:41:43,748 - Deklarisana promenljiva k na liniji 5
+INFO  18:41:43,749 - Deklarisan niz nizChar na liniji 5
+INFO  18:41:43,749 - Deklarisana promenljiva b na liniji 4
+INFO  18:41:43,749 - Deklarisana konstanta proba2 na liniji 19
+INFO  18:41:43,749 - Deklarisana konstanta proba na liniji 5
+INFO  18:41:43,749 - Deklarisan niz niz2 na liniji 8
+INFO  18:41:43,749 - Deklarisan niz niz na liniji 6
+INFO  18:41:43,749 - Obradjuje se funkcija main na liniji 9
+INFO  18:41:43,749 -  Print count calls = 0
+INFO  18:41:43,749 -  Deklarisanih promenljivih ima = 4
+INFO  18:41:43,749 - ===================================
+INFO  18:41:43,749 - Parsiranje uspesno zavrseno!

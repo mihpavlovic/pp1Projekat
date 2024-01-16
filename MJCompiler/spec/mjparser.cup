@@ -61,12 +61,12 @@ terminal INC, PRINT, VOID, DEC;
 terminal GREATER,LESS,GREATEROREQUAL,LESSOREQUAL,EQUAL,DIFFERENT,AND,OR;
 
 
-nonterminal Program, NamespList, Declarations, Namesp, VarDecl, ConstDecl, MethodDeclList, WhichConst, MoreConstDecls, MoreVarDecls;
+nonterminal Program, NamespList, Declarations, VarDecl, ConstDecl, MethodDeclList, WhichConst, MoreConstDecls, MoreVarDecls;
 nonterminal FormPars, StatementList, Statement, DesignatorStatement, VarDeclInFunc , AndConst, DesigNmsp, DesigBracket;
 nonterminal Addop, Relop, Mulop;
 
 
-nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, MethodDeclName, MethodDecl, Designator;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, MethodDeclName, MethodDecl, Designator, Namesp, NamespName;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Expr, Term, Factor;
 
 Program ::= (Program)  PROG ProgName:p NamespList Declarations LBRACE MethodDeclList  RBRACE;
@@ -78,7 +78,9 @@ NamespList ::= (NamespaceList) NamespList Namesp
 				(NoNamespaceList)/*epsilon*/
 				;
 
-Namesp ::= (Namesp) NAMESPACE IDENT LBRACE Declarations LBRACE RBRACE RBRACE;
+Namesp ::= (Namesp) NamespName LBRACE Declarations LBRACE RBRACE RBRACE;
+
+NamespName ::= (NamespName) NAMESPACE IDENT:nmspName;
 
 Declarations ::=(ConstDeclarations) Declarations ConstDecl
 				|

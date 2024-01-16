@@ -7,6 +7,7 @@ import rs.etf.pp1.symboltable.concepts.*;
 
 
 
+
 public class SemanticAnalyzer extends VisitorAdaptor {
 
 	int printCallCount = 0;
@@ -14,6 +15,8 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	int constDeclCount = 0;
 	Struct currentTypeForVarOrConstDecl = null;
 	Obj currentMethod = null;
+	Obj currentNamespace = null;
+	
 	boolean returnFound = false;
 	boolean errorDetected = false;
 	
@@ -54,48 +57,93 @@ public class SemanticAnalyzer extends VisitorAdaptor {
     	Tab.openScope();
     }
     
-    //smene za deklaracije promenljivih i konstanti
     
+    //smene za deklaracije promenljivih, nizova i konstanti
     
     public void visit(VarDeclNoArray varDeclNoArray) {
 		varDeclCount++;
+		String varName;
+		if(currentNamespace == null) {
+			varName = varDeclNoArray.getVarName();
+		}
+		else {
+			varName = currentNamespace.getName() + "::" + varDeclNoArray.getVarName();
+		}
+		
 		report_info("Deklarisana promenljiva "+ varDeclNoArray.getVarName(), varDeclNoArray);
-		Obj varNode = Tab.insert(Obj.Var, varDeclNoArray.getVarName(), varDeclNoArray.getType().struct);
+		Obj varNode = Tab.insert(Obj.Var, varName, varDeclNoArray.getType().struct);
 		currentTypeForVarOrConstDecl = null;
 	}
     
     public void visit(MoreVarDeclarations moreVarDecl) {
     	varDeclCount++;
+    	String varName;
+		if(currentNamespace == null) {
+			varName = moreVarDecl.getVarName();
+		}
+		else {
+			varName = currentNamespace.getName() + "::" + moreVarDecl.getVarName();
+		}
+		
 		report_info("Deklarisana promenljiva "+ moreVarDecl.getVarName(), moreVarDecl);
-    	Obj moreVarNode = Tab.insert(Obj.Var, moreVarDecl.getVarName(), currentTypeForVarOrConstDecl);
+    	Obj moreVarNode = Tab.insert(Obj.Var, varName, currentTypeForVarOrConstDecl);
     }
     
     public void visit(VarDeclArray varDeclArray) {
+    	String arrayName;
+		if(currentNamespace == null) {
+			arrayName = varDeclArray.getArrayName();
+		}
+		else {
+			arrayName = currentNamespace.getName() + "::" + varDeclArray.getArrayName();
+		}
+    	
 		report_info("Deklarisan niz "+ varDeclArray.getArrayName(), varDeclArray);
 		//pravim prvo strukturni cvor
 		Struct arrayStructNode = new Struct(Struct.Array, varDeclArray.getType().struct);
-		Obj varArrayNode = Tab.insert(Obj.Var, varDeclArray.getArrayName(), arrayStructNode);
+		Obj varArrayNode = Tab.insert(Obj.Var, arrayName, arrayStructNode);
 		currentTypeForVarOrConstDecl = null;
 	}
     
     public void visit(MoreVarDeclarationsArray moreVarDelcArray) {
+    	String arrayName;
+		if(currentNamespace == null) {
+			arrayName = moreVarDelcArray.getArrayName();
+		}
+		else {
+			arrayName = currentNamespace.getName() + "::" + moreVarDelcArray.getArrayName();
+		}
 		report_info("Deklarisan niz "+ moreVarDelcArray.getArrayName(), moreVarDelcArray);
 		Struct arrayStructNode = new Struct(Struct.Array, currentTypeForVarOrConstDecl);
-		Obj moreVarArrayNode = Tab.insert(Obj.Var, moreVarDelcArray.getArrayName(), arrayStructNode);
+		Obj moreVarArrayNode = Tab.insert(Obj.Var, arrayName, arrayStructNode);
 	}
     
     
     public void visit(ConstDecl constDecl) {
 		constDeclCount++;
-		report_info("Deklarisana konstanta "+ constDecl.getConstName(), constDecl);
-		Obj constNode = Tab.insert(Obj.Con, constDecl.getConstName(), constDecl.getType().struct);
+		String constName;
+		if(currentNamespace == null) {
+			constName = constDecl.getConstName();
+		}
+		else {
+			constName = currentNamespace.getName() + "::" + constDecl.getConstName();
+		}
+		report_info("Deklarisana konstanta "+ constName, constDecl);
+		Obj constNode = Tab.insert(Obj.Con, constName, constDecl.getType().struct);
 		currentTypeForVarOrConstDecl = null;
 	}
     
     public void visit(MoreConstDeclarations moreConstDecl) {
 		constDeclCount++;
+		String constName;
+		if(currentNamespace == null) {
+			constName = moreConstDecl.getConstName();
+		}
+		else {
+			constName = currentNamespace.getName() + "::" + moreConstDecl.getConstName();
+		}
 		report_info("Deklarisana konstanta "+ moreConstDecl.getConstName(), moreConstDecl);
-		Obj moreConstNode = Tab.insert(Obj.Con, moreConstDecl.getConstName(), currentTypeForVarOrConstDecl);
+		Obj moreConstNode = Tab.insert(Obj.Con, constName, currentTypeForVarOrConstDecl);
 	}
     
     public void visit(ConstNum constNum) {
@@ -118,8 +166,21 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	}
     
 	
+	//smene za Namespace
+	
+	public void visit(NamespName namespName) {
+		currentNamespace = Tab.insert(ObjExtended.Nmsp, namespName.getNmspName(), Tab.noType);
+		namespName.obj = currentNamespace;
+		report_info("Obradjuje se prostor imena: " + namespName.getNmspName(), namespName);
+	}
+	
+	public void visit(Namesp namesp) {
+		currentNamespace = null;
+	}
+	
+	
 	//smene za metode
-    
+    	
     public void visit(MethodDeclNameVoid methodDeclName) {
 		currentMethod = Tab.insert(Obj.Meth, methodDeclName.getMethName(), Tab.noType);
 		methodDeclName.obj = currentMethod;

@@ -64,7 +64,6 @@ terminal GREATER,LESS,GREATEROREQUAL,LESSOREQUAL,EQUAL,DIFFERENT,AND,OR;
 nonterminal Program Program;
 nonterminal NamespList NamespList;
 nonterminal Declarations Declarations;
-nonterminal Namesp Namesp;
 nonterminal VarDecl VarDecl;
 nonterminal ConstDecl ConstDecl;
 nonterminal MethodDeclList MethodDeclList;
@@ -84,7 +83,7 @@ nonterminal Relop Relop;
 nonterminal Mulop Mulop;
 
 
-nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, MethodDeclName, MethodDecl, Designator;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, MethodDeclName, MethodDecl, Designator, Namesp, NamespName;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Expr, Term, Factor;
 
 Program ::= (Program)  PROG ProgName:p NamespList:N1 Declarations:D2 LBRACE MethodDeclList:M3  RBRACE {: RESULT=new Program(p, N1, D2, M3); RESULT.setLine(pleft); :};
@@ -96,7 +95,9 @@ NamespList ::= (NamespaceList) NamespList:N1 Namesp:N2 {: RESULT=new NamespaceLi
 				(NoNamespaceList) {: RESULT=new NoNamespaceList(); :}/*epsilon*/
 				;
 
-Namesp ::= (Namesp) NAMESPACE IDENT:I1 LBRACE Declarations:D2 LBRACE RBRACE RBRACE {: RESULT=new Namesp(I1, D2); RESULT.setLine(I1left); :};
+Namesp ::= (Namesp) NamespName:N1 LBRACE Declarations:D2 LBRACE RBRACE RBRACE {: RESULT=new Namesp(N1, D2); RESULT.setLine(N1left); :};
+
+NamespName ::= (NamespName) NAMESPACE IDENT:nmspName {: RESULT=new NamespName(nmspName); RESULT.setLine(nmspNameleft); :};
 
 Declarations ::=(ConstDeclarations) Declarations:D1 ConstDecl:C2 {: RESULT=new ConstDeclarations(D1, C2); RESULT.setLine(D1left); :}
 				|
