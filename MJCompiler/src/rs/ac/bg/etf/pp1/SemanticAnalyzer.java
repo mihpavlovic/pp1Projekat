@@ -69,9 +69,14 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		else {
 			varName = currentNamespace.getName() + "::" + varDeclNoArray.getVarName();
 		}
+		if(Tab.find(varName)!= Tab.noObj) {
+			report_error("Semanticka greska na liniji " + varDeclNoArray.getLine() + ": promenljiva je vec prethodno deklarisana", null);
+		}
+		else {
+			report_info("Deklarisana promenljiva "+ varDeclNoArray.getVarName(), varDeclNoArray);
+			Obj varNode = Tab.insert(Obj.Var, varName, varDeclNoArray.getType().struct);
+		}
 		
-		report_info("Deklarisana promenljiva "+ varDeclNoArray.getVarName(), varDeclNoArray);
-		Obj varNode = Tab.insert(Obj.Var, varName, varDeclNoArray.getType().struct);
 		currentTypeForVarOrConstDecl = null;
 	}
     
@@ -84,9 +89,14 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		else {
 			varName = currentNamespace.getName() + "::" + moreVarDecl.getVarName();
 		}
+		if(Tab.find(varName)!= Tab.noObj) {
+			report_error("Semanticka greska na liniji " + moreVarDecl.getLine() + ": promenljiva je vec prethodno deklarisana", null);
+		}
+		else {
+			report_info("Deklarisana promenljiva "+ moreVarDecl.getVarName(), moreVarDecl);
+	    	Obj moreVarNode = Tab.insert(Obj.Var, varName, currentTypeForVarOrConstDecl);	
+		}
 		
-		report_info("Deklarisana promenljiva "+ moreVarDecl.getVarName(), moreVarDecl);
-    	Obj moreVarNode = Tab.insert(Obj.Var, varName, currentTypeForVarOrConstDecl);
     }
     
     public void visit(VarDeclArray varDeclArray) {
@@ -97,26 +107,35 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		else {
 			arrayName = currentNamespace.getName() + "::" + varDeclArray.getArrayName();
 		}
-    	
-		report_info("Deklarisan niz "+ varDeclArray.getArrayName(), varDeclArray);
-		//pravim prvo strukturni cvor
-		Struct arrayStructNode = new Struct(Struct.Array, varDeclArray.getType().struct);
-		Obj varArrayNode = Tab.insert(Obj.Var, arrayName, arrayStructNode);
+		if(Tab.find(arrayName)!= Tab.noObj) {
+			report_error("Semanticka greska na liniji " + varDeclArray.getLine() + ": niz je vec prethodno deklarisan", null);
+		}
+		else {
+			report_info("Deklarisan niz "+ varDeclArray.getArrayName(), varDeclArray);
+			//pravim prvo strukturni cvor
+			Struct arrayStructNode = new Struct(Struct.Array, varDeclArray.getType().struct);
+			Obj varArrayNode = Tab.insert(Obj.Var, arrayName, arrayStructNode);
+		}
 		currentTypeForVarOrConstDecl = null;
 	}
     
     public void visit(MoreVarDeclarationsArray moreVarDelcArray) {
     	String arrayName;
-		if(currentNamespace == null) {
-			arrayName = moreVarDelcArray.getArrayName();
-		}
-		else {
-			arrayName = currentNamespace.getName() + "::" + moreVarDelcArray.getArrayName();
-		}
-		report_info("Deklarisan niz "+ moreVarDelcArray.getArrayName(), moreVarDelcArray);
-		Struct arrayStructNode = new Struct(Struct.Array, currentTypeForVarOrConstDecl);
-		Obj moreVarArrayNode = Tab.insert(Obj.Var, arrayName, arrayStructNode);
-	}
+    	if(currentNamespace == null) {
+    		arrayName = moreVarDelcArray.getArrayName();
+    	}
+    	else {
+    		arrayName = currentNamespace.getName() + "::" + moreVarDelcArray.getArrayName();
+    	}
+    	if(Tab.find(arrayName)!= Tab.noObj) {
+    		report_error("Semanticka greska na liniji " + moreVarDelcArray.getLine() + ": promenljiva je vec prethodno deklarisana", null);
+    	}
+    	else {
+    		report_info("Deklarisan niz "+ moreVarDelcArray.getArrayName(), moreVarDelcArray);
+    		Struct arrayStructNode = new Struct(Struct.Array, currentTypeForVarOrConstDecl);
+    		Obj moreVarArrayNode = Tab.insert(Obj.Var, arrayName, arrayStructNode);
+    	}
+    }
     
     
     public void visit(ConstDecl constDecl) {
@@ -128,8 +147,13 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		else {
 			constName = currentNamespace.getName() + "::" + constDecl.getConstName();
 		}
-		report_info("Deklarisana konstanta "+ constName, constDecl);
-		Obj constNode = Tab.insert(Obj.Con, constName, constDecl.getType().struct);
+		if(Tab.find(constName)!= Tab.noObj) {
+    		report_error("Semanticka greska na liniji " + constDecl.getLine() + ": promenljiva je vec prethodno deklarisana", null);
+    	}
+		else {
+			report_info("Deklarisana konstanta "+ constName, constDecl);
+			Obj constNode = Tab.insert(Obj.Con, constName, constDecl.getType().struct);
+		}
 		currentTypeForVarOrConstDecl = null;
 	}
     
@@ -142,9 +166,14 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		else {
 			constName = currentNamespace.getName() + "::" + moreConstDecl.getConstName();
 		}
-		report_info("Deklarisana konstanta "+ moreConstDecl.getConstName(), moreConstDecl);
-		Obj moreConstNode = Tab.insert(Obj.Con, constName, currentTypeForVarOrConstDecl);
-	}
+		if(Tab.find(constName)!= Tab.noObj) {
+    		report_error("Semanticka greska na liniji " + moreConstDecl.getLine() + ": promenljiva je vec prethodno deklarisana", null);
+    	}
+		else {
+			report_info("Deklarisana konstanta "+ moreConstDecl.getConstName(), moreConstDecl);
+			Obj moreConstNode = Tab.insert(Obj.Con, constName, currentTypeForVarOrConstDecl);
+		}
+    }
     
     public void visit(ConstNum constNum) {
 		if(currentTypeForVarOrConstDecl != Tab.intType) {
@@ -160,7 +189,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 
 	//ne valja jer nisam implementirao jos bool
 	public void visit(ConstBool constBool) {
-		if(currentTypeForVarOrConstDecl != Tab.charType) {
+		if(currentTypeForVarOrConstDecl != TabExtended.boolType) {
 			report_error("Semanticka greska na liniji " + constBool.getLine() + ": pokusaj dodele bool vrednosti konstanti koja nije tog tipa", null);
 		}
 	}
@@ -199,7 +228,40 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		
 		currentMethod = null;
 		returnFound = false;
-	}  
+	} 
+	
+	
+	//smene za lokalne promenljive metode
+	
+	public void visit(VarDeclarationsInFunc varDecl) {
+		varDeclCount++;
+		String varName; //nema lokalnih simbola vraca null ako ima i nije medju njima vraca Tab.noObj
+		varName = varDecl.getVarName();
+		if(Tab.currentScope.findSymbol(varName)!= null && Tab.currentScope.findSymbol(varName)!= Tab.noObj) {
+			report_error("Semanticka greska na liniji " + varDecl.getLine() + ": promenljiva je vec prethodno deklarisana", null);
+		}
+		else {
+			report_info("Deklarisana promenljiva "+ varDecl.getVarName(), varDecl);
+			Obj varNode = Tab.insert(Obj.Var, varName, varDecl.getType().struct);
+		}
+		
+		currentTypeForVarOrConstDecl = null;
+	}
+	
+//	public void visit(VarDeclarationsInFuncArray arrayDecl) {
+//		varDeclCount++;
+//		String varName; //nema lokalnih simbola vraca null ako ima i nije medju njima vraca Tab.noObj
+//		varName = varDecl.getVarName();
+//		if(Tab.currentScope.findSymbol(varName)!= null && Tab.currentScope.findSymbol(varName)!= Tab.noObj) {
+//			report_error("Semanticka greska na liniji " + varDecl.getLine() + ": promenljiva je vec prethodno deklarisana", null);
+//		}
+//		else {
+//			report_info("Deklarisana promenljiva "+ varDecl.getVarName(), varDecl);
+//			Obj varNode = Tab.insert(Obj.Var, varName, varDecl.getType().struct);
+//		}
+//		
+//		currentTypeForVarOrConstDecl = null;
+//	}
 	
 	
 	//smena za tip
@@ -217,6 +279,52 @@ public class SemanticAnalyzer extends VisitorAdaptor {
     			report_error("Greska: Ime " + type.getTypeName() + " ne predstavlja tip!", type);
     			type.struct = Tab.noType;
 			}
+		}
+	}
+	
+	
+	//Smene za DesignatorStatement i za Designator
+	
+	public void visit(Designtr designator) {
+		Obj obj = Tab.find(designator.getName());
+		if(obj == Tab.noObj) {
+			report_error("Greska na liniji " + designator.getLine()+ " : ime "+designator.getName()+" nije deklarisano! ", null);
+		}
+		designator.obj = obj;
+	}
+	
+	public void visit(DesigntrNmsp designator) {
+		String dsName = designator.getNmspName() + "::" + designator.getName();
+		Obj obj = Tab.find(dsName);
+		if(obj == Tab.noObj) {
+			report_error("Greska na liniji " + designator.getLine()+ " : ime "+dsName+" nije deklarisano! ", null);
+		}
+		designator.obj = obj;
+	}
+	
+	public void visit(DesigntrArray designator) { // ovde pravim elem, pre nego sto to uradim treba da proverim da li postoji niz
+		Obj arr = Tab.find(designator.getArrayName());
+		if(arr == Tab.noObj) {
+			report_error("Greska na liniji " + designator.getLine()+ " : ne postoji niz sa imenom "+designator.getArrayName(), null);
+		}
+		Obj elemOfArr = new Obj(Obj.Elem, arr.getName(), arr.getType().getElemType());
+		designator.obj = elemOfArr;
+	} 
+	
+	public void visit(DesigntrNmspArray designator) { // ovde pravim elem, pre nego sto to uradim treba da proverim da li postoji niz
+		String arrNmspName = designator.getNmspName() + "::" + designator.getArrayName();
+		Obj arr = Tab.find(arrNmspName);
+		if(arr == Tab.noObj) {
+			report_error("Greska na liniji " + designator.getLine()+ " : ne postoji niz sa imenom "+arrNmspName, null);
+		}
+		Obj elemOfArr = new Obj(Obj.Elem, arr.getName(), arr.getType().getElemType());
+		designator.obj = elemOfArr;
+	}
+	
+	public void visit(DesignatorStatementAssign desigStAss) {
+		if(!desigStAss.getExpr().struct.assignableTo(desigStAss.getDesignator().obj.getType())) {
+    		report_error("Greska na liniji " + desigStAss.getLine() + " : " + "nekompatibilni tipovi u dodeli vrednosti! ", null);
+
 		}
 	}
 	
@@ -277,7 +385,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		factorNum.struct = Tab.intType;
 	}
 	
-	public void visit(FactorDesignator factorD) {
+	public void visit(FactorDesignator factorD) { // moguce da fali nesto za element niza
 		factorD.struct = factorD.getDesignator().obj.getType();
 	}
 	
@@ -291,7 +399,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	}
 	
 	public void visit(FactorBool factorBool) {
-		
+		factorBool.struct = TabExtended.boolType;
 		
 	}
 	

@@ -53,7 +53,7 @@ scan with {:
 terminal PROG, LBRACE, RBRACE, NAMESPACE, CONST ;
 terminal String IDENT;
 terminal Integer NUMBER;
-terminal BOOL;
+terminal String BOOL;
 terminal String CHAR;
 
 terminal DOUBLECOLON, READ, NEW, PLUS, MUL, COMMA, SEMI, DIV, MINUS, RPAREN, ASSIGN, LPAREN, LBRACKET, MOD, RBRACKET;
@@ -139,9 +139,9 @@ MethodDeclName ::= (MethodDeclNameType) Type:methType IDENT:methName
 
 FormPars ::= (FormPars) /*epsilon smena*/;
 
-VarDeclInFunc ::= (VarDeclarationsInFuncArray) VarDeclInFunc Type IDENT LBRACKET RBRACKET SEMI
+VarDeclInFunc ::= (VarDeclarationsInFuncArray) VarDeclInFunc Type:arrayType IDENT:arrayName LBRACKET RBRACKET SEMI
 				|
-				(VarDeclarationsInFunc) VarDeclInFunc Type IDENT MoreVarDecls SEMI
+				(VarDeclarationsInFunc) VarDeclInFunc Type:varType IDENT:varName MoreVarDecls SEMI
 				|
 				(NoVarDeclarationsInFunc)/*epsilon smena*/
 				;
@@ -161,7 +161,7 @@ Statement ::= (StatementDesignatorStatement) DesignatorStatement SEMI
 		   	{: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null);  :}
 			;
 
-AndConst ::= (AndConstPrint) COMMA NUMBER
+AndConst ::= (AndConstPrint) COMMA NUMBER:num
 			|
 			(NoAndConstPrint) /*epsilon smena*/
 			;
@@ -173,13 +173,13 @@ DesignatorStatement ::= (DesignatorStatementAssign) Designator ASSIGN Expr
 						(DesignatorStatementDec) Designator DEC
 						;
 
-Designator ::= (DesigntrNmspArray) IDENT DOUBLECOLON IDENT LBRACKET Expr RBRACKET
+Designator ::= (DesigntrNmspArray) IDENT:nmspName DOUBLECOLON IDENT:arrayName LBRACKET Expr RBRACKET
 				|
 				(Designtr) IDENT:name
 				|
-				(DesigntrArray) IDENT LBRACKET Expr RBRACKET
+				(DesigntrArray) IDENT:arrayName LBRACKET Expr RBRACKET
 				|
-				(DesigntrNmsp) IDENT DOUBLECOLON IDENT
+				(DesigntrNmsp) IDENT:nmspName DOUBLECOLON IDENT:name
 				;
 
 

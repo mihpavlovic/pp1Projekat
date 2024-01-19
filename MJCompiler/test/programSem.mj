@@ -23,5 +23,10 @@ const char proba = 'a', proba2='b';
 int niz[], niz2[];
 
 {
-	void main(){}
+	void main(){
+		a = 5;
+		ako = 5 + 6 + 10;
+		nizChar[3] = 'a';
+		NMSP2::prom2 = 'b';
+	}
 }

@@ -1,0 +1,332 @@
+INFO  16:55:42,600 - Compiling source file: D:\7. sem\PP1\projekatRad\workspace\pp1Projekat\MJCompiler\test\programSem.mj
+INFO  16:55:42,618 - #2 program
+INFO  16:55:42,618 - #7 MJtest
+INFO  16:55:42,618 - #5 namespace
+INFO  16:55:42,618 - #7 NMSP1
+INFO  16:55:42,618 - #3 {
+INFO  16:55:42,619 - #6 const
+INFO  16:55:42,619 - #7 int
+INFO  16:55:42,619 - #7 konst1
+INFO  16:55:42,619 - #21 =
+INFO  16:55:42,619 - #8 5
+INFO  16:55:42,620 - #17 ;
+INFO  16:55:42,620 - #6 const
+INFO  16:55:42,620 - #7 char
+INFO  16:55:42,620 - #7 konst2
+INFO  16:55:42,620 - #21 =
+INFO  16:55:42,621 - #10 'f'
+INFO  16:55:42,621 - #17 ;
+INFO  16:55:42,621 - #7 int
+INFO  16:55:42,621 - #7 prom1
+INFO  16:55:42,621 - #17 ;
+INFO  16:55:42,621 - #3 {
+INFO  16:55:42,627 - #4 }
+INFO  16:55:42,627 - #4 }
+INFO  16:55:42,627 - #5 namespace
+INFO  16:55:42,628 - #7 NMSP2
+INFO  16:55:42,628 - #3 {
+INFO  16:55:42,628 - #7 char
+INFO  16:55:42,628 - #7 prom2
+INFO  16:55:42,628 - #17 ;
+INFO  16:55:42,629 - #6 const
+INFO  16:55:42,629 - #7 int
+INFO  16:55:42,629 - #7 konst3
+INFO  16:55:42,629 - #21 =
+INFO  16:55:42,629 - #8 10
+INFO  16:55:42,629 - #17 ;
+INFO  16:55:42,629 - #7 int
+INFO  16:55:42,629 - #7 prom3
+INFO  16:55:42,629 - #16 ,
+INFO  16:55:42,629 - #7 prom4
+INFO  16:55:42,629 - #17 ;
+INFO  16:55:42,629 - #7 char
+INFO  16:55:42,629 - #7 niz1
+INFO  16:55:42,629 - #23 [
+INFO  16:55:42,629 - #25 ]
+INFO  16:55:42,629 - #17 ;
+INFO  16:55:42,629 - #3 {
+INFO  16:55:42,630 - #4 }
+INFO  16:55:42,630 - #4 }
+INFO  16:55:42,630 - #7 int
+INFO  16:55:42,630 - #7 a
+INFO  16:55:42,630 - #16 ,
+INFO  16:55:42,630 - #7 ako
+INFO  16:55:42,631 - #17 ;
+INFO  16:55:42,631 - #7 char
+INFO  16:55:42,631 - #7 b
+INFO  16:55:42,631 - #16 ,
+INFO  16:55:42,631 - #7 k
+INFO  16:55:42,631 - #16 ,
+INFO  16:55:42,631 - #7 nizChar
+INFO  16:55:42,631 - #23 [
+INFO  16:55:42,631 - #25 ]
+INFO  16:55:42,631 - #17 ;
+INFO  16:55:42,631 - #6 const
+INFO  16:55:42,631 - #7 char
+INFO  16:55:42,631 - #7 proba
+INFO  16:55:42,631 - #21 =
+INFO  16:55:42,631 - #10 'a'
+INFO  16:55:42,631 - #16 ,
+INFO  16:55:42,632 - #7 proba2
+INFO  16:55:42,632 - #21 =
+INFO  16:55:42,632 - #10 'b'
+INFO  16:55:42,632 - #17 ;
+INFO  16:55:42,632 - #7 int
+INFO  16:55:42,632 - #7 niz
+INFO  16:55:42,632 - #23 [
+INFO  16:55:42,632 - #25 ]
+INFO  16:55:42,632 - #16 ,
+INFO  16:55:42,632 - #7 niz2
+INFO  16:55:42,632 - #23 [
+INFO  16:55:42,632 - #25 ]
+INFO  16:55:42,632 - #17 ;
+INFO  16:55:42,632 - #7 int
+INFO  16:55:42,632 - #7 a
+INFO  16:55:42,632 - #17 ;
+INFO  16:55:42,632 - #3 {
+INFO  16:55:42,632 - #28 void
+INFO  16:55:42,632 - #7 main
+INFO  16:55:42,632 - #22 (
+INFO  16:55:42,632 - #20 )
+INFO  16:55:42,633 - #3 {
+INFO  16:55:42,633 - #7 a
+INFO  16:55:42,633 - #21 =
+INFO  16:55:42,633 - #8 5
+INFO  16:55:42,634 - #17 ;
+INFO  16:55:42,634 - #4 }
+INFO  16:55:42,634 - #4 }
+INFO  16:55:42,639 - Program(
+  ProgName(
+   MJtest
+  ) [ProgName]
+  NamespaceList(
+    NamespaceList(
+      NoNamespaceList(
+      ) [NoNamespaceList]
+      Namesp(
+        NamespName(
+         NMSP1
+        ) [NamespName]
+        VarDeclarations(
+          ConstDeclarations(
+            ConstDeclarations(
+              NoDeclarations(
+              ) [NoDeclarations]
+              ConstDecl(
+                Type(
+                 int
+                ) [Type]
+               konst1
+                ConstNum(
+                 5
+                ) [ConstNum]
+                NoMoreConstDeclarations(
+                ) [NoMoreConstDeclarations]
+              ) [ConstDecl]
+            ) [ConstDeclarations]
+            ConstDecl(
+              Type(
+               char
+              ) [Type]
+             konst2
+              ConstChar(
+               'f'
+              ) [ConstChar]
+              NoMoreConstDeclarations(
+              ) [NoMoreConstDeclarations]
+            ) [ConstDecl]
+          ) [ConstDeclarations]
+          VarDeclNoArray(
+            Type(
+             int
+            ) [Type]
+           prom1
+            NoMoreVarDeclarations(
+            ) [NoMoreVarDeclarations]
+          ) [VarDeclNoArray]
+        ) [VarDeclarations]
+      ) [Namesp]
+    ) [NamespaceList]
+    Namesp(
+      NamespName(
+       NMSP2
+      ) [NamespName]
+      VarDeclarations(
+        VarDeclarations(
+          ConstDeclarations(
+            VarDeclarations(
+              NoDeclarations(
+              ) [NoDeclarations]
+              VarDeclNoArray(
+                Type(
+                 char
+                ) [Type]
+               prom2
+                NoMoreVarDeclarations(
+                ) [NoMoreVarDeclarations]
+              ) [VarDeclNoArray]
+            ) [VarDeclarations]
+            ConstDecl(
+              Type(
+               int
+              ) [Type]
+             konst3
+              ConstNum(
+               10
+              ) [ConstNum]
+              NoMoreConstDeclarations(
+              ) [NoMoreConstDeclarations]
+            ) [ConstDecl]
+          ) [ConstDeclarations]
+          VarDeclNoArray(
+            Type(
+             int
+            ) [Type]
+           prom3
+            MoreVarDeclarations(
+              NoMoreVarDeclarations(
+              ) [NoMoreVarDeclarations]
+             prom4
+            ) [MoreVarDeclarations]
+          ) [VarDeclNoArray]
+        ) [VarDeclarations]
+        VarDeclArray(
+          Type(
+           char
+          ) [Type]
+         niz1
+          NoMoreVarDeclarations(
+          ) [NoMoreVarDeclarations]
+        ) [VarDeclArray]
+      ) [VarDeclarations]
+    ) [Namesp]
+  ) [NamespaceList]
+  VarDeclarations(
+    VarDeclarations(
+      ConstDeclarations(
+        VarDeclarations(
+          VarDeclarations(
+            NoDeclarations(
+            ) [NoDeclarations]
+            VarDeclNoArray(
+              Type(
+               int
+              ) [Type]
+             a
+              MoreVarDeclarations(
+                NoMoreVarDeclarations(
+                ) [NoMoreVarDeclarations]
+               ako
+              ) [MoreVarDeclarations]
+            ) [VarDeclNoArray]
+          ) [VarDeclarations]
+          VarDeclNoArray(
+            Type(
+             char
+            ) [Type]
+           b
+            MoreVarDeclarationsArray(
+              MoreVarDeclarations(
+                NoMoreVarDeclarations(
+                ) [NoMoreVarDeclarations]
+               k
+              ) [MoreVarDeclarations]
+             nizChar
+            ) [MoreVarDeclarationsArray]
+          ) [VarDeclNoArray]
+        ) [VarDeclarations]
+        ConstDecl(
+          Type(
+           char
+          ) [Type]
+         proba
+          ConstChar(
+           'a'
+          ) [ConstChar]
+          MoreConstDeclarations(
+            NoMoreConstDeclarations(
+            ) [NoMoreConstDeclarations]
+           proba2
+            ConstChar(
+             'b'
+            ) [ConstChar]
+          ) [MoreConstDeclarations]
+        ) [ConstDecl]
+      ) [ConstDeclarations]
+      VarDeclArray(
+        Type(
+         int
+        ) [Type]
+       niz
+        MoreVarDeclarationsArray(
+          NoMoreVarDeclarations(
+          ) [NoMoreVarDeclarations]
+         niz2
+        ) [MoreVarDeclarationsArray]
+      ) [VarDeclArray]
+    ) [VarDeclarations]
+    VarDeclNoArray(
+      Type(
+       int
+      ) [Type]
+     a
+      NoMoreVarDeclarations(
+      ) [NoMoreVarDeclarations]
+    ) [VarDeclNoArray]
+  ) [VarDeclarations]
+  MethodDeclList(
+    MethodDecl(
+      MethodDeclNameVoid(
+       main
+      ) [MethodDeclNameVoid]
+      FormPars(
+      ) [FormPars]
+      NoVarDeclarationsInFunc(
+      ) [NoVarDeclarationsInFunc]
+      StmtList(
+        NoStmtList(
+        ) [NoStmtList]
+        StatementDesignatorStatement(
+          DesignatorStatementAssign(
+            Designtr(
+             a
+            ) [Designtr]
+            ExprNoMinus(
+              FactorNoTerm(
+                FactorNum(
+                 5
+                ) [FactorNum]
+              ) [FactorNoTerm]
+            ) [ExprNoMinus]
+          ) [DesignatorStatementAssign]
+        ) [StatementDesignatorStatement]
+      ) [StmtList]
+    ) [MethodDecl]
+  ) [MethodDeclList]
+) [Program]
+INFO  16:55:42,640 - ===================================
+INFO  16:55:42,642 - Obradjuje se prostor imena: NMSP1 na liniji 3
+INFO  16:55:42,642 - Deklarisana konstanta NMSP1::konst1 na liniji 4
+INFO  16:55:42,642 - Deklarisana konstanta NMSP1::konst2 na liniji 5
+INFO  16:55:42,642 - Deklarisana promenljiva prom1 na liniji 6
+INFO  16:55:42,642 - Obradjuje se prostor imena: NMSP2 na liniji 10
+INFO  16:55:42,642 - Deklarisana promenljiva prom2 na liniji 11
+INFO  16:55:42,642 - Deklarisana konstanta NMSP2::konst3 na liniji 12
+INFO  16:55:42,642 - Deklarisana promenljiva prom4 na liniji 5
+INFO  16:55:42,642 - Deklarisana promenljiva prom3 na liniji 13
+INFO  16:55:42,642 - Deklarisan niz niz1 na liniji 14
+INFO  16:55:42,643 - Deklarisana promenljiva ako na liniji 4
+INFO  16:55:42,643 - Deklarisana promenljiva a na liniji 20
+INFO  16:55:42,643 - Deklarisana promenljiva k na liniji 5
+INFO  16:55:42,643 - Deklarisan niz nizChar na liniji 5
+INFO  16:55:42,643 - Deklarisana promenljiva b na liniji 21
+INFO  16:55:42,643 - Deklarisana konstanta proba2 na liniji 19
+INFO  16:55:42,643 - Deklarisana konstanta proba na liniji 22
+INFO  16:55:42,643 - Deklarisan niz niz2 na liniji 8
+INFO  16:55:42,643 - Deklarisan niz niz na liniji 23
+INFO  16:55:42,643 - Deklarisana promenljiva a na liniji 24
+INFO  16:55:42,643 - Obradjuje se funkcija main na liniji 27
+INFO  16:55:42,643 -  Print count calls = 0
+INFO  16:55:42,644 -  Deklarisanih promenljivih ima = 9
+INFO  16:55:42,644 - ===================================
+INFO  16:55:42,646 - Parsiranje uspesno zavrseno!
