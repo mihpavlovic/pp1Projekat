@@ -263,41 +263,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		
 		currentTypeForVarOrConstDecl = null;
 		
-//		String arrayName;
-//		if(currentNamespace == null) {
-//			arrayName = varDeclArray.getArrayName();
-//		}
-//		else {
-//			arrayName = currentNamespace.getName() + "::" + varDeclArray.getArrayName();
-//		}
-//		if(Tab.find(arrayName)!= Tab.noObj) {
-//			report_error("Semanticka greska na liniji " + varDeclArray.getLine() + ": niz je vec prethodno deklarisan", null);
-//		}
-//		else {
-//			report_info("Deklarisan niz "+ arrayName, varDeclArray);
-//			//pravim prvo strukturni cvor
-//			Struct arrayStructNode = new Struct(Struct.Array, varDeclArray.getType().struct);
-//			Obj varArrayNode = Tab.insert(Obj.Var, arrayName, arrayStructNode);
-//		}
-//		currentTypeForVarOrConstDecl = null;
 	}
-	
-	
-	
-//	public void visit(VarDeclarationsInFuncArray arrayDecl) {
-//		varDeclCount++;
-//		String varName; //nema lokalnih simbola vraca null ako ima i nije medju njima vraca Tab.noObj
-//		varName = varDecl.getVarName();
-//		if(Tab.currentScope.findSymbol(varName)!= null && Tab.currentScope.findSymbol(varName)!= Tab.noObj) {
-//			report_error("Semanticka greska na liniji " + varDecl.getLine() + ": promenljiva je vec prethodno deklarisana", null);
-//		}
-//		else {
-//			report_info("Deklarisana promenljiva "+ varDecl.getVarName(), varDecl);
-//			Obj varNode = Tab.insert(Obj.Var, varName, varDecl.getType().struct);
-//		}
-//		
-//		currentTypeForVarOrConstDecl = null;
-//	}
 	
 	
 	//smena za tip
@@ -315,6 +281,24 @@ public class SemanticAnalyzer extends VisitorAdaptor {
     			report_error("Greska: Ime " + type.getTypeName() + " ne predstavlja tip!", type);
     			type.struct = Tab.noType;
 			}
+		}
+	}
+	
+	
+	//Statement za print i read
+	
+	public void visit(StatementPrint stmtPrint) {
+		if(stmtPrint.getExpr().struct != Tab.intType &&stmtPrint.getExpr().struct != Tab.charType && stmtPrint.getExpr().struct != TabExtended.boolType) {
+			report_error("Semanticka greska na liniji "+ stmtPrint.getLine() + " : funkciji print je prosledjen parametar koji nije ni int ni char ni bool tipa",null);
+		}
+	}
+	
+	public void visit(StatementRead stmtRead) {
+		if(stmtRead.getDesignator().obj.getKind() != Obj.Var && stmtRead.getDesignator().obj.getKind() != Obj.Elem) {
+			report_error("Greska na liniji " + stmtRead.getLine() + " : designator u read iskazu nije ni promenljiva ni element niza.",null);
+		}
+		if(stmtRead.getDesignator().obj.getType() != Tab.intType && stmtRead.getDesignator().obj.getType() != Tab.charType && stmtRead.getDesignator().obj.getType() != TabExtended.boolType) {
+			report_error("Greska na liniji " + stmtRead.getLine() + " : designator u read iskazu nije tipa int, char ili bool.",null);
 		}
 	}
 	
@@ -458,7 +442,11 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	}
 	
 	public void visit(FactorNew factorNew) {
-
+		if(factorNew.getExpr().struct != Tab.intType) {
+			report_error("Semanticka greska na liniji "+ factorNew.getLine() + " vrednost u uglastim zagradama nije tipa int.", null);
+		}
+		Struct arrayStructNode = new Struct(Struct.Array, factorNew.getType().struct);
+		factorNew.struct = arrayStructNode;
 		
 	}
 	

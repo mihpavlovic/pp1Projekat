@@ -29,7 +29,7 @@ public class MJParserTestSemantic {
 		
 		Reader br = null;
 		try {
-			File sourceCode = new File("test/programSem.mj");
+			File sourceCode = new File("test/test301.mj");
 			log.info("Compiling source file: " + sourceCode.getAbsolutePath());
 			
 			br = new BufferedReader(new FileReader(sourceCode));

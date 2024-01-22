@@ -30,5 +30,8 @@ int niz[], niz2[];
 		nizChar[3] = 'a';
 		NMSP2::prom2 = 'b';
 		a++;
+		niz = new int[5];
+		print(a);
+		read(a);
 	}
 }
