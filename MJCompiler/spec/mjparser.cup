@@ -141,7 +141,7 @@ FormPars ::= (FormPars) /*epsilon smena*/;
 
 VarDeclInFunc ::= (VarDeclarationsInFuncArray) VarDeclInFunc Type:arrayType IDENT:arrayName LBRACKET RBRACKET SEMI
 				|
-				(VarDeclarationsInFunc) VarDeclInFunc Type:varType IDENT:varName MoreVarDecls SEMI
+				(VarDeclarationsInFunc) VarDeclInFunc Type:varType IDENT:varName SEMI
 				|
 				(NoVarDeclarationsInFunc)/*epsilon smena*/
 				;

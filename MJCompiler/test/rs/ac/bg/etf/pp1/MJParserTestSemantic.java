@@ -39,7 +39,7 @@ public class MJParserTestSemantic {
 	        Symbol s = p.parse();  //pocetak parsiranja
 	        
 	        Program prog = (Program)(s.value); 
-	        Tab.init();
+	        TabExtended.init();
 			// ispis sintaksnog stabla
 			log.info(prog.toString(""));
 			log.info("===================================");

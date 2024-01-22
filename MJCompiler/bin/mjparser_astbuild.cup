@@ -158,7 +158,7 @@ FormPars ::= (FormPars) {: RESULT=new FormPars(); :} /*epsilon smena*/;
 
 VarDeclInFunc ::= (VarDeclarationsInFuncArray) VarDeclInFunc:V1 Type:arrayType IDENT:arrayName LBRACKET RBRACKET SEMI {: RESULT=new VarDeclarationsInFuncArray(V1, arrayType, arrayName); RESULT.setLine(V1left); :}
 				|
-				(VarDeclarationsInFunc) VarDeclInFunc:V1 Type:varType IDENT:varName MoreVarDecls:M2 SEMI {: RESULT=new VarDeclarationsInFunc(V1, varType, varName, M2); RESULT.setLine(V1left); :}
+				(VarDeclarationsInFunc) VarDeclInFunc:V1 Type:varType IDENT:varName SEMI {: RESULT=new VarDeclarationsInFunc(V1, varType, varName); RESULT.setLine(V1left); :}
 				|
 				(NoVarDeclarationsInFunc) {: RESULT=new NoVarDeclarationsInFunc(); :}/*epsilon smena*/
 				;
