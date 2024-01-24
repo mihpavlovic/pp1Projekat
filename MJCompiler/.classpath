@@ -9,5 +9,6 @@
 	<classpathentry kind="lib" path="lib/log4j-1.2.17.jar"/>
 	<classpathentry kind="lib" path="lib/JFlex.jar"/>
 	<classpathentry kind="lib" path="D:/7. sem/PP1/projekatRad/workspace/pp1Projekat/MJCompiler/lib/symboltable-1-1.jar"/>
+	<classpathentry kind="lib" path="lib/mj-runtime-1.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

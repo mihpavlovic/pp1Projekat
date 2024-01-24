@@ -288,7 +288,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	//Statement za print i read
 	
 	public void visit(StatementPrint stmtPrint) {
-		if(stmtPrint.getExpr().struct != Tab.intType &&stmtPrint.getExpr().struct != Tab.charType && stmtPrint.getExpr().struct != TabExtended.boolType) {
+		if(stmtPrint.getExpr().struct != Tab.intType && stmtPrint.getExpr().struct != Tab.charType && stmtPrint.getExpr().struct != TabExtended.boolType) {
 			report_error("Semanticka greska na liniji "+ stmtPrint.getLine() + " : funkciji print je prosledjen parametar koji nije ni int ni char ni bool tipa",null);
 		}
 	}
