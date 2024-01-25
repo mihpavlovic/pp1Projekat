@@ -12,6 +12,8 @@
 				<exclude name="TabExtended.java"/>
 				<exclude name="ObjExtended.java"/>
 				<exclude name="CodeGenerator.java"/>
+				<exclude name="CounterVisitor.java"/>
+
 
 
 			</fileset>

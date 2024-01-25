@@ -16,6 +16,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	Struct currentTypeForVarOrConstDecl = null;
 	Obj currentMethod = null;
 	Obj currentNamespace = null;
+	int nVars;
 	
 	boolean returnFound = false;
 	boolean errorDetected = false;
@@ -48,6 +49,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	}
 	
     public void visit(Program program) { 
+    	nVars = Tab.currentScope.getnVars();
     	Tab.chainLocalSymbols(program.getProgName().obj);
     	Tab.closeScope();
     }
@@ -291,6 +293,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		if(stmtPrint.getExpr().struct != Tab.intType && stmtPrint.getExpr().struct != Tab.charType && stmtPrint.getExpr().struct != TabExtended.boolType) {
 			report_error("Semanticka greska na liniji "+ stmtPrint.getLine() + " : funkciji print je prosledjen parametar koji nije ni int ni char ni bool tipa",null);
 		}
+		printCallCount++;
 	}
 	
 	public void visit(StatementRead stmtRead) {
