@@ -1,0 +1,75 @@
+INFO  14:34:11,808 - Compiling source file: D:\7. sem\PP1\projekatRad\workspace\pp1Projekat\MJCompiler\test\programSem.mj
+INFO  14:34:11,825 - #2 program
+INFO  14:34:11,826 - #7 MJtest
+INFO  14:34:11,826 - #3 {
+INFO  14:34:11,827 - #28 void
+INFO  14:34:11,827 - #7 main
+INFO  14:34:11,827 - #22 (
+INFO  14:34:11,827 - #20 )
+INFO  14:34:11,828 - #3 {
+INFO  14:34:11,828 - #27 print
+INFO  14:34:11,829 - #22 (
+INFO  14:34:11,829 - #8 1
+INFO  14:34:11,829 - #20 )
+INFO  14:34:11,829 - #17 ;
+INFO  14:34:11,829 - #27 print
+INFO  14:34:11,829 - #22 (
+INFO  14:34:11,829 - #8 2
+INFO  14:34:11,829 - #20 )
+INFO  14:34:11,830 - #17 ;
+INFO  14:34:11,830 - #4 }
+INFO  14:34:11,830 - #4 }
+INFO  14:34:11,842 - Program(
+  ProgName(
+   MJtest
+  ) [ProgName]
+  NoNamespaceList(
+  ) [NoNamespaceList]
+  NoDeclarations(
+  ) [NoDeclarations]
+  MethodDeclList(
+    MethodDecl(
+      MethodDeclNameVoid(
+       main
+      ) [MethodDeclNameVoid]
+      FormPars(
+      ) [FormPars]
+      NoVarDeclarationsInFunc(
+      ) [NoVarDeclarationsInFunc]
+      StmtList(
+        StmtList(
+          NoStmtList(
+          ) [NoStmtList]
+          StatementPrint(
+            ExprNoMinus(
+              FactorNoTerm(
+                FactorNum(
+                 1
+                ) [FactorNum]
+              ) [FactorNoTerm]
+            ) [ExprNoMinus]
+            NoAndConstPrint(
+            ) [NoAndConstPrint]
+          ) [StatementPrint]
+        ) [StmtList]
+        StatementPrint(
+          ExprNoMinus(
+            FactorNoTerm(
+              FactorNum(
+               2
+              ) [FactorNum]
+            ) [FactorNoTerm]
+          ) [ExprNoMinus]
+          NoAndConstPrint(
+          ) [NoAndConstPrint]
+        ) [StatementPrint]
+      ) [StmtList]
+    ) [MethodDecl]
+  ) [MethodDeclList]
+) [Program]
+INFO  14:34:11,847 - ===================================
+INFO  14:34:11,850 - Obradjuje se funkcija main na liniji 4
+INFO  14:34:11,850 -  Print count calls = 2
+INFO  14:34:11,850 -  Deklarisanih promenljivih ima = 0
+INFO  14:34:11,850 - ===================================
+INFO  14:34:11,858 - Parsiranje uspesno zavrseno!

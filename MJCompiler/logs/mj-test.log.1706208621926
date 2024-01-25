@@ -1,78 +1,95 @@
-INFO  20:28:03,938 - Compiling source file: D:\7. sem\PP1\projekatRad\workspace\pp1Projekat\MJCompiler\test\programSem.mj
-INFO  20:28:03,957 - #2 program
-INFO  20:28:03,957 - #7 MJtest
-INFO  20:28:03,957 - #7 int
-INFO  20:28:03,958 - #7 x
-INFO  20:28:03,959 - #17 ;
-INFO  20:28:03,959 - #7 char
-INFO  20:28:03,960 - #7 m
-INFO  20:28:03,960 - #17 ;
-INFO  20:28:03,960 - #3 {
-INFO  20:28:03,960 - #28 void
-INFO  20:28:03,960 - #7 main
-INFO  20:28:03,960 - #22 (
-INFO  20:28:03,960 - #20 )
-INFO  20:28:03,961 - #7 int
-INFO  20:28:03,961 - #7 y
-INFO  20:28:03,961 - #17 ;
-INFO  20:28:03,961 - #3 {
-INFO  20:28:03,961 - #7 x
-INFO  20:28:03,961 - #21 =
-INFO  20:28:03,961 - #8 6
-INFO  20:28:03,961 - #14 +
-INFO  20:28:03,962 - #8 1
-INFO  20:28:03,968 - #17 ;
-INFO  20:28:03,969 - #7 y
-INFO  20:28:03,969 - #21 =
-INFO  20:28:03,969 - #8 3
-INFO  20:28:03,969 - #17 ;
-INFO  20:28:03,969 - #7 m
-INFO  20:28:03,970 - #21 =
-INFO  20:28:03,970 - #10 'm'
-INFO  20:28:03,970 - #17 ;
-INFO  20:28:03,970 - #27 print
-INFO  20:28:03,970 - #22 (
-INFO  20:28:03,970 - #7 x
-INFO  20:28:03,970 - #20 )
-INFO  20:28:03,971 - #17 ;
-INFO  20:28:03,971 - #27 print
-INFO  20:28:03,971 - #22 (
-INFO  20:28:03,971 - #7 y
-INFO  20:28:03,971 - #20 )
-INFO  20:28:03,971 - #17 ;
-INFO  20:28:03,971 - #27 print
-INFO  20:28:03,971 - #22 (
-INFO  20:28:03,971 - #7 m
-INFO  20:28:03,971 - #16 ,
-INFO  20:28:03,971 - #8 5
-INFO  20:28:03,971 - #20 )
-INFO  20:28:03,972 - #17 ;
-INFO  20:28:03,972 - #4 }
-INFO  20:28:03,972 - #4 }
-INFO  20:28:03,981 - Program(
+INFO  19:40:10,096 - Compiling source file: D:\7. sem\PP1\projekatRad\workspace\pp1Projekat\MJCompiler\test\programSem.mj
+INFO  19:40:10,115 - #2 program
+INFO  19:40:10,115 - #7 MJtest
+INFO  19:40:10,115 - #5 namespace
+INFO  19:40:10,116 - #7 NMSP
+INFO  19:40:10,116 - #3 {
+INFO  19:40:10,116 - #7 int
+INFO  19:40:10,116 - #7 nm
+INFO  19:40:10,118 - #17 ;
+INFO  19:40:10,119 - #3 {
+INFO  19:40:10,119 - #4 }
+INFO  19:40:10,119 - #4 }
+INFO  19:40:10,119 - #7 int
+INFO  19:40:10,120 - #7 x
+INFO  19:40:10,120 - #17 ;
+INFO  19:40:10,120 - #3 {
+INFO  19:40:10,121 - #28 void
+INFO  19:40:10,121 - #7 main
+INFO  19:40:10,121 - #22 (
+INFO  19:40:10,121 - #20 )
+INFO  19:40:10,121 - #7 int
+INFO  19:40:10,122 - #7 y
+INFO  19:40:10,126 - #17 ;
+INFO  19:40:10,126 - #3 {
+INFO  19:40:10,126 - #7 x
+INFO  19:40:10,126 - #21 =
+INFO  19:40:10,126 - #8 6
+INFO  19:40:10,127 - #14 +
+INFO  19:40:10,127 - #8 1
+INFO  19:40:10,128 - #17 ;
+INFO  19:40:10,128 - #7 y
+INFO  19:40:10,128 - #21 =
+INFO  19:40:10,129 - #8 3
+INFO  19:40:10,129 - #17 ;
+INFO  19:40:10,129 - #7 NMSP
+INFO  19:40:10,129 - #11 ::
+INFO  19:40:10,129 - #7 nm
+INFO  19:40:10,129 - #21 =
+INFO  19:40:10,129 - #8 4
+INFO  19:40:10,130 - #17 ;
+INFO  19:40:10,130 - #27 print
+INFO  19:40:10,130 - #22 (
+INFO  19:40:10,130 - #7 x
+INFO  19:40:10,130 - #20 )
+INFO  19:40:10,130 - #17 ;
+INFO  19:40:10,130 - #27 print
+INFO  19:40:10,131 - #22 (
+INFO  19:40:10,131 - #7 y
+INFO  19:40:10,131 - #20 )
+INFO  19:40:10,131 - #17 ;
+INFO  19:40:10,131 - #27 print
+INFO  19:40:10,131 - #22 (
+INFO  19:40:10,131 - #7 NMSP
+INFO  19:40:10,131 - #11 ::
+INFO  19:40:10,131 - #7 nm
+INFO  19:40:10,131 - #20 )
+INFO  19:40:10,131 - #17 ;
+INFO  19:40:10,131 - #4 }
+INFO  19:40:10,131 - #4 }
+INFO  19:40:10,141 - Program(
   ProgName(
    MJtest
   ) [ProgName]
-  NoNamespaceList(
-  ) [NoNamespaceList]
+  NamespaceList(
+    NoNamespaceList(
+    ) [NoNamespaceList]
+    Namesp(
+      NamespName(
+       NMSP
+      ) [NamespName]
+      VarDeclarations(
+        NoDeclarations(
+        ) [NoDeclarations]
+        VarDeclNoArray(
+          Type(
+           int
+          ) [Type]
+         nm
+          NoMoreVarDeclarations(
+          ) [NoMoreVarDeclarations]
+        ) [VarDeclNoArray]
+      ) [VarDeclarations]
+    ) [Namesp]
+  ) [NamespaceList]
   VarDeclarations(
-    VarDeclarations(
-      NoDeclarations(
-      ) [NoDeclarations]
-      VarDeclNoArray(
-        Type(
-         int
-        ) [Type]
-       x
-        NoMoreVarDeclarations(
-        ) [NoMoreVarDeclarations]
-      ) [VarDeclNoArray]
-    ) [VarDeclarations]
+    NoDeclarations(
+    ) [NoDeclarations]
     VarDeclNoArray(
       Type(
-       char
+       int
       ) [Type]
-     m
+     x
       NoMoreVarDeclarations(
       ) [NoMoreVarDeclarations]
     ) [VarDeclNoArray]
@@ -141,14 +158,15 @@ INFO  20:28:03,981 - Program(
               ) [StmtList]
               StatementDesignatorStatement(
                 DesignatorStatementAssign(
-                  Designtr(
-                   m
-                  ) [Designtr]
+                  DesigntrNmsp(
+                   NMSP
+                   nm
+                  ) [DesigntrNmsp]
                   ExprNoMinus(
                     FactorNoTerm(
-                      FactorChar(
-                       'm'
-                      ) [FactorChar]
+                      FactorNum(
+                       4
+                      ) [FactorNum]
                     ) [FactorNoTerm]
                   ) [ExprNoMinus]
                 ) [DesignatorStatementAssign]
@@ -186,26 +204,27 @@ INFO  20:28:03,981 - Program(
           ExprNoMinus(
             FactorNoTerm(
               FactorDesignator(
-                Designtr(
-                 m
-                ) [Designtr]
+                DesigntrNmsp(
+                 NMSP
+                 nm
+                ) [DesigntrNmsp]
               ) [FactorDesignator]
             ) [FactorNoTerm]
           ) [ExprNoMinus]
-          AndConstPrint(
-           5
-          ) [AndConstPrint]
+          NoAndConstPrint(
+          ) [NoAndConstPrint]
         ) [StatementPrint]
       ) [StmtList]
     ) [MethodDecl]
   ) [MethodDeclList]
 ) [Program]
-INFO  20:28:03,981 - ===================================
-INFO  20:28:03,984 - Deklarisana promenljiva x na liniji 3
-INFO  20:28:03,984 - Deklarisana promenljiva m na liniji 4
-INFO  20:28:03,984 - Obradjuje se funkcija main na liniji 6
-INFO  20:28:03,984 - Deklarisana lokalna promenljiva y na liniji 11
-INFO  20:28:03,984 -  Print count calls = 3
-INFO  20:28:03,984 -  Deklarisanih promenljivih ima = 3
-INFO  20:28:03,984 - ===================================
-INFO  20:28:03,991 - Parsiranje uspesno zavrseno!
+INFO  19:40:10,141 - ===================================
+INFO  19:40:10,143 - Obradjuje se prostor imena: NMSP na liniji 3
+INFO  19:40:10,143 - Deklarisana promenljiva NMSP::nm na liniji 4
+INFO  19:40:10,143 - Deklarisana promenljiva x na liniji 10
+INFO  19:40:10,143 - Obradjuje se funkcija main na liniji 12
+INFO  19:40:10,143 - Deklarisana lokalna promenljiva y na liniji 11
+INFO  19:40:10,144 -  Print count calls = 3
+INFO  19:40:10,144 -  Deklarisanih promenljivih ima = 3
+INFO  19:40:10,144 - ===================================
+INFO  19:40:10,153 - Parsiranje uspesno zavrseno!

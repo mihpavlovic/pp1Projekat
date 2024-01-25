@@ -1,55 +1,53 @@
-INFO  20:28:03,938 - Compiling source file: D:\7. sem\PP1\projekatRad\workspace\pp1Projekat\MJCompiler\test\programSem.mj
-INFO  20:28:03,957 - #2 program
-INFO  20:28:03,957 - #7 MJtest
-INFO  20:28:03,957 - #7 int
-INFO  20:28:03,958 - #7 x
-INFO  20:28:03,959 - #17 ;
-INFO  20:28:03,959 - #7 char
-INFO  20:28:03,960 - #7 m
-INFO  20:28:03,960 - #17 ;
-INFO  20:28:03,960 - #3 {
-INFO  20:28:03,960 - #28 void
-INFO  20:28:03,960 - #7 main
-INFO  20:28:03,960 - #22 (
-INFO  20:28:03,960 - #20 )
-INFO  20:28:03,961 - #7 int
-INFO  20:28:03,961 - #7 y
-INFO  20:28:03,961 - #17 ;
-INFO  20:28:03,961 - #3 {
-INFO  20:28:03,961 - #7 x
-INFO  20:28:03,961 - #21 =
-INFO  20:28:03,961 - #8 6
-INFO  20:28:03,961 - #14 +
-INFO  20:28:03,962 - #8 1
-INFO  20:28:03,968 - #17 ;
-INFO  20:28:03,969 - #7 y
-INFO  20:28:03,969 - #21 =
-INFO  20:28:03,969 - #8 3
-INFO  20:28:03,969 - #17 ;
-INFO  20:28:03,969 - #7 m
-INFO  20:28:03,970 - #21 =
-INFO  20:28:03,970 - #10 'm'
-INFO  20:28:03,970 - #17 ;
-INFO  20:28:03,970 - #27 print
-INFO  20:28:03,970 - #22 (
-INFO  20:28:03,970 - #7 x
-INFO  20:28:03,970 - #20 )
-INFO  20:28:03,971 - #17 ;
-INFO  20:28:03,971 - #27 print
-INFO  20:28:03,971 - #22 (
-INFO  20:28:03,971 - #7 y
-INFO  20:28:03,971 - #20 )
-INFO  20:28:03,971 - #17 ;
-INFO  20:28:03,971 - #27 print
-INFO  20:28:03,971 - #22 (
-INFO  20:28:03,971 - #7 m
-INFO  20:28:03,971 - #16 ,
-INFO  20:28:03,971 - #8 5
-INFO  20:28:03,971 - #20 )
-INFO  20:28:03,972 - #17 ;
-INFO  20:28:03,972 - #4 }
-INFO  20:28:03,972 - #4 }
-INFO  20:28:03,981 - Program(
+INFO  19:51:36,560 - Compiling source file: D:\7. sem\PP1\projekatRad\workspace\pp1Projekat\MJCompiler\test\programSem.mj
+INFO  19:51:36,583 - #2 program
+INFO  19:51:36,583 - #7 MJtest
+INFO  19:51:36,583 - #7 int
+INFO  19:51:36,585 - #7 x
+INFO  19:51:36,586 - #17 ;
+INFO  19:51:36,586 - #7 char
+INFO  19:51:36,586 - #7 m
+INFO  19:51:36,586 - #17 ;
+INFO  19:51:36,586 - #3 {
+INFO  19:51:36,586 - #28 void
+INFO  19:51:36,587 - #7 main
+INFO  19:51:36,587 - #22 (
+INFO  19:51:36,587 - #20 )
+INFO  19:51:36,587 - #7 int
+INFO  19:51:36,587 - #7 y
+INFO  19:51:36,588 - #17 ;
+INFO  19:51:36,588 - #3 {
+INFO  19:51:36,588 - #7 x
+INFO  19:51:36,588 - #21 =
+INFO  19:51:36,588 - #8 6
+INFO  19:51:36,588 - #14 +
+INFO  19:51:36,589 - #8 1
+INFO  19:51:36,590 - #17 ;
+INFO  19:51:36,590 - #7 y
+INFO  19:51:36,591 - #21 =
+INFO  19:51:36,591 - #8 3
+INFO  19:51:36,591 - #17 ;
+INFO  19:51:36,591 - #7 m
+INFO  19:51:36,591 - #21 =
+INFO  19:51:36,591 - #10 'm'
+INFO  19:51:36,591 - #17 ;
+INFO  19:51:36,591 - #27 print
+INFO  19:51:36,591 - #22 (
+INFO  19:51:36,591 - #7 x
+INFO  19:51:36,591 - #20 )
+INFO  19:51:36,592 - #17 ;
+INFO  19:51:36,592 - #27 print
+INFO  19:51:36,592 - #22 (
+INFO  19:51:36,592 - #7 y
+INFO  19:51:36,592 - #20 )
+INFO  19:51:36,592 - #17 ;
+INFO  19:51:36,592 - #27 print
+INFO  19:51:36,592 - #22 (
+INFO  19:51:36,592 - #7 m
+INFO  19:51:36,592 - #20 )
+INFO  19:51:36,592 - #17 ;
+INFO  19:51:36,592 - #4 }
+INFO  19:51:36,592 - #4 }
+INFO  19:51:36,600 - Program(
   ProgName(
    MJtest
   ) [ProgName]
@@ -192,20 +190,19 @@ INFO  20:28:03,981 - Program(
               ) [FactorDesignator]
             ) [FactorNoTerm]
           ) [ExprNoMinus]
-          AndConstPrint(
-           5
-          ) [AndConstPrint]
+          NoAndConstPrint(
+          ) [NoAndConstPrint]
         ) [StatementPrint]
       ) [StmtList]
     ) [MethodDecl]
   ) [MethodDeclList]
 ) [Program]
-INFO  20:28:03,981 - ===================================
-INFO  20:28:03,984 - Deklarisana promenljiva x na liniji 3
-INFO  20:28:03,984 - Deklarisana promenljiva m na liniji 4
-INFO  20:28:03,984 - Obradjuje se funkcija main na liniji 6
-INFO  20:28:03,984 - Deklarisana lokalna promenljiva y na liniji 11
-INFO  20:28:03,984 -  Print count calls = 3
-INFO  20:28:03,984 -  Deklarisanih promenljivih ima = 3
-INFO  20:28:03,984 - ===================================
-INFO  20:28:03,991 - Parsiranje uspesno zavrseno!
+INFO  19:51:36,600 - ===================================
+INFO  19:51:36,602 - Deklarisana promenljiva x na liniji 3
+INFO  19:51:36,602 - Deklarisana promenljiva m na liniji 4
+INFO  19:51:36,603 - Obradjuje se funkcija main na liniji 6
+INFO  19:51:36,603 - Deklarisana lokalna promenljiva y na liniji 11
+INFO  19:51:36,603 -  Print count calls = 3
+INFO  19:51:36,603 -  Deklarisanih promenljivih ima = 3
+INFO  19:51:36,603 - ===================================
+INFO  19:51:36,609 - Parsiranje uspesno zavrseno!

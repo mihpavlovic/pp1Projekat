@@ -1,8 +1,14 @@
 program MJtest 
 
+int x;
+char m;
 {
-	void main(){
-		print(1);
-		print(2);
+	void main() int y; {
+		x = 6 + 1;
+		y = 3;
+		m = 'm';
+		print(x);
+		print(y);
+		print(m, 5);
 	}
 }
