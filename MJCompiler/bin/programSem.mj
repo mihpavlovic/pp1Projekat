@@ -1,19 +1,10 @@
 program MJtest 
 
-namespace NMSP{
-	int nm;
-	const char ch = 'h';
-	{}
-}
-
-int x, z;
-char m;
-const int cnst = 6, cnst2 = 11, cnst3 = 1;
 int niz[];
 {
-	void main() int y; {
+	void main() {
 		niz = new int[3];
-		
+		niz[1] = 5;
 		
 		print(niz[1]);
 		

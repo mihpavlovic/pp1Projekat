@@ -1,43 +1,43 @@
-INFO  22:28:13,326 - Compiling source file: D:\7. sem\PP1\projekatRad\workspace\pp1Projekat\MJCompiler\test\programSem.mj
-INFO  22:28:13,346 - #2 program
-INFO  22:28:13,346 - #7 MJtest
-INFO  22:28:13,346 - #7 int
-INFO  22:28:13,347 - #7 niz
-INFO  22:28:13,347 - #23 [
-INFO  22:28:13,347 - #25 ]
-INFO  22:28:13,347 - #17 ;
-INFO  22:28:13,348 - #3 {
-INFO  22:28:13,348 - #28 void
-INFO  22:28:13,348 - #7 main
-INFO  22:28:13,348 - #22 (
-INFO  22:28:13,348 - #20 )
-INFO  22:28:13,348 - #3 {
-INFO  22:28:13,349 - #7 niz
-INFO  22:28:13,349 - #21 =
-INFO  22:28:13,349 - #13 new
-INFO  22:28:13,349 - #7 int
-INFO  22:28:13,350 - #23 [
-INFO  22:28:13,350 - #8 3
-INFO  22:28:13,350 - #25 ]
-INFO  22:28:13,350 - #17 ;
-INFO  22:28:13,350 - #7 niz
-INFO  22:28:13,355 - #23 [
-INFO  22:28:13,355 - #8 1
-INFO  22:28:13,356 - #25 ]
-INFO  22:28:13,356 - #21 =
-INFO  22:28:13,356 - #8 5
-INFO  22:28:13,356 - #17 ;
-INFO  22:28:13,356 - #27 print
-INFO  22:28:13,356 - #22 (
-INFO  22:28:13,356 - #7 niz
-INFO  22:28:13,356 - #23 [
-INFO  22:28:13,356 - #8 1
-INFO  22:28:13,356 - #25 ]
-INFO  22:28:13,357 - #20 )
-INFO  22:28:13,357 - #17 ;
-INFO  22:28:13,357 - #4 }
-INFO  22:28:13,358 - #4 }
-INFO  22:28:13,365 - Program(
+INFO  22:23:06,061 - Compiling source file: D:\7. sem\PP1\projekatRad\workspace\pp1Projekat\MJCompiler\test\programSem.mj
+INFO  22:23:06,077 - #2 program
+INFO  22:23:06,078 - #7 MJtest
+INFO  22:23:06,079 - #7 int
+INFO  22:23:06,080 - #7 niz
+INFO  22:23:06,081 - #23 [
+INFO  22:23:06,081 - #25 ]
+INFO  22:23:06,081 - #17 ;
+INFO  22:23:06,082 - #3 {
+INFO  22:23:06,082 - #28 void
+INFO  22:23:06,082 - #7 main
+INFO  22:23:06,082 - #22 (
+INFO  22:23:06,082 - #20 )
+INFO  22:23:06,083 - #3 {
+INFO  22:23:06,083 - #7 niz
+INFO  22:23:06,083 - #21 =
+INFO  22:23:06,083 - #13 new
+INFO  22:23:06,083 - #7 int
+INFO  22:23:06,084 - #23 [
+INFO  22:23:06,084 - #8 3
+INFO  22:23:06,084 - #25 ]
+INFO  22:23:06,084 - #17 ;
+INFO  22:23:06,084 - #7 niz
+INFO  22:23:06,089 - #23 [
+INFO  22:23:06,090 - #8 1
+INFO  22:23:06,090 - #25 ]
+INFO  22:23:06,090 - #21 =
+INFO  22:23:06,090 - #8 5
+INFO  22:23:06,090 - #17 ;
+INFO  22:23:06,090 - #27 print
+INFO  22:23:06,090 - #22 (
+INFO  22:23:06,090 - #7 niz
+INFO  22:23:06,090 - #23 [
+INFO  22:23:06,090 - #8 1
+INFO  22:23:06,090 - #25 ]
+INFO  22:23:06,091 - #20 )
+INFO  22:23:06,091 - #17 ;
+INFO  22:23:06,091 - #4 }
+INFO  22:23:06,091 - #4 }
+INFO  22:23:06,100 - Program(
   ProgName(
    MJtest
   ) [ProgName]
@@ -143,10 +143,10 @@ INFO  22:28:13,365 - Program(
     ) [MethodDecl]
   ) [MethodDeclList]
 ) [Program]
-INFO  22:28:13,365 - ===================================
-INFO  22:28:13,367 - Deklarisan niz niz na liniji 3
-INFO  22:28:13,367 - Obradjuje se funkcija main na liniji 5
-INFO  22:28:13,367 -  Print count calls = 1
-INFO  22:28:13,367 -  Deklarisanih promenljivih ima = 0
-INFO  22:28:13,367 - ===================================
-INFO  22:28:13,375 - Parsiranje uspesno zavrseno!
+INFO  22:23:06,100 - ===================================
+INFO  22:23:06,101 - Deklarisan niz niz na liniji 3
+INFO  22:23:06,102 - Obradjuje se funkcija main na liniji 5
+INFO  22:23:06,102 -  Print count calls = 1
+INFO  22:23:06,102 -  Deklarisanih promenljivih ima = 0
+INFO  22:23:06,102 - ===================================
+INFO  22:23:06,108 - Parsiranje uspesno zavrseno!

@@ -5,6 +5,7 @@ import rs.ac.bg.etf.pp1.ast.*;
 import rs.etf.pp1.mj.runtime.Code;
 import rs.etf.pp1.symboltable.*;
 import rs.etf.pp1.symboltable.concepts.Obj;
+import rs.etf.pp1.symboltable.concepts.Struct;
 
 public class CodeGenerator extends VisitorAdaptor {
 	private int mainPc;
@@ -109,7 +110,9 @@ public class CodeGenerator extends VisitorAdaptor {
 	
 	public void visit(DesignatorStatementAssign desigAssign) {
 		//na exprsteku vec imam Expr i njega samo storujem u designator
+	
 		Code.store(desigAssign.getDesignator().obj);
+		
 	}
 	
 	public void visit(DesignatorStatementInc dsStmt) {
@@ -151,8 +154,9 @@ public class CodeGenerator extends VisitorAdaptor {
 		}
 	}
 	
-	public void visit(ArrName arr) {
-		Obj arrObj = Tab.find(arr.getArrayName());
+	public void visit(ArrName arr) { // ne valja adresa niza jer je obj elem
+		Obj arrObj = ((DesigntrArray)arr.getParent()).obj; 
+		//Obj arrObj = Tab.find(arr.getArrayName());
 		Code.load(arrObj);
 	}
 	
@@ -211,9 +215,9 @@ public class CodeGenerator extends VisitorAdaptor {
 	public void visit(FactorNew fNew) { 
 		Code.put(Code.newarray);
 		if(fNew.getType().struct == Tab.charType) {
-			Code.put(1);
-		} else { // da probam da bool odradim preko 0 i 1
 			Code.put(0);
+		} else { // da probam da bool odradim preko 0 i 1
+			Code.put(1);
 		}
 		
 	}
