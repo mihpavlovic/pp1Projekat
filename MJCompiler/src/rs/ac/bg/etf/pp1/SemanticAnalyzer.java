@@ -156,6 +156,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		else {
 			report_info("Deklarisana konstanta "+ constName, constDecl);
 			Obj constNode = Tab.insert(Obj.Con, constName, constDecl.getType().struct);
+			constDecl.obj = constNode;
 		}
 		currentTypeForVarOrConstDecl = null;
 	}
@@ -175,6 +176,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		else {
 			report_info("Deklarisana konstanta "+ constName, moreConstDecl);
 			Obj moreConstNode = Tab.insert(Obj.Con, constName, currentTypeForVarOrConstDecl);
+			moreConstDecl.obj = moreConstNode;
 		}
     }
     

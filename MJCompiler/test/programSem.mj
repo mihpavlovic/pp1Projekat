@@ -1,14 +1,26 @@
 program MJtest 
 
+namespace NMSP{
+	int nm;
+	{}
+}
+
 int x;
 char m;
+const int cnst = 6;
+const char ch = 'c';
 {
 	void main() int y; {
-		x = 6 + 1;
-		y = 3;
+		x = 6 + 3;
+		y = 8;
 		m = 'm';
+		NMSP::nm = 7;
 		print(x);
 		print(y);
 		print(m, 5);
+		print(NMSP::nm);
+		print(cnst);
+		print(ch);
+		
 	}
 }

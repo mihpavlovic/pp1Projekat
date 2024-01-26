@@ -62,6 +62,50 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 	
 	
+	//pomocna funkcija za vracanje vrednosti
+	private int cnstValue(SyntaxNode node) {
+		if(node instanceof ConstNum) {
+			return ((ConstNum)node).getNumValue();
+		}
+		if(node instanceof ConstChar) {
+			return ((ConstChar)node).getCharValue().charAt(1);
+		}
+		if(node instanceof ConstBool) {
+			//nisam obradio za bool
+		}
+		
+		return -1;
+	}
+	
+	
+	//deklaracije konstanti
+	
+	public void visit(ConstDecl constDecl) {
+		constDecl.obj.setAdr(cnstValue(constDecl.getWhichConst()));
+		
+	}
+	
+	public void visit(MoreConstDeclarations moreConstDecl) {
+		moreConstDecl.obj.setAdr(cnstValue(moreConstDecl.getWhichConst()));
+	}
+	
+	public void visit(ConstNum cNum) {
+		Code.loadConst(cNum.getNumValue());
+	}
+	
+	public void visit(ConstChar cChar) { // ne znam da li je dobro, ili da idem samo loadConst sa ovom adresom
+		//Obj obj = new Obj(Obj.Con, "charValue", Tab.charType);
+		//obj.setAdr(cChar.getCharValue().charAt(1));
+		//Code.load(obj);
+		Code.loadConst(cChar.getCharValue().charAt(1));
+	}
+	
+	public void visit(ConstBool cBool) { // nije jos uradjeno
+		
+	}
+	
+	
+	//sve za Designator, DesignatorStatement
 	
 	public void visit(DesignatorStatementAssign desigAssign) {
 		//na exprsteku vec imam Expr i njega samo storujem u designator
@@ -74,6 +118,16 @@ public class CodeGenerator extends VisitorAdaptor {
 			Code.load(designator.obj);//ukoliko nije designator iz dodele vrednosti stavi ga na stek, ako jeste ne radi nista
 		}
 	}
+	
+	public void visit(DesigntrNmsp dsNmsp) {
+		SyntaxNode parent = dsNmsp.getParent();
+		if(DesignatorStatementAssign.class != parent.getClass() ) {
+			Code.load(dsNmsp.obj);
+		}
+	}
+	
+	
+	//sve za Expr, izraze i operacije
 	
 	public void visit(ExprAddopTerm exprAddopTerm) {
 		if(exprAddopTerm.getAddop().getClass() == AddopPlus.class) {
@@ -106,7 +160,7 @@ public class CodeGenerator extends VisitorAdaptor {
 		Code.load(obj);
 	}
 	
-	public void visit(FactorExpr fExpr) { //trebalo bi da je vec na steku
+	public void visit(FactorExpr fExpr){//trebalo bi da je vec na steku
 		
 	}
 

@@ -65,10 +65,8 @@ nonterminal Program Program;
 nonterminal NamespList NamespList;
 nonterminal Declarations Declarations;
 nonterminal VarDecl VarDecl;
-nonterminal ConstDecl ConstDecl;
 nonterminal MethodDeclList MethodDeclList;
 nonterminal WhichConst WhichConst;
-nonterminal MoreConstDecls MoreConstDecls;
 nonterminal MoreVarDecls MoreVarDecls;
 nonterminal FormPars FormPars;
 nonterminal StatementList StatementList;
@@ -83,7 +81,7 @@ nonterminal Relop Relop;
 nonterminal Mulop Mulop;
 
 
-nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, MethodDeclName, MethodDecl, Designator, Namesp, NamespName;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, MethodDeclName, MethodDecl, Designator, Namesp, NamespName, ConstDecl, MoreConstDecls;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Expr, Term, Factor;
 
 Program ::= (Program)  PROG ProgName:p NamespList:N1 Declarations:D2 LBRACE MethodDeclList:M3  RBRACE {: RESULT=new Program(p, N1, D2, M3); RESULT.setLine(pleft); :};

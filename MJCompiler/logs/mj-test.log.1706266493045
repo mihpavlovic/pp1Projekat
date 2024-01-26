@@ -1,0 +1,327 @@
+INFO  11:52:28,832 - Compiling source file: D:\7. sem\PP1\projekatRad\workspace\pp1Projekat\MJCompiler\test\programSem.mj
+INFO  11:52:28,845 - #2 program
+INFO  11:52:28,846 - #7 MJtest
+INFO  11:52:28,846 - #5 namespace
+INFO  11:52:28,853 - #7 NMSP
+INFO  11:52:28,853 - #3 {
+INFO  11:52:28,853 - #7 int
+INFO  11:52:28,853 - #7 nm
+INFO  11:52:28,854 - #17 ;
+INFO  11:52:28,854 - #3 {
+INFO  11:52:28,854 - #4 }
+INFO  11:52:28,854 - #4 }
+INFO  11:52:28,854 - #7 int
+INFO  11:52:28,855 - #7 x
+INFO  11:52:28,855 - #17 ;
+INFO  11:52:28,855 - #7 char
+INFO  11:52:28,855 - #7 m
+INFO  11:52:28,855 - #17 ;
+INFO  11:52:28,855 - #6 const
+INFO  11:52:28,855 - #7 int
+INFO  11:52:28,855 - #7 cnst
+INFO  11:52:28,855 - #21 =
+INFO  11:52:28,856 - #8 6
+INFO  11:52:28,856 - #17 ;
+INFO  11:52:28,856 - #3 {
+INFO  11:52:28,857 - #28 void
+INFO  11:52:28,857 - #7 main
+INFO  11:52:28,857 - #22 (
+INFO  11:52:28,857 - #20 )
+INFO  11:52:28,858 - #7 int
+INFO  11:52:28,858 - #7 y
+INFO  11:52:28,858 - #17 ;
+INFO  11:52:28,858 - #3 {
+INFO  11:52:28,859 - #7 x
+INFO  11:52:28,859 - #21 =
+INFO  11:52:28,859 - #8 6
+INFO  11:52:28,859 - #14 +
+INFO  11:52:28,859 - #8 3
+INFO  11:52:28,860 - #17 ;
+INFO  11:52:28,860 - #7 y
+INFO  11:52:28,860 - #21 =
+INFO  11:52:28,860 - #8 8
+INFO  11:52:28,860 - #17 ;
+INFO  11:52:28,860 - #7 m
+INFO  11:52:28,860 - #21 =
+INFO  11:52:28,860 - #10 'm'
+INFO  11:52:28,860 - #17 ;
+INFO  11:52:28,860 - #7 NMSP
+INFO  11:52:28,861 - #11 ::
+INFO  11:52:28,861 - #7 nm
+INFO  11:52:28,861 - #21 =
+INFO  11:52:28,861 - #8 7
+INFO  11:52:28,861 - #17 ;
+INFO  11:52:28,861 - #27 print
+INFO  11:52:28,861 - #22 (
+INFO  11:52:28,861 - #7 x
+INFO  11:52:28,861 - #20 )
+INFO  11:52:28,861 - #17 ;
+INFO  11:52:28,861 - #27 print
+INFO  11:52:28,861 - #22 (
+INFO  11:52:28,861 - #7 y
+INFO  11:52:28,862 - #20 )
+INFO  11:52:28,862 - #17 ;
+INFO  11:52:28,862 - #27 print
+INFO  11:52:28,862 - #22 (
+INFO  11:52:28,862 - #7 m
+INFO  11:52:28,862 - #16 ,
+INFO  11:52:28,862 - #8 5
+INFO  11:52:28,862 - #20 )
+INFO  11:52:28,862 - #17 ;
+INFO  11:52:28,862 - #27 print
+INFO  11:52:28,862 - #22 (
+INFO  11:52:28,862 - #7 NMSP
+INFO  11:52:28,862 - #11 ::
+INFO  11:52:28,862 - #7 nm
+INFO  11:52:28,862 - #20 )
+INFO  11:52:28,862 - #17 ;
+INFO  11:52:28,862 - #27 print
+INFO  11:52:28,862 - #22 (
+INFO  11:52:28,863 - #7 cnst
+INFO  11:52:28,863 - #20 )
+INFO  11:52:28,863 - #17 ;
+INFO  11:52:28,863 - #4 }
+INFO  11:52:28,863 - #4 }
+INFO  11:52:28,870 - Program(
+  ProgName(
+   MJtest
+  ) [ProgName]
+  NamespaceList(
+    NoNamespaceList(
+    ) [NoNamespaceList]
+    Namesp(
+      NamespName(
+       NMSP
+      ) [NamespName]
+      VarDeclarations(
+        NoDeclarations(
+        ) [NoDeclarations]
+        VarDeclNoArray(
+          Type(
+           int
+          ) [Type]
+         nm
+          NoMoreVarDeclarations(
+          ) [NoMoreVarDeclarations]
+        ) [VarDeclNoArray]
+      ) [VarDeclarations]
+    ) [Namesp]
+  ) [NamespaceList]
+  ConstDeclarations(
+    VarDeclarations(
+      VarDeclarations(
+        NoDeclarations(
+        ) [NoDeclarations]
+        VarDeclNoArray(
+          Type(
+           int
+          ) [Type]
+         x
+          NoMoreVarDeclarations(
+          ) [NoMoreVarDeclarations]
+        ) [VarDeclNoArray]
+      ) [VarDeclarations]
+      VarDeclNoArray(
+        Type(
+         char
+        ) [Type]
+       m
+        NoMoreVarDeclarations(
+        ) [NoMoreVarDeclarations]
+      ) [VarDeclNoArray]
+    ) [VarDeclarations]
+    ConstDecl(
+      Type(
+       int
+      ) [Type]
+     cnst
+      ConstNum(
+       6
+      ) [ConstNum]
+      NoMoreConstDeclarations(
+      ) [NoMoreConstDeclarations]
+    ) [ConstDecl]
+  ) [ConstDeclarations]
+  MethodDeclList(
+    MethodDecl(
+      MethodDeclNameVoid(
+       main
+      ) [MethodDeclNameVoid]
+      FormPars(
+      ) [FormPars]
+      VarDeclarationsInFunc(
+        NoVarDeclarationsInFunc(
+        ) [NoVarDeclarationsInFunc]
+        Type(
+         int
+        ) [Type]
+       y
+      ) [VarDeclarationsInFunc]
+      StmtList(
+        StmtList(
+          StmtList(
+            StmtList(
+              StmtList(
+                StmtList(
+                  StmtList(
+                    StmtList(
+                      StmtList(
+                        NoStmtList(
+                        ) [NoStmtList]
+                        StatementDesignatorStatement(
+                          DesignatorStatementAssign(
+                            Designtr(
+                             x
+                            ) [Designtr]
+                            ExprAddopTerm(
+                              ExprNoMinus(
+                                FactorNoTerm(
+                                  FactorNum(
+                                   6
+                                  ) [FactorNum]
+                                ) [FactorNoTerm]
+                              ) [ExprNoMinus]
+                              AddopPlus(
+                              ) [AddopPlus]
+                              FactorNoTerm(
+                                FactorNum(
+                                 3
+                                ) [FactorNum]
+                              ) [FactorNoTerm]
+                            ) [ExprAddopTerm]
+                          ) [DesignatorStatementAssign]
+                        ) [StatementDesignatorStatement]
+                      ) [StmtList]
+                      StatementDesignatorStatement(
+                        DesignatorStatementAssign(
+                          Designtr(
+                           y
+                          ) [Designtr]
+                          ExprNoMinus(
+                            FactorNoTerm(
+                              FactorNum(
+                               8
+                              ) [FactorNum]
+                            ) [FactorNoTerm]
+                          ) [ExprNoMinus]
+                        ) [DesignatorStatementAssign]
+                      ) [StatementDesignatorStatement]
+                    ) [StmtList]
+                    StatementDesignatorStatement(
+                      DesignatorStatementAssign(
+                        Designtr(
+                         m
+                        ) [Designtr]
+                        ExprNoMinus(
+                          FactorNoTerm(
+                            FactorChar(
+                             'm'
+                            ) [FactorChar]
+                          ) [FactorNoTerm]
+                        ) [ExprNoMinus]
+                      ) [DesignatorStatementAssign]
+                    ) [StatementDesignatorStatement]
+                  ) [StmtList]
+                  StatementDesignatorStatement(
+                    DesignatorStatementAssign(
+                      DesigntrNmsp(
+                       NMSP
+                       nm
+                      ) [DesigntrNmsp]
+                      ExprNoMinus(
+                        FactorNoTerm(
+                          FactorNum(
+                           7
+                          ) [FactorNum]
+                        ) [FactorNoTerm]
+                      ) [ExprNoMinus]
+                    ) [DesignatorStatementAssign]
+                  ) [StatementDesignatorStatement]
+                ) [StmtList]
+                StatementPrint(
+                  ExprNoMinus(
+                    FactorNoTerm(
+                      FactorDesignator(
+                        Designtr(
+                         x
+                        ) [Designtr]
+                      ) [FactorDesignator]
+                    ) [FactorNoTerm]
+                  ) [ExprNoMinus]
+                  NoAndConstPrint(
+                  ) [NoAndConstPrint]
+                ) [StatementPrint]
+              ) [StmtList]
+              StatementPrint(
+                ExprNoMinus(
+                  FactorNoTerm(
+                    FactorDesignator(
+                      Designtr(
+                       y
+                      ) [Designtr]
+                    ) [FactorDesignator]
+                  ) [FactorNoTerm]
+                ) [ExprNoMinus]
+                NoAndConstPrint(
+                ) [NoAndConstPrint]
+              ) [StatementPrint]
+            ) [StmtList]
+            StatementPrint(
+              ExprNoMinus(
+                FactorNoTerm(
+                  FactorDesignator(
+                    Designtr(
+                     m
+                    ) [Designtr]
+                  ) [FactorDesignator]
+                ) [FactorNoTerm]
+              ) [ExprNoMinus]
+              AndConstPrint(
+               5
+              ) [AndConstPrint]
+            ) [StatementPrint]
+          ) [StmtList]
+          StatementPrint(
+            ExprNoMinus(
+              FactorNoTerm(
+                FactorDesignator(
+                  DesigntrNmsp(
+                   NMSP
+                   nm
+                  ) [DesigntrNmsp]
+                ) [FactorDesignator]
+              ) [FactorNoTerm]
+            ) [ExprNoMinus]
+            NoAndConstPrint(
+            ) [NoAndConstPrint]
+          ) [StatementPrint]
+        ) [StmtList]
+        StatementPrint(
+          ExprNoMinus(
+            FactorNoTerm(
+              FactorDesignator(
+                Designtr(
+                 cnst
+                ) [Designtr]
+              ) [FactorDesignator]
+            ) [FactorNoTerm]
+          ) [ExprNoMinus]
+          NoAndConstPrint(
+          ) [NoAndConstPrint]
+        ) [StatementPrint]
+      ) [StmtList]
+    ) [MethodDecl]
+  ) [MethodDeclList]
+) [Program]
+INFO  11:52:28,871 - ===================================
+INFO  11:52:28,873 - Obradjuje se prostor imena: NMSP na liniji 3
+INFO  11:52:28,873 - Deklarisana promenljiva NMSP::nm na liniji 4
+INFO  11:52:28,873 - Deklarisana promenljiva x na liniji 8
+INFO  11:52:28,873 - Deklarisana promenljiva m na liniji 9
+INFO  11:52:28,873 - Deklarisana konstanta cnst na liniji 10
+INFO  11:52:28,873 - Obradjuje se funkcija main na liniji 12
+INFO  11:52:28,873 - Deklarisana lokalna promenljiva y na liniji 11
+INFO  11:52:28,873 -  Print count calls = 5
+INFO  11:52:28,873 -  Deklarisanih promenljivih ima = 4
+INFO  11:52:28,874 - ===================================
+INFO  11:52:28,879 - Parsiranje uspesno zavrseno!
