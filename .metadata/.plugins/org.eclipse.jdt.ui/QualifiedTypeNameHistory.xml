@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="rs.etf.pp1.symboltable.concepts.Struct"/>
     <fullyQualifiedTypeName name="rs.etf.pp1.symboltable.concepts.ObjExtended"/>
+    <fullyQualifiedTypeName name="rs.etf.pp1.symboltable.concepts.Struct"/>
+    <fullyQualifiedTypeName name="rs.etf.pp1.symboltable.concepts.Scope"/>
+    <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ObjExtended"/>
     <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.TabExtended"/>
+    <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
+    <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.StatementPrint"/>
+    <fullyQualifiedTypeName name="rs.etf.pp1.symboltable.Tab"/>
+    <fullyQualifiedTypeName name="rs.etf.pp1.mj.runtime.Code"/>
+    <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.FactorNum"/>
+    <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.MethodDeclName"/>
+    <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.MethodDeclNameVoid"/>
+    <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.CounterVisitor"/>
+    <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.VarDeclarationsInFunc"/>
+    <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.VarDeclarationsInFuncArray"/>
+    <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.CounterVisitor.VarCounter"/>
+    <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.MethodDecl"/>
+    <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.SyntaxNode"/>
+    <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.DesignatorStatementAssign"/>
+    <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.MulopDiv"/>
+    <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.MulopMod"/>
+    <fullyQualifiedTypeName name="rs.etf.pp1.symboltable.concepts.Obj"/>
+    <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.AndConstPrint"/>
 </qualifiedTypeNameHistroy>

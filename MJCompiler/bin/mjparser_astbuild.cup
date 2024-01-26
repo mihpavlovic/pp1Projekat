@@ -79,6 +79,7 @@ nonterminal DesigBracket DesigBracket;
 nonterminal Addop Addop;
 nonterminal Relop Relop;
 nonterminal Mulop Mulop;
+nonterminal ArrName ArrName;
 
 
 nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, MethodDeclName, MethodDecl, Designator, Namesp, NamespName, ConstDecl, MoreConstDecls;
@@ -188,16 +189,16 @@ DesignatorStatement ::= (DesignatorStatementAssign) Designator:D1 ASSIGN Expr:E2
 						(DesignatorStatementDec) Designator:D1 DEC {: RESULT=new DesignatorStatementDec(D1); RESULT.setLine(D1left); :}
 						;
 
-Designator ::= (DesigntrNmspArray) IDENT:nmspName DOUBLECOLON IDENT:arrayName LBRACKET Expr:E1 RBRACKET {: RESULT=new DesigntrNmspArray(nmspName, arrayName, E1); RESULT.setLine(nmspNameleft); :}
+Designator ::= (DesigntrNmspArray) IDENT:nmspName DOUBLECOLON ArrName:arrayName LBRACKET Expr:E1 RBRACKET {: RESULT=new DesigntrNmspArray(nmspName, arrayName, E1); RESULT.setLine(nmspNameleft); :}
 				|
 				(Designtr) IDENT:name {: RESULT=new Designtr(name); RESULT.setLine(nameleft); :}
 				|
-				(DesigntrArray) IDENT:arrayName LBRACKET Expr:E1 RBRACKET {: RESULT=new DesigntrArray(arrayName, E1); RESULT.setLine(arrayNameleft); :}
+				(DesigntrArray) ArrName:arrayName LBRACKET Expr:E1 RBRACKET {: RESULT=new DesigntrArray(arrayName, E1); RESULT.setLine(arrayNameleft); :}
 				|
 				(DesigntrNmsp) IDENT:nmspName DOUBLECOLON IDENT:name {: RESULT=new DesigntrNmsp(nmspName, name); RESULT.setLine(nmspNameleft); :}
 				;
 
-
+ArrName ::= (ArrName) IDENT:arrayName {: RESULT=new ArrName(arrayName); RESULT.setLine(arrayNameleft); :} ;
 
 
 Expr ::= (ExprMinus) MINUS Term:t {: RESULT=new ExprMinus(t); RESULT.setLine(tleft); :}

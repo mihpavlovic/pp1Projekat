@@ -17,7 +17,6 @@ INDEX VERSION 1.131+D:\7. sem\PP1\projekatRad\workspace\pp1Projekat\.metadata\.p
 2410721875.index
 1009665549.index
 267254768.index
-2063763519.index
 1865797976.index
 107238570.index
 3812281376.index

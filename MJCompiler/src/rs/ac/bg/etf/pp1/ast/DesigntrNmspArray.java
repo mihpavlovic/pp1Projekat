@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 26/0/2024 11:48:7
+// 26/0/2024 16:33:3
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -8,12 +8,13 @@ package rs.ac.bg.etf.pp1.ast;
 public class DesigntrNmspArray extends Designator {
 
     private String nmspName;
-    private String arrayName;
+    private ArrName ArrName;
     private Expr Expr;
 
-    public DesigntrNmspArray (String nmspName, String arrayName, Expr Expr) {
+    public DesigntrNmspArray (String nmspName, ArrName ArrName, Expr Expr) {
         this.nmspName=nmspName;
-        this.arrayName=arrayName;
+        this.ArrName=ArrName;
+        if(ArrName!=null) ArrName.setParent(this);
         this.Expr=Expr;
         if(Expr!=null) Expr.setParent(this);
     }
@@ -26,12 +27,12 @@ public class DesigntrNmspArray extends Designator {
         this.nmspName=nmspName;
     }
 
-    public String getArrayName() {
-        return arrayName;
+    public ArrName getArrName() {
+        return ArrName;
     }
 
-    public void setArrayName(String arrayName) {
-        this.arrayName=arrayName;
+    public void setArrName(ArrName ArrName) {
+        this.ArrName=ArrName;
     }
 
     public Expr getExpr() {
@@ -47,15 +48,18 @@ public class DesigntrNmspArray extends Designator {
     }
 
     public void childrenAccept(Visitor visitor) {
+        if(ArrName!=null) ArrName.accept(visitor);
         if(Expr!=null) Expr.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
+        if(ArrName!=null) ArrName.traverseTopDown(visitor);
         if(Expr!=null) Expr.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
+        if(ArrName!=null) ArrName.traverseBottomUp(visitor);
         if(Expr!=null) Expr.traverseBottomUp(visitor);
         accept(visitor);
     }
@@ -68,7 +72,10 @@ public class DesigntrNmspArray extends Designator {
         buffer.append(" "+tab+nmspName);
         buffer.append("\n");
 
-        buffer.append(" "+tab+arrayName);
+        if(ArrName!=null)
+            buffer.append(ArrName.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
         buffer.append("\n");
 
         if(Expr!=null)

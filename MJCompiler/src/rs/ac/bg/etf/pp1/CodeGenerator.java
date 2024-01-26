@@ -112,6 +112,20 @@ public class CodeGenerator extends VisitorAdaptor {
 		Code.store(desigAssign.getDesignator().obj);
 	}
 	
+	public void visit(DesignatorStatementInc dsStmt) {
+		Code.loadConst(1);
+		Code.put(Code.add);
+		Code.store(dsStmt.getDesignator().obj);
+
+	}
+	
+	public void visit(DesignatorStatementDec dsStmt) {
+		Code.loadConst(1);
+		Code.put(Code.sub);
+		Code.store(dsStmt.getDesignator().obj);
+
+	}
+	
 	public void visit(Designtr designator) {
 		SyntaxNode parent = designator.getParent();
 		if(DesignatorStatementAssign.class != parent.getClass() ) {
@@ -124,6 +138,22 @@ public class CodeGenerator extends VisitorAdaptor {
 		if(DesignatorStatementAssign.class != parent.getClass() ) {
 			Code.load(dsNmsp.obj);
 		}
+	}
+	
+	public void visit(DesigntrArray dsArr) {
+		SyntaxNode parent = dsArr.getParent();
+		if(DesignatorStatementAssign.class != parent.getClass() ) {
+			if(dsArr.obj.getType() == Tab.intType) {
+				Code.put(Code.aload);
+			} else {
+				Code.put(Code.baload);
+			}
+		}
+	}
+	
+	public void visit(ArrName arr) {
+		Obj arrObj = Tab.find(arr.getArrayName());
+		Code.load(arrObj);
 	}
 	
 	
@@ -165,19 +195,26 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 
 	public void visit(FactorBool fBool) { // ne znam
-	
+		if(fBool.getBl() == "true") {
+			Code.loadConst(1);
+		} else {
+			Code.loadConst(0);
+		}
 	}
 	
 	  
 	
 	public void visit(FactorDesignator fDesig) { // ne znam
-//		SyntaxNode parent = fDesig.getParent();
-//		if(DesignatorStatementAssign.class != parent.getClass() ) {
-//			Code.load(fDesig.obj);//ukoliko nije designator iz dodele vrednosti stavi ga na stek, ako jeste ne radi nista
-//		}
+
 	}
 	
-	public void visit(FactorNew fNew) { // ne znam
+	public void visit(FactorNew fNew) { 
+		Code.put(Code.newarray);
+		if(fNew.getType().struct == Tab.charType) {
+			Code.put(1);
+		} else { // da probam da bool odradim preko 0 i 1
+			Code.put(0);
+		}
 		
 	}
 	

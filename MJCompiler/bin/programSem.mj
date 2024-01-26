@@ -2,25 +2,21 @@ program MJtest
 
 namespace NMSP{
 	int nm;
+	const char ch = 'h';
 	{}
 }
 
-int x;
+int x, z;
 char m;
-const int cnst = 6;
-const char ch = 'c';
+const int cnst = 6, cnst2 = 11, cnst3 = 1;
+int niz[];
 {
 	void main() int y; {
-		x = 6 + 3;
-		y = 8;
-		m = 'm';
-		NMSP::nm = 7;
-		print(x);
-		print(y);
-		print(m, 5);
-		print(NMSP::nm);
-		print(cnst);
-		print(ch);
+		niz = new int[3];
+		
+		
+		print(niz[1]);
+		
 		
 	}
 }
