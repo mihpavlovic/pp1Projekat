@@ -1,0 +1,93 @@
+INFO  12:26:35,697 - Compiling source file: D:\7. sem\PP1\projekatRad\workspace\pp1Projekat\MJCompiler\test\programSem.mj
+INFO  12:26:35,762 - #2 program
+INFO  12:26:35,762 - #7 MJtest
+INFO  12:26:35,763 - #7 int
+INFO  12:26:35,764 - #7 x
+INFO  12:26:35,765 - #17 ;
+INFO  12:26:35,765 - #3 {
+INFO  12:26:35,766 - #28 void
+INFO  12:26:35,767 - #7 main
+INFO  12:26:35,767 - #22 (
+INFO  12:26:35,767 - #20 )
+INFO  12:26:35,768 - #3 {
+INFO  12:26:35,768 - #7 x
+INFO  12:26:35,769 - #21 =
+INFO  12:26:35,769 - #8 1
+INFO  12:26:35,769 - #17 ;
+INFO  12:26:35,769 - #27 print
+INFO  12:26:35,769 - #22 (
+INFO  12:26:35,769 - #7 x
+INFO  12:26:35,769 - #20 )
+INFO  12:26:35,770 - #17 ;
+INFO  12:26:35,770 - #4 }
+INFO  12:26:35,770 - #4 }
+INFO  12:26:35,784 - Program(
+  ProgName(
+   MJtest
+  ) [ProgName]
+  NoNamespaceList(
+  ) [NoNamespaceList]
+  VarDeclarations(
+    NoDeclarations(
+    ) [NoDeclarations]
+    VarDeclNoArray(
+      Type(
+       int
+      ) [Type]
+     x
+      NoMoreVarDeclarations(
+      ) [NoMoreVarDeclarations]
+    ) [VarDeclNoArray]
+  ) [VarDeclarations]
+  MethodDeclList(
+    MethodDecl(
+      MethodDeclNameVoid(
+       main
+      ) [MethodDeclNameVoid]
+      FormPars(
+      ) [FormPars]
+      NoVarDeclarationsInFunc(
+      ) [NoVarDeclarationsInFunc]
+      StmtList(
+        StmtList(
+          NoStmtList(
+          ) [NoStmtList]
+          StatementDesignatorStatement(
+            DesignatorStatementAssign(
+              Designtr(
+               x
+              ) [Designtr]
+              ExprNoMinus(
+                FactorNoTerm(
+                  FactorNum(
+                   1
+                  ) [FactorNum]
+                ) [FactorNoTerm]
+              ) [ExprNoMinus]
+            ) [DesignatorStatementAssign]
+          ) [StatementDesignatorStatement]
+        ) [StmtList]
+        StatementPrint(
+          ExprNoMinus(
+            FactorNoTerm(
+              FactorDesignator(
+                Designtr(
+                 x
+                ) [Designtr]
+              ) [FactorDesignator]
+            ) [FactorNoTerm]
+          ) [ExprNoMinus]
+          NoAndConstPrint(
+          ) [NoAndConstPrint]
+        ) [StatementPrint]
+      ) [StmtList]
+    ) [MethodDecl]
+  ) [MethodDeclList]
+) [Program]
+INFO  12:26:35,784 - ===================================
+INFO  12:26:35,801 - Deklarisana promenljiva x na liniji 3
+INFO  12:26:35,801 - Obradjuje se funkcija main na liniji 5
+INFO  12:26:35,801 -  Print count calls = 1
+INFO  12:26:35,801 -  Deklarisanih promenljivih ima = 1
+INFO  12:26:35,801 - ===================================
+INFO  12:26:35,809 - Parsiranje uspesno zavrseno!

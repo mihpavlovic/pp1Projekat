@@ -1,0 +1,152 @@
+INFO  22:28:13,326 - Compiling source file: D:\7. sem\PP1\projekatRad\workspace\pp1Projekat\MJCompiler\test\programSem.mj
+INFO  22:28:13,346 - #2 program
+INFO  22:28:13,346 - #7 MJtest
+INFO  22:28:13,346 - #7 int
+INFO  22:28:13,347 - #7 niz
+INFO  22:28:13,347 - #23 [
+INFO  22:28:13,347 - #25 ]
+INFO  22:28:13,347 - #17 ;
+INFO  22:28:13,348 - #3 {
+INFO  22:28:13,348 - #28 void
+INFO  22:28:13,348 - #7 main
+INFO  22:28:13,348 - #22 (
+INFO  22:28:13,348 - #20 )
+INFO  22:28:13,348 - #3 {
+INFO  22:28:13,349 - #7 niz
+INFO  22:28:13,349 - #21 =
+INFO  22:28:13,349 - #13 new
+INFO  22:28:13,349 - #7 int
+INFO  22:28:13,350 - #23 [
+INFO  22:28:13,350 - #8 3
+INFO  22:28:13,350 - #25 ]
+INFO  22:28:13,350 - #17 ;
+INFO  22:28:13,350 - #7 niz
+INFO  22:28:13,355 - #23 [
+INFO  22:28:13,355 - #8 1
+INFO  22:28:13,356 - #25 ]
+INFO  22:28:13,356 - #21 =
+INFO  22:28:13,356 - #8 5
+INFO  22:28:13,356 - #17 ;
+INFO  22:28:13,356 - #27 print
+INFO  22:28:13,356 - #22 (
+INFO  22:28:13,356 - #7 niz
+INFO  22:28:13,356 - #23 [
+INFO  22:28:13,356 - #8 1
+INFO  22:28:13,356 - #25 ]
+INFO  22:28:13,357 - #20 )
+INFO  22:28:13,357 - #17 ;
+INFO  22:28:13,357 - #4 }
+INFO  22:28:13,358 - #4 }
+INFO  22:28:13,365 - Program(
+  ProgName(
+   MJtest
+  ) [ProgName]
+  NoNamespaceList(
+  ) [NoNamespaceList]
+  VarDeclarations(
+    NoDeclarations(
+    ) [NoDeclarations]
+    VarDeclArray(
+      Type(
+       int
+      ) [Type]
+     niz
+      NoMoreVarDeclarations(
+      ) [NoMoreVarDeclarations]
+    ) [VarDeclArray]
+  ) [VarDeclarations]
+  MethodDeclList(
+    MethodDecl(
+      MethodDeclNameVoid(
+       main
+      ) [MethodDeclNameVoid]
+      FormPars(
+      ) [FormPars]
+      NoVarDeclarationsInFunc(
+      ) [NoVarDeclarationsInFunc]
+      StmtList(
+        StmtList(
+          StmtList(
+            NoStmtList(
+            ) [NoStmtList]
+            StatementDesignatorStatement(
+              DesignatorStatementAssign(
+                Designtr(
+                 niz
+                ) [Designtr]
+                ExprNoMinus(
+                  FactorNoTerm(
+                    FactorNew(
+                      Type(
+                       int
+                      ) [Type]
+                      ExprNoMinus(
+                        FactorNoTerm(
+                          FactorNum(
+                           3
+                          ) [FactorNum]
+                        ) [FactorNoTerm]
+                      ) [ExprNoMinus]
+                    ) [FactorNew]
+                  ) [FactorNoTerm]
+                ) [ExprNoMinus]
+              ) [DesignatorStatementAssign]
+            ) [StatementDesignatorStatement]
+          ) [StmtList]
+          StatementDesignatorStatement(
+            DesignatorStatementAssign(
+              DesigntrArray(
+                ArrName(
+                 niz
+                ) [ArrName]
+                ExprNoMinus(
+                  FactorNoTerm(
+                    FactorNum(
+                     1
+                    ) [FactorNum]
+                  ) [FactorNoTerm]
+                ) [ExprNoMinus]
+              ) [DesigntrArray]
+              ExprNoMinus(
+                FactorNoTerm(
+                  FactorNum(
+                   5
+                  ) [FactorNum]
+                ) [FactorNoTerm]
+              ) [ExprNoMinus]
+            ) [DesignatorStatementAssign]
+          ) [StatementDesignatorStatement]
+        ) [StmtList]
+        StatementPrint(
+          ExprNoMinus(
+            FactorNoTerm(
+              FactorDesignator(
+                DesigntrArray(
+                  ArrName(
+                   niz
+                  ) [ArrName]
+                  ExprNoMinus(
+                    FactorNoTerm(
+                      FactorNum(
+                       1
+                      ) [FactorNum]
+                    ) [FactorNoTerm]
+                  ) [ExprNoMinus]
+                ) [DesigntrArray]
+              ) [FactorDesignator]
+            ) [FactorNoTerm]
+          ) [ExprNoMinus]
+          NoAndConstPrint(
+          ) [NoAndConstPrint]
+        ) [StatementPrint]
+      ) [StmtList]
+    ) [MethodDecl]
+  ) [MethodDeclList]
+) [Program]
+INFO  22:28:13,365 - ===================================
+INFO  22:28:13,367 - Deklarisan niz niz na liniji 3
+INFO  22:28:13,367 - Obradjuje se funkcija main na liniji 5
+INFO  22:28:13,367 -  Print count calls = 1
+INFO  22:28:13,367 -  Deklarisanih promenljivih ima = 0
+INFO  22:28:13,367 - ===================================
+INFO  22:28:13,375 - Parsiranje uspesno zavrseno!

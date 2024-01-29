@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="rs.etf.pp1.symboltable.concepts.ObjExtended"/>
-    <fullyQualifiedTypeName name="rs.etf.pp1.symboltable.concepts.Struct"/>
     <fullyQualifiedTypeName name="rs.etf.pp1.symboltable.concepts.Scope"/>
     <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ObjExtended"/>
     <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.TabExtended"/>
@@ -23,4 +22,5 @@
     <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.MulopMod"/>
     <fullyQualifiedTypeName name="rs.etf.pp1.symboltable.concepts.Obj"/>
     <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.AndConstPrint"/>
+    <fullyQualifiedTypeName name="rs.etf.pp1.symboltable.concepts.Struct"/>
 </qualifiedTypeNameHistroy>

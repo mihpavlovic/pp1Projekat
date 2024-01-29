@@ -115,7 +115,7 @@ public class CodeGenerator extends VisitorAdaptor {
 		
 	}
 	
-	public void visit(DesignatorStatementInc dsStmt) {
+	public void visit(DesignatorStatementInc dsStmt) { // ovi ne valjaju za nizove msm
 		Code.loadConst(1);
 		Code.put(Code.add);
 		Code.store(dsStmt.getDesignator().obj);
@@ -145,20 +145,25 @@ public class CodeGenerator extends VisitorAdaptor {
 	
 	public void visit(DesigntrArray dsArr) {
 		SyntaxNode parent = dsArr.getParent();
-		if(DesignatorStatementAssign.class != parent.getClass() ) {
-			if(dsArr.obj.getType() == Tab.intType) {
-				Code.put(Code.aload);
-			} else {
-				Code.put(Code.baload);
-			}
+		if(parent instanceof DesignatorStatementAssign) { // ako je dsArr sa leve strane jednako u dodeli vrednosti
+			
+		} else {
+			Code.load(dsArr.obj); // u Code.load gleda da l je char ili int
 		}
+//		if(DesignatorStatementAssign.class != parent.getClass() ) {
+//			if(dsArr.obj.getType() == Tab.intType) {
+//				Code.put(Code.aload);
+//			} else {
+//				Code.put(Code.baload);
+//			}
+//		}
 	}
 	
-	public void visit(ArrName arr) { // ne valja adresa niza jer je obj elem
-		Obj arrObj = ((DesigntrArray)arr.getParent()).obj; 
-		//Obj arrObj = Tab.find(arr.getArrayName());
-		Code.load(arrObj);
-	}
+//	public void visit(ArrName arr) { // kind od obj je elem i zato uradi aload
+//		Obj arrObj = ((DesigntrArray)arr.getParent()).obj; 
+//		
+//		//Code.load(arrObj);
+//	}
 	
 	
 	//sve za Expr, izraze i operacije

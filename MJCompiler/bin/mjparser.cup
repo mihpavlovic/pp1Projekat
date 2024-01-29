@@ -63,7 +63,7 @@ terminal GREATER,LESS,GREATEROREQUAL,LESSOREQUAL,EQUAL,DIFFERENT,AND,OR;
 
 nonterminal Program, NamespList, Declarations, VarDecl, MethodDeclList, WhichConst, MoreVarDecls;
 nonterminal FormPars, StatementList, Statement, DesignatorStatement, VarDeclInFunc , AndConst, DesigNmsp, DesigBracket;
-nonterminal Addop, Relop, Mulop, ArrName;
+nonterminal Addop, Relop, Mulop;
 
 
 nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, MethodDeclName, MethodDecl, Designator, Namesp, NamespName, ConstDecl, MoreConstDecls;
@@ -173,16 +173,12 @@ DesignatorStatement ::= (DesignatorStatementAssign) Designator ASSIGN Expr
 						(DesignatorStatementDec) Designator DEC
 						;
 
-Designator ::= (DesigntrNmspArray) IDENT:nmspName DOUBLECOLON ArrName:arrayName LBRACKET Expr RBRACKET
+Designator ::= 	(Designtr) IDENT:name
 				|
-				(Designtr) IDENT:name
-				|
-				(DesigntrArray) ArrName:arrayName LBRACKET Expr RBRACKET
+				(DesigntrArray) Designator LBRACKET Expr RBRACKET
 				|
 				(DesigntrNmsp) IDENT:nmspName DOUBLECOLON IDENT:name
 				;
-
-ArrName ::= (ArrName) IDENT:arrayName ;
 
 
 Expr ::= (ExprMinus) MINUS Term:t

@@ -4,8 +4,7 @@ int niz[];
 {
 	void main() {
 		niz = new int[3];
-		niz[1] = 5;
-		
+		niz[1] = 25;
 		print(niz[1]);
 		
 		

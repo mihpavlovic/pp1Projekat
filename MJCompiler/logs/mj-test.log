@@ -1,43 +1,43 @@
-INFO  22:28:13,326 - Compiling source file: D:\7. sem\PP1\projekatRad\workspace\pp1Projekat\MJCompiler\test\programSem.mj
-INFO  22:28:13,346 - #2 program
-INFO  22:28:13,346 - #7 MJtest
-INFO  22:28:13,346 - #7 int
-INFO  22:28:13,347 - #7 niz
-INFO  22:28:13,347 - #23 [
-INFO  22:28:13,347 - #25 ]
-INFO  22:28:13,347 - #17 ;
-INFO  22:28:13,348 - #3 {
-INFO  22:28:13,348 - #28 void
-INFO  22:28:13,348 - #7 main
-INFO  22:28:13,348 - #22 (
-INFO  22:28:13,348 - #20 )
-INFO  22:28:13,348 - #3 {
-INFO  22:28:13,349 - #7 niz
-INFO  22:28:13,349 - #21 =
-INFO  22:28:13,349 - #13 new
-INFO  22:28:13,349 - #7 int
-INFO  22:28:13,350 - #23 [
-INFO  22:28:13,350 - #8 3
-INFO  22:28:13,350 - #25 ]
-INFO  22:28:13,350 - #17 ;
-INFO  22:28:13,350 - #7 niz
-INFO  22:28:13,355 - #23 [
-INFO  22:28:13,355 - #8 1
-INFO  22:28:13,356 - #25 ]
-INFO  22:28:13,356 - #21 =
-INFO  22:28:13,356 - #8 5
-INFO  22:28:13,356 - #17 ;
-INFO  22:28:13,356 - #27 print
-INFO  22:28:13,356 - #22 (
-INFO  22:28:13,356 - #7 niz
-INFO  22:28:13,356 - #23 [
-INFO  22:28:13,356 - #8 1
-INFO  22:28:13,356 - #25 ]
-INFO  22:28:13,357 - #20 )
-INFO  22:28:13,357 - #17 ;
-INFO  22:28:13,357 - #4 }
-INFO  22:28:13,358 - #4 }
-INFO  22:28:13,365 - Program(
+INFO  15:12:29,727 - Compiling source file: D:\7. sem\PP1\projekatRad\workspace\pp1Projekat\MJCompiler\test\programSem.mj
+INFO  15:12:29,743 - #2 program
+INFO  15:12:29,743 - #7 MJtest
+INFO  15:12:29,744 - #7 int
+INFO  15:12:29,745 - #7 niz
+INFO  15:12:29,746 - #23 [
+INFO  15:12:29,746 - #25 ]
+INFO  15:12:29,746 - #17 ;
+INFO  15:12:29,747 - #3 {
+INFO  15:12:29,747 - #28 void
+INFO  15:12:29,747 - #7 main
+INFO  15:12:29,747 - #22 (
+INFO  15:12:29,747 - #20 )
+INFO  15:12:29,748 - #3 {
+INFO  15:12:29,749 - #7 niz
+INFO  15:12:29,749 - #21 =
+INFO  15:12:29,749 - #13 new
+INFO  15:12:29,749 - #7 int
+INFO  15:12:29,749 - #23 [
+INFO  15:12:29,750 - #8 3
+INFO  15:12:29,750 - #25 ]
+INFO  15:12:29,750 - #17 ;
+INFO  15:12:29,750 - #7 niz
+INFO  15:12:29,755 - #23 [
+INFO  15:12:29,755 - #8 1
+INFO  15:12:29,755 - #25 ]
+INFO  15:12:29,755 - #21 =
+INFO  15:12:29,755 - #8 25
+INFO  15:12:29,755 - #17 ;
+INFO  15:12:29,755 - #27 print
+INFO  15:12:29,755 - #22 (
+INFO  15:12:29,756 - #7 niz
+INFO  15:12:29,756 - #23 [
+INFO  15:12:29,756 - #8 1
+INFO  15:12:29,756 - #25 ]
+INFO  15:12:29,756 - #20 )
+INFO  15:12:29,757 - #17 ;
+INFO  15:12:29,757 - #4 }
+INFO  15:12:29,757 - #4 }
+INFO  15:12:29,765 - Program(
   ProgName(
    MJtest
   ) [ProgName]
@@ -96,9 +96,9 @@ INFO  22:28:13,365 - Program(
           StatementDesignatorStatement(
             DesignatorStatementAssign(
               DesigntrArray(
-                ArrName(
+                Designtr(
                  niz
-                ) [ArrName]
+                ) [Designtr]
                 ExprNoMinus(
                   FactorNoTerm(
                     FactorNum(
@@ -110,7 +110,7 @@ INFO  22:28:13,365 - Program(
               ExprNoMinus(
                 FactorNoTerm(
                   FactorNum(
-                   5
+                   25
                   ) [FactorNum]
                 ) [FactorNoTerm]
               ) [ExprNoMinus]
@@ -122,9 +122,9 @@ INFO  22:28:13,365 - Program(
             FactorNoTerm(
               FactorDesignator(
                 DesigntrArray(
-                  ArrName(
+                  Designtr(
                    niz
-                  ) [ArrName]
+                  ) [Designtr]
                   ExprNoMinus(
                     FactorNoTerm(
                       FactorNum(
@@ -143,10 +143,10 @@ INFO  22:28:13,365 - Program(
     ) [MethodDecl]
   ) [MethodDeclList]
 ) [Program]
-INFO  22:28:13,365 - ===================================
-INFO  22:28:13,367 - Deklarisan niz niz na liniji 3
-INFO  22:28:13,367 - Obradjuje se funkcija main na liniji 5
-INFO  22:28:13,367 -  Print count calls = 1
-INFO  22:28:13,367 -  Deklarisanih promenljivih ima = 0
-INFO  22:28:13,367 - ===================================
-INFO  22:28:13,375 - Parsiranje uspesno zavrseno!
+INFO  15:12:29,765 - ===================================
+INFO  15:12:29,767 - Deklarisan niz niz na liniji 3
+INFO  15:12:29,767 - Obradjuje se funkcija main na liniji 5
+INFO  15:12:29,767 -  Print count calls = 1
+INFO  15:12:29,767 -  Deklarisanih promenljivih ima = 0
+INFO  15:12:29,767 - ===================================
+INFO  15:12:29,773 - Parsiranje uspesno zavrseno!
