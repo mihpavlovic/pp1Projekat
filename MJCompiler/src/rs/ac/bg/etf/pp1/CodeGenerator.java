@@ -38,21 +38,21 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 	
 	
-	public void visit(StatementPrint print) { // fali obrada sa AndConst
-		if(print.getAndConst().getClass() == AndConstPrint.class) {
-			if(print.getExpr().struct == Tab.intType) {
-				Code.put(Code.print);
-			} else {
+	public void visit(StatementPrint print) { 
+		if(print.getAndConst().getClass() == AndConstPrint.class) { // ovo je ako ima AndConst i ako ga ima ta vrednost je vec na steku
+			if(print.getExpr().struct == Tab.charType) {
 				Code.put(Code.bprint);
+			} else {
+				Code.put(Code.print);
 			}
 		}
 		else {
-			if(print.getExpr().struct == Tab.intType) {
-				Code.loadConst(5);
-				Code.put(Code.print);
-			} else {
+			if(print.getExpr().struct == Tab.charType) {
 				Code.loadConst(1);
 				Code.put(Code.bprint);
+			} else {
+				Code.loadConst(5);
+				Code.put(Code.print);
 			}
 		}
 		
@@ -102,7 +102,11 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 	
 	public void visit(ConstBool cBool) { // nije jos uradjeno
-		
+		if(cBool.getBoolValue() == "true") {
+			Code.loadConst(6);
+		} else {
+			Code.loadConst(11);
+		}
 	}
 	
 	
@@ -202,11 +206,19 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 
 	public void visit(FactorBool fBool) { // ne znam
-		if(fBool.getBl() == "true") {
-			Code.loadConst(1);
-		} else {
-			Code.loadConst(0);
-		}
+		String ime;
+		ime = fBool.getBl();
+		Obj obj = new Obj(Obj.Con, "charValue", Tab.charType);
+		obj.setAdr(ime.charAt(ime.length()-1));
+		Code.load(obj);
+//		if(fBool.getBl() =="") {
+//			Code.loadConst(55);
+//		}
+//		else if(fBool.getBl() == "false") {
+//			Code.loadConst(5);
+//		} else {
+//			Code.loadConst(10);
+//		}
 	}
 	
 	  
