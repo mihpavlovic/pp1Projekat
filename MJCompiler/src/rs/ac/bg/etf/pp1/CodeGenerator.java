@@ -116,6 +116,7 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 	
 	public void visit(DesignatorStatementInc dsStmt) { // ovi ne valjaju za nizove msm
+		
 		Code.loadConst(1);
 		Code.put(Code.add);
 		Code.store(dsStmt.getDesignator().obj);
@@ -148,22 +149,15 @@ public class CodeGenerator extends VisitorAdaptor {
 		if(parent instanceof DesignatorStatementAssign) { // ako je dsArr sa leve strane jednako u dodeli vrednosti
 			
 		} else {
+			if(parent instanceof DesignatorStatementInc || parent instanceof DesignatorStatementDec) {
+				Code.put(Code.dup2);
+			}
 			Code.load(dsArr.obj); // u Code.load gleda da l je char ili int
 		}
-//		if(DesignatorStatementAssign.class != parent.getClass() ) {
-//			if(dsArr.obj.getType() == Tab.intType) {
-//				Code.put(Code.aload);
-//			} else {
-//				Code.put(Code.baload);
-//			}
-//		}
+
 	}
 	
-//	public void visit(ArrName arr) { // kind od obj je elem i zato uradi aload
-//		Obj arrObj = ((DesigntrArray)arr.getParent()).obj; 
-//		
-//		//Code.load(arrObj);
-//	}
+
 	
 	
 	//sve za Expr, izraze i operacije
@@ -175,6 +169,10 @@ public class CodeGenerator extends VisitorAdaptor {
 		if(exprAddopTerm.getAddop().getClass() == AddopMinus.class) {
 			Code.put(Code.sub);
 		}
+	}
+	
+	public void visit(ExprMinus exprMinus) {
+		Code.put(Code.neg);
 	}
 	
 	public void visit(TermMulopFactor termMulopFactor) {
