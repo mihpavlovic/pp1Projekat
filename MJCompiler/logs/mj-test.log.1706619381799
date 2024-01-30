@@ -1,0 +1,123 @@
+INFO  13:52:08,440 - Compiling source file: D:\7. sem\PP1\projekatRad\workspace\pp1Projekat\MJCompiler\test\programSem.mj
+INFO  13:52:08,475 - #2 program
+INFO  13:52:08,475 - #7 MJTest
+INFO  13:52:08,475 - #7 int
+INFO  13:52:08,478 - #7 a
+INFO  13:52:08,479 - #17 ;
+INFO  13:52:08,480 - #3 {
+INFO  13:52:08,480 - #28 void
+INFO  13:52:08,480 - #7 main
+INFO  13:52:08,480 - #22 (
+INFO  13:52:08,480 - #20 )
+INFO  13:52:08,481 - #7 int
+INFO  13:52:08,481 - #7 bodovi
+INFO  13:52:08,481 - #17 ;
+INFO  13:52:08,482 - #7 bool
+INFO  13:52:08,482 - #7 bt
+INFO  13:52:08,482 - #17 ;
+INFO  13:52:08,482 - #7 char
+INFO  13:52:08,482 - #7 ch
+INFO  13:52:08,483 - #17 ;
+INFO  13:52:08,483 - #3 {
+INFO  13:52:08,483 - #7 ch
+INFO  13:52:08,488 - #21 =
+INFO  13:52:08,488 - #10 'a'
+INFO  13:52:08,488 - #17 ;
+INFO  13:52:08,490 - #27 print
+INFO  13:52:08,491 - #22 (
+INFO  13:52:08,491 - #7 ch
+INFO  13:52:08,491 - #20 )
+INFO  13:52:08,491 - #17 ;
+INFO  13:52:08,491 - #4 }
+INFO  13:52:08,492 - #4 }
+INFO  13:52:08,505 - Program(
+  ProgName(
+   MJTest
+  ) [ProgName]
+  NoNamespaceList(
+  ) [NoNamespaceList]
+  VarDeclarations(
+    NoDeclarations(
+    ) [NoDeclarations]
+    VarDeclNoArray(
+      Type(
+       int
+      ) [Type]
+     a
+      NoMoreVarDeclarations(
+      ) [NoMoreVarDeclarations]
+    ) [VarDeclNoArray]
+  ) [VarDeclarations]
+  MethodDeclList(
+    MethodDecl(
+      MethodDeclNameVoid(
+       main
+      ) [MethodDeclNameVoid]
+      FormPars(
+      ) [FormPars]
+      VarDeclarationsInFunc(
+        VarDeclarationsInFunc(
+          VarDeclarationsInFunc(
+            NoVarDeclarationsInFunc(
+            ) [NoVarDeclarationsInFunc]
+            Type(
+             int
+            ) [Type]
+           bodovi
+          ) [VarDeclarationsInFunc]
+          Type(
+           bool
+          ) [Type]
+         bt
+        ) [VarDeclarationsInFunc]
+        Type(
+         char
+        ) [Type]
+       ch
+      ) [VarDeclarationsInFunc]
+      StmtList(
+        StmtList(
+          NoStmtList(
+          ) [NoStmtList]
+          StatementDesignatorStatement(
+            DesignatorStatementAssign(
+              Designtr(
+               ch
+              ) [Designtr]
+              ExprNoMinus(
+                FactorNoTerm(
+                  FactorChar(
+                   'a'
+                  ) [FactorChar]
+                ) [FactorNoTerm]
+              ) [ExprNoMinus]
+            ) [DesignatorStatementAssign]
+          ) [StatementDesignatorStatement]
+        ) [StmtList]
+        StatementPrint(
+          ExprNoMinus(
+            FactorNoTerm(
+              FactorDesignator(
+                Designtr(
+                 ch
+                ) [Designtr]
+              ) [FactorDesignator]
+            ) [FactorNoTerm]
+          ) [ExprNoMinus]
+          NoAndConstPrint(
+          ) [NoAndConstPrint]
+        ) [StatementPrint]
+      ) [StmtList]
+    ) [MethodDecl]
+  ) [MethodDeclList]
+) [Program]
+INFO  13:52:08,505 - ===================================
+INFO  13:52:08,509 - Deklarisana promenljiva a na liniji 4
+INFO  13:52:08,509 - Obradjuje se funkcija main na liniji 7
+INFO  13:52:08,509 - Deklarisana lokalna promenljiva bodovi na liniji 11
+INFO  13:52:08,509 - Deklarisana lokalna promenljiva bt na liniji 11
+INFO  13:52:08,509 - Deklarisana lokalna promenljiva ch na liniji 11
+INFO  13:52:08,510 -  Print count calls = 1
+INFO  13:52:08,510 -  Deklarisanih promenljivih ima = 4
+INFO  13:52:08,510 - ===================================
+INFO  13:52:08,519 - Parsiranje uspesno zavrseno!

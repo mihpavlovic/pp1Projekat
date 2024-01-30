@@ -62,6 +62,15 @@ public class CodeGenerator extends VisitorAdaptor {
 		Code.loadConst(p.getNum());
 	}
 	
+	public void visit(StatementRead read) {
+		if(read.getDesignator().obj.getType() == Tab.charType) {
+			Code.put(Code.bread);
+		} else {
+			Code.put(Code.read);	
+		}
+		Code.store(read.getDesignator().obj);
+	}
+	
 	
 	//pomocna funkcija za vracanje vrednosti
 	private int cnstValue(SyntaxNode node) {
@@ -94,18 +103,15 @@ public class CodeGenerator extends VisitorAdaptor {
 		Code.loadConst(cNum.getNumValue());
 	}
 	
-	public void visit(ConstChar cChar) { // ne znam da li je dobro, ili da idem samo loadConst sa ovom adresom
-		//Obj obj = new Obj(Obj.Con, "charValue", Tab.charType);
-		//obj.setAdr(cChar.getCharValue().charAt(1));
-		//Code.load(obj);
+	public void visit(ConstChar cChar) { 
 		Code.loadConst(cChar.getCharValue().charAt(1));
 	}
 	
 	public void visit(ConstBool cBool) { // nije jos uradjeno
-		if(cBool.getBoolValue() == "true") {
-			Code.loadConst(6);
+		if("true".equalsIgnoreCase(cBool.getBoolValue())) {
+			Code.loadConst(1);
 		} else {
-			Code.loadConst(11);
+			Code.loadConst(0);
 		}
 	}
 	
@@ -134,23 +140,23 @@ public class CodeGenerator extends VisitorAdaptor {
 
 	}
 	
-	public void visit(Designtr designator) {
+	public void visit(Designtr designator) { //proba za read, mozda tako treba mozda ne 
 		SyntaxNode parent = designator.getParent();
-		if(DesignatorStatementAssign.class != parent.getClass() ) {
+		if(DesignatorStatementAssign.class != parent.getClass() && StatementRead.class != parent.getClass()) {
 			Code.load(designator.obj);//ukoliko nije designator iz dodele vrednosti stavi ga na stek, ako jeste ne radi nista
 		}
 	}
 	
-	public void visit(DesigntrNmsp dsNmsp) {
+	public void visit(DesigntrNmsp dsNmsp) { //proba za read, mozda tako treba mozda ne 
 		SyntaxNode parent = dsNmsp.getParent();
-		if(DesignatorStatementAssign.class != parent.getClass() ) {
+		if(DesignatorStatementAssign.class != parent.getClass() && StatementRead.class != parent.getClass()) {
 			Code.load(dsNmsp.obj);
 		}
 	}
 	
-	public void visit(DesigntrArray dsArr) {
+	public void visit(DesigntrArray dsArr) { // adresa i indeks su vec na steku, ovde dodajem aload i dup2 ako je potreban
 		SyntaxNode parent = dsArr.getParent();
-		if(parent instanceof DesignatorStatementAssign) { // ako je dsArr sa leve strane jednako u dodeli vrednosti
+		if(parent instanceof DesignatorStatementAssign || parent instanceof StatementRead) { // ako je dsArr sa leve strane jednako u dodeli vrednosti
 			
 		} else {
 			if(parent instanceof DesignatorStatementInc || parent instanceof DesignatorStatementDec) {
@@ -206,19 +212,12 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 
 	public void visit(FactorBool fBool) { // ne znam
-		String ime;
-		ime = fBool.getBl();
-		Obj obj = new Obj(Obj.Con, "charValue", Tab.charType);
-		obj.setAdr(ime.charAt(ime.length()-1));
-		Code.load(obj);
-//		if(fBool.getBl() =="") {
-//			Code.loadConst(55);
-//		}
-//		else if(fBool.getBl() == "false") {
-//			Code.loadConst(5);
-//		} else {
-//			Code.loadConst(10);
-//		}
+		if("true".equalsIgnoreCase(fBool.getBl())) {
+			Code.loadConst(1);
+		} else {
+			Code.loadConst(0);
+		}
+
 	}
 	
 	  

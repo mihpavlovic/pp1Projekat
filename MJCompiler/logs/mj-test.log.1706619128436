@@ -1,0 +1,155 @@
+INFO  13:50:31,781 - Compiling source file: D:\7. sem\PP1\projekatRad\workspace\pp1Projekat\MJCompiler\test\programSem.mj
+INFO  13:50:31,802 - #2 program
+INFO  13:50:31,802 - #7 MJTest
+INFO  13:50:31,802 - #7 int
+INFO  13:50:31,804 - #7 a
+INFO  13:50:31,805 - #17 ;
+INFO  13:50:31,805 - #3 {
+INFO  13:50:31,806 - #28 void
+INFO  13:50:31,806 - #7 main
+INFO  13:50:31,806 - #22 (
+INFO  13:50:31,806 - #20 )
+INFO  13:50:31,807 - #7 int
+INFO  13:50:31,808 - #7 bodovi
+INFO  13:50:31,808 - #17 ;
+INFO  13:50:31,808 - #7 bool
+INFO  13:50:31,808 - #7 bt
+INFO  13:50:31,809 - #17 ;
+INFO  13:50:31,809 - #7 char
+INFO  13:50:31,809 - #7 ch
+INFO  13:50:31,809 - #17 ;
+INFO  13:50:31,809 - #3 {
+INFO  13:50:31,809 - #7 ch
+INFO  13:50:31,816 - #21 =
+INFO  13:50:31,816 - #10 'a'
+INFO  13:50:31,816 - #17 ;
+INFO  13:50:31,816 - #27 print
+INFO  13:50:31,816 - #22 (
+INFO  13:50:31,816 - #7 ch
+INFO  13:50:31,816 - #20 )
+INFO  13:50:31,817 - #17 ;
+INFO  13:50:31,817 - #12 read
+INFO  13:50:31,817 - #22 (
+INFO  13:50:31,817 - #7 ch
+INFO  13:50:31,818 - #20 )
+INFO  13:50:31,818 - #17 ;
+INFO  13:50:31,818 - #27 print
+INFO  13:50:31,818 - #22 (
+INFO  13:50:31,818 - #7 ch
+INFO  13:50:31,818 - #20 )
+INFO  13:50:31,818 - #17 ;
+INFO  13:50:31,818 - #4 }
+INFO  13:50:31,818 - #4 }
+INFO  13:50:31,827 - Program(
+  ProgName(
+   MJTest
+  ) [ProgName]
+  NoNamespaceList(
+  ) [NoNamespaceList]
+  VarDeclarations(
+    NoDeclarations(
+    ) [NoDeclarations]
+    VarDeclNoArray(
+      Type(
+       int
+      ) [Type]
+     a
+      NoMoreVarDeclarations(
+      ) [NoMoreVarDeclarations]
+    ) [VarDeclNoArray]
+  ) [VarDeclarations]
+  MethodDeclList(
+    MethodDecl(
+      MethodDeclNameVoid(
+       main
+      ) [MethodDeclNameVoid]
+      FormPars(
+      ) [FormPars]
+      VarDeclarationsInFunc(
+        VarDeclarationsInFunc(
+          VarDeclarationsInFunc(
+            NoVarDeclarationsInFunc(
+            ) [NoVarDeclarationsInFunc]
+            Type(
+             int
+            ) [Type]
+           bodovi
+          ) [VarDeclarationsInFunc]
+          Type(
+           bool
+          ) [Type]
+         bt
+        ) [VarDeclarationsInFunc]
+        Type(
+         char
+        ) [Type]
+       ch
+      ) [VarDeclarationsInFunc]
+      StmtList(
+        StmtList(
+          StmtList(
+            StmtList(
+              NoStmtList(
+              ) [NoStmtList]
+              StatementDesignatorStatement(
+                DesignatorStatementAssign(
+                  Designtr(
+                   ch
+                  ) [Designtr]
+                  ExprNoMinus(
+                    FactorNoTerm(
+                      FactorChar(
+                       'a'
+                      ) [FactorChar]
+                    ) [FactorNoTerm]
+                  ) [ExprNoMinus]
+                ) [DesignatorStatementAssign]
+              ) [StatementDesignatorStatement]
+            ) [StmtList]
+            StatementPrint(
+              ExprNoMinus(
+                FactorNoTerm(
+                  FactorDesignator(
+                    Designtr(
+                     ch
+                    ) [Designtr]
+                  ) [FactorDesignator]
+                ) [FactorNoTerm]
+              ) [ExprNoMinus]
+              NoAndConstPrint(
+              ) [NoAndConstPrint]
+            ) [StatementPrint]
+          ) [StmtList]
+          StatementRead(
+            Designtr(
+             ch
+            ) [Designtr]
+          ) [StatementRead]
+        ) [StmtList]
+        StatementPrint(
+          ExprNoMinus(
+            FactorNoTerm(
+              FactorDesignator(
+                Designtr(
+                 ch
+                ) [Designtr]
+              ) [FactorDesignator]
+            ) [FactorNoTerm]
+          ) [ExprNoMinus]
+          NoAndConstPrint(
+          ) [NoAndConstPrint]
+        ) [StatementPrint]
+      ) [StmtList]
+    ) [MethodDecl]
+  ) [MethodDeclList]
+) [Program]
+INFO  13:50:31,827 - ===================================
+INFO  13:50:31,829 - Deklarisana promenljiva a na liniji 4
+INFO  13:50:31,829 - Obradjuje se funkcija main na liniji 7
+INFO  13:50:31,830 - Deklarisana lokalna promenljiva bodovi na liniji 11
+INFO  13:50:31,830 - Deklarisana lokalna promenljiva bt na liniji 11
+INFO  13:50:31,830 - Deklarisana lokalna promenljiva ch na liniji 11
+INFO  13:50:31,830 -  Print count calls = 2
+INFO  13:50:31,830 -  Deklarisanih promenljivih ima = 4
+INFO  13:50:31,830 - ===================================
+INFO  13:50:31,837 - Parsiranje uspesno zavrseno!
