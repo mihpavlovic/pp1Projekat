@@ -1,16 +1,16 @@
 program MJTest
 
 
-	int a;
+	int niz[];
 	
 {
 	void main()	
 		char ch;
 	{
-		ch = 'a';
-		print(ch);
-		read(ch);
-		print(ch);
-			
+		niz = new int[3];
+		niz[0] = 5;
+		niz[2] = 11;
+		niz[1] = niz[0] + niz[2];
+		print(niz[1]);
 	}
 }

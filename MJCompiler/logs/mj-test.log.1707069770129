@@ -1,0 +1,155 @@
+INFO  18:57:44,043 - Compiling source file: D:\7. sem\PP1\projekatRad\workspace\pp1Projekat\MJCompiler\test\programSem.mj
+INFO  18:57:44,075 - #2 program
+INFO  18:57:44,075 - #7 MJTest
+INFO  18:57:44,075 - #7 int
+INFO  18:57:44,077 - #7 a
+INFO  18:57:44,078 - #17 ;
+INFO  18:57:44,079 - #3 {
+INFO  18:57:44,079 - #28 void
+INFO  18:57:44,079 - #7 main
+INFO  18:57:44,080 - #22 (
+INFO  18:57:44,080 - #20 )
+INFO  18:57:44,081 - #7 char
+INFO  18:57:44,081 - #7 ch
+INFO  18:57:44,082 - #17 ;
+INFO  18:57:44,082 - #3 {
+INFO  18:57:44,082 - #7 ch
+INFO  18:57:44,082 - #21 =
+INFO  18:57:44,083 - #10 'a'
+INFO  18:57:44,083 - #17 ;
+INFO  18:57:44,084 - #27 print
+INFO  18:57:44,084 - #22 (
+INFO  18:57:44,084 - #7 ch
+INFO  18:57:44,085 - #20 )
+INFO  18:57:44,085 - #17 ;
+INFO  18:57:44,086 - #12 read
+INFO  18:57:44,086 - #22 (
+INFO  18:57:44,086 - #7 ch
+INFO  18:57:44,086 - #20 )
+INFO  18:57:44,086 - #17 ;
+INFO  18:57:44,086 - #27 print
+INFO  18:57:44,087 - #22 (
+INFO  18:57:44,087 - #7 ch
+INFO  18:57:44,087 - #20 )
+INFO  18:57:44,087 - #17 ;
+INFO  18:57:44,087 - #27 print
+INFO  18:57:44,088 - #22 (
+INFO  18:57:44,088 - #7 eol
+INFO  18:57:44,088 - #20 )
+INFO  18:57:44,089 - #17 ;
+INFO  18:57:44,089 - #4 }
+INFO  18:57:44,089 - #4 }
+INFO  18:57:44,101 - Program(
+  ProgName(
+   MJTest
+  ) [ProgName]
+  NoNamespaceList(
+  ) [NoNamespaceList]
+  VarDeclarations(
+    NoDeclarations(
+    ) [NoDeclarations]
+    VarDeclNoArray(
+      Type(
+       int
+      ) [Type]
+     a
+      NoMoreVarDeclarations(
+      ) [NoMoreVarDeclarations]
+    ) [VarDeclNoArray]
+  ) [VarDeclarations]
+  MethodDeclList(
+    MethodDecl(
+      MethodDeclNameVoid(
+       main
+      ) [MethodDeclNameVoid]
+      FormPars(
+      ) [FormPars]
+      VarDeclarationsInFunc(
+        NoVarDeclarationsInFunc(
+        ) [NoVarDeclarationsInFunc]
+        Type(
+         char
+        ) [Type]
+       ch
+      ) [VarDeclarationsInFunc]
+      StmtList(
+        StmtList(
+          StmtList(
+            StmtList(
+              StmtList(
+                NoStmtList(
+                ) [NoStmtList]
+                StatementDesignatorStatement(
+                  DesignatorStatementAssign(
+                    Designtr(
+                     ch
+                    ) [Designtr]
+                    ExprNoMinus(
+                      FactorNoTerm(
+                        FactorChar(
+                         'a'
+                        ) [FactorChar]
+                      ) [FactorNoTerm]
+                    ) [ExprNoMinus]
+                  ) [DesignatorStatementAssign]
+                ) [StatementDesignatorStatement]
+              ) [StmtList]
+              StatementPrint(
+                ExprNoMinus(
+                  FactorNoTerm(
+                    FactorDesignator(
+                      Designtr(
+                       ch
+                      ) [Designtr]
+                    ) [FactorDesignator]
+                  ) [FactorNoTerm]
+                ) [ExprNoMinus]
+                NoAndConstPrint(
+                ) [NoAndConstPrint]
+              ) [StatementPrint]
+            ) [StmtList]
+            StatementRead(
+              Designtr(
+               ch
+              ) [Designtr]
+            ) [StatementRead]
+          ) [StmtList]
+          StatementPrint(
+            ExprNoMinus(
+              FactorNoTerm(
+                FactorDesignator(
+                  Designtr(
+                   ch
+                  ) [Designtr]
+                ) [FactorDesignator]
+              ) [FactorNoTerm]
+            ) [ExprNoMinus]
+            NoAndConstPrint(
+            ) [NoAndConstPrint]
+          ) [StatementPrint]
+        ) [StmtList]
+        StatementPrint(
+          ExprNoMinus(
+            FactorNoTerm(
+              FactorDesignator(
+                Designtr(
+                 eol
+                ) [Designtr]
+              ) [FactorDesignator]
+            ) [FactorNoTerm]
+          ) [ExprNoMinus]
+          NoAndConstPrint(
+          ) [NoAndConstPrint]
+        ) [StatementPrint]
+      ) [StmtList]
+    ) [MethodDecl]
+  ) [MethodDeclList]
+) [Program]
+INFO  18:57:44,102 - ===================================
+INFO  18:57:44,106 - Deklarisana promenljiva a na liniji 4
+INFO  18:57:44,106 - Obradjuje se funkcija main na liniji 7
+INFO  18:57:44,106 - Deklarisana lokalna promenljiva ch na liniji 11
+INFO  18:57:44,107 -  Print count calls = 3
+INFO  18:57:44,107 -  Deklarisanih promenljivih ima = 2
+INFO  18:57:44,107 - ===================================
+INFO  18:57:44,118 - Parsiranje uspesno zavrseno!

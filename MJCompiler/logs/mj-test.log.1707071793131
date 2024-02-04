@@ -1,0 +1,154 @@
+INFO  19:35:14,305 - Compiling source file: D:\7. sem\PP1\projekatRad\workspace\pp1Projekat\MJCompiler\test\programSem.mj
+INFO  19:35:14,337 - #2 program
+INFO  19:35:14,337 - #7 MJTest
+INFO  19:35:14,337 - #7 int
+INFO  19:35:14,339 - #7 a
+INFO  19:35:14,340 - #17 ;
+INFO  19:35:14,341 - #6 const
+INFO  19:35:14,342 - #7 bool
+INFO  19:35:14,342 - #7 constBool
+INFO  19:35:14,342 - #21 =
+INFO  19:35:14,342 - #7 okok
+ERROR 19:35:14,342 - 
+Sintaksna greska na liniji 5
+INFO  19:35:14,343 - #17 ;
+INFO  19:35:14,343 - #7 bool
+INFO  19:35:14,343 - #7 varBool
+INFO  19:35:14,343 - #17 ;
+ERROR 19:35:14,343 - Izvrsen oporavak do ; u liniji 5
+INFO  19:35:14,344 - #3 {
+INFO  19:35:14,344 - #28 void
+INFO  19:35:14,344 - #7 main
+INFO  19:35:14,344 - #22 (
+INFO  19:35:14,345 - #20 )
+INFO  19:35:14,346 - #7 char
+INFO  19:35:14,346 - #7 ch
+INFO  19:35:14,346 - #17 ;
+INFO  19:35:14,347 - #3 {
+INFO  19:35:14,347 - #27 print
+INFO  19:35:14,348 - #22 (
+INFO  19:35:14,348 - #7 constBool
+INFO  19:35:14,348 - #20 )
+INFO  19:35:14,349 - #17 ;
+INFO  19:35:14,350 - #27 print
+INFO  19:35:14,351 - #22 (
+INFO  19:35:14,351 - #7 eol
+INFO  19:35:14,351 - #20 )
+INFO  19:35:14,351 - #17 ;
+INFO  19:35:14,351 - #27 print
+INFO  19:35:14,351 - #22 (
+INFO  19:35:14,352 - #7 constBool
+INFO  19:35:14,352 - #20 )
+INFO  19:35:14,352 - #17 ;
+INFO  19:35:14,352 - #4 }
+INFO  19:35:14,352 - #4 }
+INFO  19:35:14,371 - Program(
+  ProgName(
+   MJTest
+  ) [ProgName]
+  NoNamespaceList(
+  ) [NoNamespaceList]
+  VarDeclarations(
+    VarDeclarations(
+      VarDeclarations(
+        NoDeclarations(
+        ) [NoDeclarations]
+        VarDeclNoArray(
+          Type(
+           int
+          ) [Type]
+         a
+          NoMoreVarDeclarations(
+          ) [NoMoreVarDeclarations]
+        ) [VarDeclNoArray]
+      ) [VarDeclarations]
+      ErrorStmtVar(
+      ) [ErrorStmtVar]
+    ) [VarDeclarations]
+    VarDeclNoArray(
+      Type(
+       bool
+      ) [Type]
+     varBool
+      NoMoreVarDeclarations(
+      ) [NoMoreVarDeclarations]
+    ) [VarDeclNoArray]
+  ) [VarDeclarations]
+  MethodDeclList(
+    MethodDecl(
+      MethodDeclNameVoid(
+       main
+      ) [MethodDeclNameVoid]
+      FormPars(
+      ) [FormPars]
+      VarDeclarationsInFunc(
+        NoVarDeclarationsInFunc(
+        ) [NoVarDeclarationsInFunc]
+        Type(
+         char
+        ) [Type]
+       ch
+      ) [VarDeclarationsInFunc]
+      StmtList(
+        StmtList(
+          StmtList(
+            NoStmtList(
+            ) [NoStmtList]
+            StatementPrint(
+              ExprNoMinus(
+                FactorNoTerm(
+                  FactorDesignator(
+                    Designtr(
+                     constBool
+                    ) [Designtr]
+                  ) [FactorDesignator]
+                ) [FactorNoTerm]
+              ) [ExprNoMinus]
+              NoAndConstPrint(
+              ) [NoAndConstPrint]
+            ) [StatementPrint]
+          ) [StmtList]
+          StatementPrint(
+            ExprNoMinus(
+              FactorNoTerm(
+                FactorDesignator(
+                  Designtr(
+                   eol
+                  ) [Designtr]
+                ) [FactorDesignator]
+              ) [FactorNoTerm]
+            ) [ExprNoMinus]
+            NoAndConstPrint(
+            ) [NoAndConstPrint]
+          ) [StatementPrint]
+        ) [StmtList]
+        StatementPrint(
+          ExprNoMinus(
+            FactorNoTerm(
+              FactorDesignator(
+                Designtr(
+                 constBool
+                ) [Designtr]
+              ) [FactorDesignator]
+            ) [FactorNoTerm]
+          ) [ExprNoMinus]
+          NoAndConstPrint(
+          ) [NoAndConstPrint]
+        ) [StatementPrint]
+      ) [StmtList]
+    ) [MethodDecl]
+  ) [MethodDeclList]
+) [Program]
+INFO  19:35:14,371 - ===================================
+INFO  19:35:14,375 - Deklarisana promenljiva a na liniji 4
+INFO  19:35:14,375 - Deklarisana promenljiva varBool na liniji 6
+INFO  19:35:14,376 - Obradjuje se funkcija main na liniji 8
+INFO  19:35:14,376 - Deklarisana lokalna promenljiva ch na liniji 11
+ERROR 19:35:14,376 - Greska na liniji 11 : ime constBool nije deklarisano! 
+ERROR 19:35:14,376 - Semanticka greska na liniji 11 : funkciji print je prosledjen parametar koji nije ni int ni char ni bool tipa
+ERROR 19:35:14,376 - Greska na liniji 13 : ime constBool nije deklarisano! 
+ERROR 19:35:14,376 - Semanticka greska na liniji 13 : funkciji print je prosledjen parametar koji nije ni int ni char ni bool tipa
+INFO  19:35:14,377 -  Print count calls = 3
+INFO  19:35:14,377 -  Deklarisanih promenljivih ima = 3
+INFO  19:35:14,377 - ===================================
+ERROR 19:35:14,378 - Parsiranje NIJE uspesno zavrseno!

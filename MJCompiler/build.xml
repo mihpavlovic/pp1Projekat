@@ -13,9 +13,6 @@
 				<exclude name="ObjExtended.java"/>
 				<exclude name="CodeGenerator.java"/>
 				<exclude name="CounterVisitor.java"/>
-
-
-
 			</fileset>
 		</delete>
 		<delete>
@@ -79,7 +76,7 @@
 	<target name="runObj" depends="disasm">
 		<java classname="rs.etf.pp1.mj.runtime.Run" fork="true">
 			<arg value="test/program.obj" />
-			<arg value="-debug"/>
+			<!-- zakomentarisano <arg value="-debug"/> -->
 			<redirector input="test/input.txt" />
 			<classpath>
 				<pathelement location="lib/mj-runtime-1.1.jar" />

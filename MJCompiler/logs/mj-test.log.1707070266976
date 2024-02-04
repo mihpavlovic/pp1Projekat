@@ -1,0 +1,103 @@
+INFO  19:02:50,135 - Compiling source file: D:\7. sem\PP1\projekatRad\workspace\pp1Projekat\MJCompiler\test\programSem.mj
+INFO  19:02:50,168 - #2 program
+INFO  19:02:50,169 - #7 MJTest
+INFO  19:02:50,169 - #7 int
+INFO  19:02:50,171 - #7 a
+INFO  19:02:50,172 - #17 ;
+INFO  19:02:50,172 - #6 const
+INFO  19:02:50,173 - #7 bool
+INFO  19:02:50,173 - #7 bl
+INFO  19:02:50,173 - #21 =
+INFO  19:02:50,173 - #9 true
+INFO  19:02:50,173 - #17 ;
+INFO  19:02:50,174 - #3 {
+INFO  19:02:50,175 - #28 void
+INFO  19:02:50,176 - #7 main
+INFO  19:02:50,176 - #22 (
+INFO  19:02:50,176 - #20 )
+INFO  19:02:50,177 - #7 char
+INFO  19:02:50,178 - #7 ch
+INFO  19:02:50,178 - #17 ;
+INFO  19:02:50,178 - #3 {
+INFO  19:02:50,178 - #27 print
+INFO  19:02:50,183 - #22 (
+INFO  19:02:50,184 - #7 bl
+INFO  19:02:50,184 - #20 )
+INFO  19:02:50,186 - #17 ;
+INFO  19:02:50,186 - #4 }
+INFO  19:02:50,186 - #4 }
+INFO  19:02:50,201 - Program(
+  ProgName(
+   MJTest
+  ) [ProgName]
+  NoNamespaceList(
+  ) [NoNamespaceList]
+  ConstDeclarations(
+    VarDeclarations(
+      NoDeclarations(
+      ) [NoDeclarations]
+      VarDeclNoArray(
+        Type(
+         int
+        ) [Type]
+       a
+        NoMoreVarDeclarations(
+        ) [NoMoreVarDeclarations]
+      ) [VarDeclNoArray]
+    ) [VarDeclarations]
+    ConstDecl(
+      Type(
+       bool
+      ) [Type]
+     bl
+      ConstBool(
+       true
+      ) [ConstBool]
+      NoMoreConstDeclarations(
+      ) [NoMoreConstDeclarations]
+    ) [ConstDecl]
+  ) [ConstDeclarations]
+  MethodDeclList(
+    MethodDecl(
+      MethodDeclNameVoid(
+       main
+      ) [MethodDeclNameVoid]
+      FormPars(
+      ) [FormPars]
+      VarDeclarationsInFunc(
+        NoVarDeclarationsInFunc(
+        ) [NoVarDeclarationsInFunc]
+        Type(
+         char
+        ) [Type]
+       ch
+      ) [VarDeclarationsInFunc]
+      StmtList(
+        NoStmtList(
+        ) [NoStmtList]
+        StatementPrint(
+          ExprNoMinus(
+            FactorNoTerm(
+              FactorDesignator(
+                Designtr(
+                 bl
+                ) [Designtr]
+              ) [FactorDesignator]
+            ) [FactorNoTerm]
+          ) [ExprNoMinus]
+          NoAndConstPrint(
+          ) [NoAndConstPrint]
+        ) [StatementPrint]
+      ) [StmtList]
+    ) [MethodDecl]
+  ) [MethodDeclList]
+) [Program]
+INFO  19:02:50,201 - ===================================
+INFO  19:02:50,205 - Deklarisana promenljiva a na liniji 4
+INFO  19:02:50,205 - Deklarisana konstanta bl na liniji 5
+INFO  19:02:50,205 - Obradjuje se funkcija main na liniji 8
+INFO  19:02:50,205 - Deklarisana lokalna promenljiva ch na liniji 11
+INFO  19:02:50,205 -  Print count calls = 1
+INFO  19:02:50,206 -  Deklarisanih promenljivih ima = 2
+INFO  19:02:50,206 - ===================================
+INFO  19:02:50,217 - Parsiranje uspesno zavrseno!

@@ -1,0 +1,157 @@
+INFO  19:14:02,120 - Compiling source file: D:\7. sem\PP1\projekatRad\workspace\pp1Projekat\MJCompiler\test\programSem.mj
+INFO  19:14:02,160 - #2 program
+INFO  19:14:02,160 - #7 MJTest
+INFO  19:14:02,160 - #7 int
+INFO  19:14:02,163 - #7 a
+INFO  19:14:02,164 - #17 ;
+INFO  19:14:02,164 - #6 const
+INFO  19:14:02,165 - #7 bool
+INFO  19:14:02,165 - #7 constBool
+INFO  19:14:02,165 - #21 =
+INFO  19:14:02,165 - #9 true
+INFO  19:14:02,166 - #17 ;
+INFO  19:14:02,166 - #7 bool
+INFO  19:14:02,168 - #7 varBool
+INFO  19:14:02,168 - #17 ;
+INFO  19:14:02,168 - #3 {
+INFO  19:14:02,168 - #28 void
+INFO  19:14:02,168 - #7 main
+INFO  19:14:02,168 - #22 (
+INFO  19:14:02,169 - #20 )
+INFO  19:14:02,169 - #7 char
+INFO  19:14:02,170 - #7 ch
+INFO  19:14:02,175 - #17 ;
+INFO  19:14:02,175 - #3 {
+INFO  19:14:02,176 - #27 print
+INFO  19:14:02,176 - #22 (
+INFO  19:14:02,176 - #7 constBool
+INFO  19:14:02,177 - #20 )
+INFO  19:14:02,178 - #17 ;
+INFO  19:14:02,178 - #27 print
+INFO  19:14:02,179 - #22 (
+INFO  19:14:02,179 - #7 eol
+INFO  19:14:02,179 - #20 )
+INFO  19:14:02,179 - #17 ;
+INFO  19:14:02,179 - #27 print
+INFO  19:14:02,179 - #22 (
+INFO  19:14:02,179 - #7 constBool
+INFO  19:14:02,179 - #20 )
+INFO  19:14:02,179 - #17 ;
+INFO  19:14:02,179 - #4 }
+INFO  19:14:02,180 - #4 }
+INFO  19:14:02,196 - Program(
+  ProgName(
+   MJTest
+  ) [ProgName]
+  NoNamespaceList(
+  ) [NoNamespaceList]
+  VarDeclarations(
+    ConstDeclarations(
+      VarDeclarations(
+        NoDeclarations(
+        ) [NoDeclarations]
+        VarDeclNoArray(
+          Type(
+           int
+          ) [Type]
+         a
+          NoMoreVarDeclarations(
+          ) [NoMoreVarDeclarations]
+        ) [VarDeclNoArray]
+      ) [VarDeclarations]
+      ConstDecl(
+        Type(
+         bool
+        ) [Type]
+       constBool
+        ConstBool(
+         true
+        ) [ConstBool]
+        NoMoreConstDeclarations(
+        ) [NoMoreConstDeclarations]
+      ) [ConstDecl]
+    ) [ConstDeclarations]
+    VarDeclNoArray(
+      Type(
+       bool
+      ) [Type]
+     varBool
+      NoMoreVarDeclarations(
+      ) [NoMoreVarDeclarations]
+    ) [VarDeclNoArray]
+  ) [VarDeclarations]
+  MethodDeclList(
+    MethodDecl(
+      MethodDeclNameVoid(
+       main
+      ) [MethodDeclNameVoid]
+      FormPars(
+      ) [FormPars]
+      VarDeclarationsInFunc(
+        NoVarDeclarationsInFunc(
+        ) [NoVarDeclarationsInFunc]
+        Type(
+         char
+        ) [Type]
+       ch
+      ) [VarDeclarationsInFunc]
+      StmtList(
+        StmtList(
+          StmtList(
+            NoStmtList(
+            ) [NoStmtList]
+            StatementPrint(
+              ExprNoMinus(
+                FactorNoTerm(
+                  FactorDesignator(
+                    Designtr(
+                     constBool
+                    ) [Designtr]
+                  ) [FactorDesignator]
+                ) [FactorNoTerm]
+              ) [ExprNoMinus]
+              NoAndConstPrint(
+              ) [NoAndConstPrint]
+            ) [StatementPrint]
+          ) [StmtList]
+          StatementPrint(
+            ExprNoMinus(
+              FactorNoTerm(
+                FactorDesignator(
+                  Designtr(
+                   eol
+                  ) [Designtr]
+                ) [FactorDesignator]
+              ) [FactorNoTerm]
+            ) [ExprNoMinus]
+            NoAndConstPrint(
+            ) [NoAndConstPrint]
+          ) [StatementPrint]
+        ) [StmtList]
+        StatementPrint(
+          ExprNoMinus(
+            FactorNoTerm(
+              FactorDesignator(
+                Designtr(
+                 constBool
+                ) [Designtr]
+              ) [FactorDesignator]
+            ) [FactorNoTerm]
+          ) [ExprNoMinus]
+          NoAndConstPrint(
+          ) [NoAndConstPrint]
+        ) [StatementPrint]
+      ) [StmtList]
+    ) [MethodDecl]
+  ) [MethodDeclList]
+) [Program]
+INFO  19:14:02,196 - ===================================
+INFO  19:14:02,200 - Deklarisana promenljiva a na liniji 4
+INFO  19:14:02,200 - Deklarisana konstanta constBool na liniji 5
+INFO  19:14:02,200 - Deklarisana promenljiva varBool na liniji 6
+INFO  19:14:02,201 - Obradjuje se funkcija main na liniji 8
+INFO  19:14:02,201 - Deklarisana lokalna promenljiva ch na liniji 11
+INFO  19:14:02,201 -  Print count calls = 3
+INFO  19:14:02,201 -  Deklarisanih promenljivih ima = 3
+INFO  19:14:02,201 - ===================================
+INFO  19:14:02,219 - Parsiranje uspesno zavrseno!

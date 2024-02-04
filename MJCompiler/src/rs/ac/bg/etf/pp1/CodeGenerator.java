@@ -66,13 +66,13 @@ public class CodeGenerator extends VisitorAdaptor {
 		if(read.getDesignator().obj.getType() == Tab.charType) {
 			Code.put(Code.bread);
 		} else {
-			Code.put(Code.read);	
+			Code.put(Code.read);
 		}
 		Code.store(read.getDesignator().obj);
 	}
 	
 	
-	//pomocna funkcija za vracanje vrednosti
+	//pomocna funkcija za vracanje vrednosti konstanti, ne moze bez nje jer svaki tip konstante ima drugi atribut koji treba da vrati, ovako je uniformno za sve
 	private int cnstValue(SyntaxNode node) {
 		if(node instanceof ConstNum) {
 			return ((ConstNum)node).getNumValue();
@@ -81,18 +81,21 @@ public class CodeGenerator extends VisitorAdaptor {
 			return ((ConstChar)node).getCharValue().charAt(1);
 		}
 		if(node instanceof ConstBool) {
-			//nisam obradio za bool
+			String boolValue = ((ConstBool)node).getBoolValue();
+			if("true".equalsIgnoreCase(boolValue)) {
+				return 1;
+			} else {
+				return 0;
+			}
 		}
-		
-		return -1;
+		return -1; // u slucaju da nesto nije kako treba 
 	}
 	
 	
 	//deklaracije konstanti
 	
-	public void visit(ConstDecl constDecl) {
+	public void visit(ConstDecl constDecl) { // kod konstanti se njihova vrednost cuva u njihovoj adresi
 		constDecl.obj.setAdr(cnstValue(constDecl.getWhichConst()));
-		
 	}
 	
 	public void visit(MoreConstDeclarations moreConstDecl) {
@@ -107,7 +110,7 @@ public class CodeGenerator extends VisitorAdaptor {
 		Code.loadConst(cChar.getCharValue().charAt(1));
 	}
 	
-	public void visit(ConstBool cBool) { // nije jos uradjeno
+	public void visit(ConstBool cBool) { //u dosadasnjim fazama je vrednost za bool String i ovde mora da se prebaci u int
 		if("true".equalsIgnoreCase(cBool.getBoolValue())) {
 			Code.loadConst(1);
 		} else {
@@ -125,7 +128,7 @@ public class CodeGenerator extends VisitorAdaptor {
 		
 	}
 	
-	public void visit(DesignatorStatementInc dsStmt) { // ovi ne valjaju za nizove msm
+	public void visit(DesignatorStatementInc dsStmt) { // potreban store jer ne ide preko assign operatora
 		
 		Code.loadConst(1);
 		Code.put(Code.add);
@@ -140,26 +143,27 @@ public class CodeGenerator extends VisitorAdaptor {
 
 	}
 	
-	public void visit(Designtr designator) { //proba za read, mozda tako treba mozda ne 
+	public void visit(Designtr designator) {
 		SyntaxNode parent = designator.getParent();
-		if(DesignatorStatementAssign.class != parent.getClass() && StatementRead.class != parent.getClass()) {
+		if(DesignatorStatementAssign.class != parent.getClass() && StatementRead.class != parent.getClass()) { // za read mi ne treba designator na steku jer se tu samo u njega upisuje, njegova prethodna vr je nebitna 
 			Code.load(designator.obj);//ukoliko nije designator iz dodele vrednosti stavi ga na stek, ako jeste ne radi nista
 		}
 	}
 	
-	public void visit(DesigntrNmsp dsNmsp) { //proba za read, mozda tako treba mozda ne 
+	public void visit(DesigntrNmsp dsNmsp) {
 		SyntaxNode parent = dsNmsp.getParent();
 		if(DesignatorStatementAssign.class != parent.getClass() && StatementRead.class != parent.getClass()) {
 			Code.load(dsNmsp.obj);
 		}
 	}
 	
+	// u Desugntr i DesigntrNmsp sam stavio adresu niza na exprStek
 	public void visit(DesigntrArray dsArr) { // adresa i indeks su vec na steku, ovde dodajem aload i dup2 ako je potreban
 		SyntaxNode parent = dsArr.getParent();
-		if(parent instanceof DesignatorStatementAssign || parent instanceof StatementRead) { // ako je dsArr sa leve strane jednako u dodeli vrednosti
+		if(parent instanceof DesignatorStatementAssign || parent instanceof StatementRead) { // ako je dsArr sa leve strane jednako u dodeli vrednosti ne treba da se stavlja na exprStek
 			
 		} else {
-			if(parent instanceof DesignatorStatementInc || parent instanceof DesignatorStatementDec) {
+			if(parent instanceof DesignatorStatementInc || parent instanceof DesignatorStatementDec) { //mora ovde da se doradi zbog aload, on skida te tr i stavlja vrednost te u inc i dec nemam sta da dupliram onda
 				Code.put(Code.dup2);
 			}
 			Code.load(dsArr.obj); // u Code.load gleda da l je char ili int
@@ -172,7 +176,7 @@ public class CodeGenerator extends VisitorAdaptor {
 	
 	//sve za Expr, izraze i operacije
 	
-	public void visit(ExprAddopTerm exprAddopTerm) {
+	public void visit(ExprAddopTerm exprAddopTerm) { // operandi su vec na exprSteku, ovde samo stavljam koja operacija treba da se uradi
 		if(exprAddopTerm.getAddop().getClass() == AddopPlus.class) {
 			Code.put(Code.add);
 		}
@@ -181,7 +185,7 @@ public class CodeGenerator extends VisitorAdaptor {
 		}
 	}
 	
-	public void visit(ExprMinus exprMinus) {
+	public void visit(ExprMinus exprMinus) { //operand je vec na steku
 		Code.put(Code.neg);
 	}
 	
@@ -201,36 +205,33 @@ public class CodeGenerator extends VisitorAdaptor {
 		Code.loadConst(fNum.getNum());
 	}
 	
-	public void visit(FactorChar fChar) { // ne znam
+	public void visit(FactorChar fChar) { // char stavljam na exprStek, posto nije int pravim cvor i postavljam adresu i radim load a ne loadConst sa samim charom
 		Obj obj = new Obj(Obj.Con, "charValue", Tab.charType);
 		obj.setAdr(fChar.getCh().charAt(1));
 		Code.load(obj);
 	}
 	
-	public void visit(FactorExpr fExpr){//trebalo bi da je vec na steku
+	public void visit(FactorExpr fExpr){ // vec je na exprSteku preko Expr smene
 		
 	}
 
-	public void visit(FactorBool fBool) { // ne znam
+	public void visit(FactorBool fBool) { // u dosadasnjim fazama je vrednost za bool String i ovde mora da se prebaci u int
 		if("true".equalsIgnoreCase(fBool.getBl())) {
 			Code.loadConst(1);
 		} else {
 			Code.loadConst(0);
 		}
+	}
+	
+	public void visit(FactorDesignator fDesig) { // vec je na exprSteku preko designatora
 
 	}
 	
-	  
-	
-	public void visit(FactorDesignator fDesig) { // ne znam
-
-	}
-	
-	public void visit(FactorNew fNew) { 
+	public void visit(FactorNew fNew) { //instrukcija za pravljenje novog niza, duzina je preko smene expr vec na exprSteku
 		Code.put(Code.newarray);
 		if(fNew.getType().struct == Tab.charType) {
 			Code.put(0);
-		} else { // da probam da bool odradim preko 0 i 1
+		} else { // bool je realizovan kao int (false = 0 , true = 1) tako da ide isto kao int
 			Code.put(1);
 		}
 		

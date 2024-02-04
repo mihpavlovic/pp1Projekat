@@ -44,9 +44,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		log.info(msg.toString());
 	}
 	
-	public void visit() {
-		
-	}
+	
 	
     public void visit(Program program) { 
     	nVars = Tab.currentScope.getnVars();
@@ -81,7 +79,6 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		
 		currentTypeForVarOrConstDecl = null;
 	}
-    
     
     public void visit(MoreVarDeclarations moreVarDecl) {
     	varDeclCount++;
@@ -140,12 +137,6 @@ public class SemanticAnalyzer extends VisitorAdaptor {
     	}
     }
     
-    
-    
-    
-    
-    
-    
     public void visit(ConstDecl constDecl) {
 		constDeclCount++;
 		String constName;
@@ -185,7 +176,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		}
     }
     
-    public void visit(ConstNum constNum) {
+    public void visit(ConstNum constNum) { // samo gleda da li se tip vrednosti koja je data slaze za currentType promenljivom, isto vazi i za char i za bool
 		if(currentTypeForVarOrConstDecl != Tab.intType) {
 			report_error("Semanticka greska na liniji " + constNum.getLine() + ": pokusaj dodele int vrednosti konstanti koja nije tog tipa", null);
 		}
@@ -197,7 +188,6 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		}
 	}
 
-	//ne valja jer nisam implementirao jos bool
 	public void visit(ConstBool constBool) {
 		if(currentTypeForVarOrConstDecl != TabExtended.boolType) {
 			report_error("Semanticka greska na liniji " + constBool.getLine() + ": pokusaj dodele bool vrednosti konstanti koja nije tog tipa", null);
@@ -269,9 +259,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 			Obj varArrayNode = Tab.insert(Obj.Var, arrName, arrayStructNode);
 
 		}
-		
 		currentTypeForVarOrConstDecl = null;
-		
 	}
 	
 	
@@ -331,16 +319,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		}
 		designator.obj = obj;
 	}
-	
-//	public void visit(DesigntrArray designator) { // ovde pravim elem, pre nego sto to uradim treba da proverim da li postoji niz
-//		Obj arr = Tab.find(designator.getArrName().getArrayName());
-//		if(arr == Tab.noObj) {
-//			report_error("Greska na liniji " + designator.getLine()+ " : ne postoji niz sa imenom "+designator.getArrName().getArrayName(), null);
-//		}
-//		Obj elemOfArr = new Obj(Obj.Elem, arr.getName(), arr.getType().getElemType());
-//		designator.obj = elemOfArr;
-//	} 
-	
+		
 	public void visit(DesigntrArray desigArray) {
 		String arrayName;
 		if(desigArray.getDesignator() instanceof Designtr) {
@@ -358,16 +337,6 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		Obj elemOfArr = new Obj(Obj.Elem, arrayName, arr.getType().getElemType());
 		desigArray.obj = elemOfArr;
 	}
-	
-//	public void visit(DesigntrNmspArray designator) { // ovde pravim elem, pre nego sto to uradim treba da proverim da li postoji niz
-//		String arrNmspName = designator.getNmspName() + "::" + designator.getArrName().getArrayName();
-//		Obj arr = Tab.find(arrNmspName);
-//		if(arr == Tab.noObj) {
-//			report_error("Greska na liniji " + designator.getLine()+ " : ne postoji niz sa imenom "+arrNmspName, null);
-//		}
-//		Obj elemOfArr = new Obj(Obj.Elem, arr.getName(), arr.getType().getElemType());
-//		designator.obj = elemOfArr;
-//	}
 	
 	public void visit(DesignatorStatementAssign desigStAss) {
 		if(!desigStAss.getExpr().struct.assignableTo(desigStAss.getDesignator().obj.getType())) {
@@ -410,7 +379,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		expr.struct = expr.getTerm().struct;
 	}
 	
-	public void visit(ExprAddopTerm expr) { // mozda fali nesto za niz
+	public void visit(ExprAddopTerm expr) { // mozda fali nesto za niz, ustanovio sam da ne fali
 		Struct stExpr = expr.getExpr().struct;
 		Struct stTerm = expr.getTerm().struct;
 		if(!stExpr.compatibleWith(stTerm)) {

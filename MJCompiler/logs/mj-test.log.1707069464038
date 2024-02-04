@@ -1,0 +1,135 @@
+INFO  18:56:32,877 - Compiling source file: D:\7. sem\PP1\projekatRad\workspace\pp1Projekat\MJCompiler\test\programSem.mj
+INFO  18:56:32,909 - #2 program
+INFO  18:56:32,910 - #7 MJTest
+INFO  18:56:32,910 - #7 int
+INFO  18:56:32,912 - #7 a
+INFO  18:56:32,913 - #17 ;
+INFO  18:56:32,913 - #3 {
+INFO  18:56:32,914 - #28 void
+INFO  18:56:32,914 - #7 main
+INFO  18:56:32,914 - #22 (
+INFO  18:56:32,914 - #20 )
+INFO  18:56:32,914 - #7 char
+INFO  18:56:32,916 - #7 ch
+INFO  18:56:32,916 - #17 ;
+INFO  18:56:32,916 - #3 {
+INFO  18:56:32,916 - #7 ch
+INFO  18:56:32,916 - #21 =
+INFO  18:56:32,917 - #10 'a'
+INFO  18:56:32,917 - #17 ;
+INFO  18:56:32,917 - #27 print
+INFO  18:56:32,917 - #22 (
+INFO  18:56:32,918 - #7 ch
+INFO  18:56:32,918 - #20 )
+INFO  18:56:32,919 - #17 ;
+INFO  18:56:32,919 - #12 read
+INFO  18:56:32,919 - #22 (
+INFO  18:56:32,920 - #7 ch
+INFO  18:56:32,920 - #20 )
+INFO  18:56:32,920 - #17 ;
+INFO  18:56:32,921 - #27 print
+INFO  18:56:32,921 - #22 (
+INFO  18:56:32,921 - #7 ch
+INFO  18:56:32,921 - #20 )
+INFO  18:56:32,922 - #17 ;
+INFO  18:56:32,922 - #4 }
+INFO  18:56:32,922 - #4 }
+INFO  18:56:32,937 - Program(
+  ProgName(
+   MJTest
+  ) [ProgName]
+  NoNamespaceList(
+  ) [NoNamespaceList]
+  VarDeclarations(
+    NoDeclarations(
+    ) [NoDeclarations]
+    VarDeclNoArray(
+      Type(
+       int
+      ) [Type]
+     a
+      NoMoreVarDeclarations(
+      ) [NoMoreVarDeclarations]
+    ) [VarDeclNoArray]
+  ) [VarDeclarations]
+  MethodDeclList(
+    MethodDecl(
+      MethodDeclNameVoid(
+       main
+      ) [MethodDeclNameVoid]
+      FormPars(
+      ) [FormPars]
+      VarDeclarationsInFunc(
+        NoVarDeclarationsInFunc(
+        ) [NoVarDeclarationsInFunc]
+        Type(
+         char
+        ) [Type]
+       ch
+      ) [VarDeclarationsInFunc]
+      StmtList(
+        StmtList(
+          StmtList(
+            StmtList(
+              NoStmtList(
+              ) [NoStmtList]
+              StatementDesignatorStatement(
+                DesignatorStatementAssign(
+                  Designtr(
+                   ch
+                  ) [Designtr]
+                  ExprNoMinus(
+                    FactorNoTerm(
+                      FactorChar(
+                       'a'
+                      ) [FactorChar]
+                    ) [FactorNoTerm]
+                  ) [ExprNoMinus]
+                ) [DesignatorStatementAssign]
+              ) [StatementDesignatorStatement]
+            ) [StmtList]
+            StatementPrint(
+              ExprNoMinus(
+                FactorNoTerm(
+                  FactorDesignator(
+                    Designtr(
+                     ch
+                    ) [Designtr]
+                  ) [FactorDesignator]
+                ) [FactorNoTerm]
+              ) [ExprNoMinus]
+              NoAndConstPrint(
+              ) [NoAndConstPrint]
+            ) [StatementPrint]
+          ) [StmtList]
+          StatementRead(
+            Designtr(
+             ch
+            ) [Designtr]
+          ) [StatementRead]
+        ) [StmtList]
+        StatementPrint(
+          ExprNoMinus(
+            FactorNoTerm(
+              FactorDesignator(
+                Designtr(
+                 ch
+                ) [Designtr]
+              ) [FactorDesignator]
+            ) [FactorNoTerm]
+          ) [ExprNoMinus]
+          NoAndConstPrint(
+          ) [NoAndConstPrint]
+        ) [StatementPrint]
+      ) [StmtList]
+    ) [MethodDecl]
+  ) [MethodDeclList]
+) [Program]
+INFO  18:56:32,938 - ===================================
+INFO  18:56:32,941 - Deklarisana promenljiva a na liniji 4
+INFO  18:56:32,941 - Obradjuje se funkcija main na liniji 7
+INFO  18:56:32,941 - Deklarisana lokalna promenljiva ch na liniji 11
+INFO  18:56:32,941 -  Print count calls = 2
+INFO  18:56:32,942 -  Deklarisanih promenljivih ima = 2
+INFO  18:56:32,942 - ===================================
+INFO  18:56:32,952 - Parsiranje uspesno zavrseno!
